@@ -37,7 +37,7 @@ function Timer(props){
       ));
 
       return(
-        <div className='my-5 py-5 flex flex-col items-center rounded-md bg-[#FADA7A]'>
+        <div className='my-5 p-5 flex flex-col items-center rounded-md bg-[#FADA7A]'>
             <h2 className="text-2xl font-bold mb-4">{props.timer}</h2>
             <div className="flex items-center">
                 {timerComponents.length ? timerComponents : <span className="text-xl">Time's up!</span>}
