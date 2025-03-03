@@ -56,7 +56,7 @@ function NewNav() {
         ${showNavbar ? "translate-y-0" : "-translate-y-full" }`}>
             <nav className={`transition-all duration-100 
             ${navbar ? 'bg-[#f8f4d8] shadow-md' : 'bg-transparent'}`}>
-            <ul className="flex hidden z-50 justify-between items-center h-24 max-w-[1240px] font-bold mx-auto px-4 text-[#FA6B1C] md:text-4xl sm:text-3xl text-2xl">
+            <ul className="flex z-50 justify-between items-center h-24 max-w-[1240px] font-bold mx-auto px-4 text-[#FA6B1C] md:text-4xl sm:text-3xl text-2xl">
               <li className="pt-4 cursor-pointer" onClick={() => scrollToSection('about')}>About</li>
               <li className="pt-4 cursor-pointer" onClick={() => scrollToSection('schedule')}>Schedule</li>
               <li className="pt-4 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Logo</li>
