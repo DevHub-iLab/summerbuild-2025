@@ -11,9 +11,9 @@ function Workshop(){
                 <span className='text-[#FA6B1C]'>available</span>
             </h1>
             <div className='flex justify-center mt-10'>
-                <WorkshopCard frontImgSrc={HTMLLogo} color='#FADA7A'  frontText='HTML/CSS'/>
-                <WorkshopCard frontImgSrc={ReactLogo} color='#FADA7A' frontText='React'/>
-                <WorkshopCard frontImgSrc={ExpressLogo} color='#FADA7A' frontText='Express.js'/>
+                <WorkshopCard frontImgSrc={HTMLLogo} color='#FADA7A' frontText='HTML/CSS Workshop' backText='This workshop is presented by XYZ. It will cover introduction to HTML.'/>
+                <WorkshopCard frontImgSrc={ReactLogo} color='#FADA7A' frontText='React Workshop'/>
+                <WorkshopCard frontImgSrc={ExpressLogo} color='#FADA7A' frontText='Express.js Workshop'/>
             </div>
         </div>
     )
