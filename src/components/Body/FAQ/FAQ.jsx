@@ -1,6 +1,6 @@
-import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
 import { useState } from 'react';
 import FAQTopic from "./FAQTopic.jsx";
+import FAQExt from './FAQExt.jsx';
 
 function FAQ(){
 
@@ -31,6 +31,7 @@ function FAQ(){
             ))}
           </div>
           <FAQTopic active={active} />
+          <FAQExt header="Have a question that is not addressed above?" content="Contact @hellopanda (Event Lead) or @meiji (Co-Lead) on telegram and have your queries answered!"/>
         </div>
       )
 }
