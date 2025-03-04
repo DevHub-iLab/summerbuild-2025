@@ -25,3 +25,5 @@ run npm run deploy whenever there is any updates <br>
 3. Tailwind Animations: https://tailwindcss.com/docs/animation
 4. Wavy background: https://getwaves.io/
 5. Poppins Font: https://fonts.google.com/selection
+6. Swiper: https://swiperjs.com/
+

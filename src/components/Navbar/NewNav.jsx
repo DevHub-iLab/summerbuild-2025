@@ -13,6 +13,8 @@ function NewNav() {
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
+
+      setNavMobile(false)
     };
 
     //sticky navBar
@@ -62,19 +64,21 @@ function NewNav() {
               <li className="pt-4 cursor-pointer" onClick={() => scrollToSection('workshop')}>Workshops</li>
               <li className="pt-4 cursor-pointer" onClick={() => scrollToSection('faq')}>FAQ</li>
             </ul>
-            <div onClick={handleMobileNav} className='block md:hidden'>
-                {navMobile ? <IoMdClose className='text-[#FA6B1C] fixed items-center top-10 right-0 z-10' size={20}/> :
-                <IoIosMenu className='text-[#FA6B1C] fixed items-center top-10 right-0 z-10' size={20}/> }
-            </div>
           </nav>
         </div>
 
         {/* Mobile Navbar */}
-        <div className={navMobile ? 'fixed md:hidden flex items-center left-0 top-0 w-[60%] h-full bg-amber-50 ease-in-out duration-500' : 'fixed left-[-100%]'}>
+        <div className={navMobile ? 'fixed z-50 rounded-2xl p-5 md:hidden flex justify-center items-center w-auto h-auto left-0 top-0 bg-amber-50 ease-in-out duration-500' : 
+            'fixed left-[-100%]'}>
+            <div onClick={handleMobileNav} className='block md:hidden'>
+                {navMobile ? <IoMdClose className='text-[#FA6B1C] fixed items-center top-5 right-5' size={30}/> :
+                <IoIosMenu className='text-[#FA6B1C] fixed items-center top-5 right-5' size={30}/> }
+            </div>
             <ul className="font-bold text-[#FA6B1C] md:text-4xl sm:text-3xl text-2xl">
                 <li className="py-10 pl-10 border-y-2 cursor-pointer" onClick={() => scrollToSection('about')}>About</li>
                 <li className="py-10 pl-10 border-b-2 cursor-pointer" onClick={() => scrollToSection('schedule')}>Schedule</li>
-                <li className="py-10 pl-10 border-b-2 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Logo</li>
+                <li className="py-10 pl-10 border-b-2 cursor-pointer" onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" }); setNavMobile(false) }}>Logo</li>
                 <li className="py-10 pl-10 border-b-2 cursor-pointer" onClick={() => scrollToSection('workshop')}>Workshops</li>
                 <li className="py-10 pl-10 border-b-2 cursor-pointer" onClick={() => scrollToSection('faq')}>FAQ</li>
             </ul>

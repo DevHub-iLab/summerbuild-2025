@@ -1,6 +1,6 @@
 function AchievementCard(props){
     return(
-        <div>
+        <div className='mb-5 '>
             <div className="w-0 h-0 mx-10
                 border-l-[120px] border-l-transparent
                 border-b-[150px] border-b-yellow-100
