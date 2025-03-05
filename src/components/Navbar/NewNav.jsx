@@ -52,6 +52,7 @@ function NewNav() {
             0,1371,0,1337,0C1302.9,0,1269,0,1234,0C1200,0,1166,0,1131,0C1097.1,0,1063,0,1029,0C994.3,0,960,0,926,0C891.4,0,857,0,823,0C788.6,0,754,0,720,0C685.7,0,651,0,617,
             0C582.9,0,549,0,514,0C480,0,446,0,411,0C377.1,0,343,0,309,0C274.3,0,240,0,206,0C171.4,0,137,0,103,0C68.6,0,34,0,17,0L0,0Z"></path>
         </svg>
+
         {/* Desktop Navbar */}
         <div className={`fixed top-0 w-full z-50 transition-transform duration-300 
         ${showNavbar ? "translate-y-0" : "-translate-y-full" }`}>
@@ -68,21 +69,33 @@ function NewNav() {
         </div>
 
         {/* Mobile Navbar */}
-        <div className={navMobile ? 'fixed z-50 rounded-2xl p-5 md:hidden flex justify-center items-center w-auto h-auto left-0 top-0 bg-amber-50 ease-in-out duration-500' : 
-            'fixed left-[-100%]'}>
-            <div onClick={handleMobileNav} className='block md:hidden'>
-                {navMobile ? <IoMdClose className='text-[#FA6B1C] fixed items-center top-5 right-5' size={30}/> :
-                <IoIosMenu className='text-[#FA6B1C] fixed items-center top-5 right-5' size={30}/> }
+        <div className={`fixed top-0 w-full z-50 transition-transform duration-300 
+            ${showNavbar ? "translate-y-0" : "-translate-y-full" }`}>
+            <div className={`transition-all duration-100 ${navMobile || navbar ? 'bg-[#f8f4d8] shadow-md' : 'bg-transparent'} 
+            p-5 flex flex-col justify-start items-center w-full md:hidden`}>
+                {/* Mobile Menu Icon (Toggles Menu) */}
+                <div onClick={handleMobileNav} className='cursor-pointer'>
+                    {navMobile ? (
+                        <IoMdClose className='text-[#FA6B1C]' size={30}/>
+                    ) : (
+                        <IoIosMenu className='text-[#FA6B1C]' size={30}/>
+                    )}
+                </div>
+
+                {/* Menu Items (Shown Only When navMobile is True) */}
+                <div className={`transition-all duration-500 ease-in-out overflow-hidden transform 
+                ${navMobile ? 'max-h-[500px] opacity-100 scale-y-100' : 'max-h-0 opacity-0 scale-y-0'}`}>
+                    <ul className="font-bold text-[#FA6B1C] md:text-4xl sm:text-3xl text-2xl text-center mt-5">
+                        <li className="py-5 cursor-pointer" onClick={() => { scrollToSection('about'); setNavMobile(false); }}>About</li>
+                        <li className="py-5 cursor-pointer" onClick={() => { scrollToSection('schedule'); setNavMobile(false); }}>Schedule</li>
+                        <li className="py-5 cursor-pointer" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); setNavMobile(false); }}>Logo</li>
+                        <li className="py-5 cursor-pointer" onClick={() => { scrollToSection('workshop'); setNavMobile(false); }}>Workshops</li>
+                        <li className="py-5 cursor-pointer" onClick={() => { scrollToSection('faq'); setNavMobile(false); }}>FAQ</li>
+                    </ul>
+                </div>
             </div>
-            <ul className="font-bold text-[#FA6B1C] md:text-4xl sm:text-3xl text-2xl">
-                <li className="py-10 pl-10 border-y-2 cursor-pointer" onClick={() => scrollToSection('about')}>About</li>
-                <li className="py-10 pl-10 border-b-2 cursor-pointer" onClick={() => scrollToSection('schedule')}>Schedule</li>
-                <li className="py-10 pl-10 border-b-2 cursor-pointer" onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" }); setNavMobile(false) }}>Logo</li>
-                <li className="py-10 pl-10 border-b-2 cursor-pointer" onClick={() => scrollToSection('workshop')}>Workshops</li>
-                <li className="py-10 pl-10 border-b-2 cursor-pointer" onClick={() => scrollToSection('faq')}>FAQ</li>
-            </ul>
         </div>
+
       </>
     );
   }

@@ -30,16 +30,22 @@ function Timer(props){
     
       // Create timer components for display
       const timerComponents = Object.keys(timeLeft).map(interval => (
-        <span key={interval} className="mx-3 flex flex-col items-center text-lg font-semibold uppercase">
+        <span key={interval} className="sm:mx-3 mx-1.5 flex flex-col items-center sm:text-xl text-base font-semibold uppercase">
             <p>{interval}</p>
             <p>{timeLeft[interval]}</p>
         </span>
       ));
 
       return(
-        <div className='my-5 p-5 flex flex-col items-center rounded-md bg-[#FADA7A]'>
-            <h2 className="text-2xl font-bold mb-4">{props.timer}</h2>
-            <div className="flex items-center">
+        <div className='my-5 p-5 flex flex-col items-center rounded-md bg-[#FADA7A]'
+        onMouseEnter={(e) => {
+          e.currentTarget.style.animation = "wiggle 1s ease-in-out";
+        }}
+        onMouseLeave={(e) => {
+            e.currentTarget.style.animation = "none";
+        }}>
+            <h2 className="sm:text-3xl text-xl font-bold mb-4">{props.timer}</h2>
+            <div className="flex items-center sm:max-w-[500px] max-w-[300px]">
                 {timerComponents.length ? timerComponents : <span className="text-xl">Time's up!</span>}
             </div>
         </div>
