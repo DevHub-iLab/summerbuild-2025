@@ -12,7 +12,7 @@ function WorkshopCard(props) {
             {/* The actual card with wiggle animation */}
             <div
                 className="rounded-2xl text-center md:w-[250px] sm:w-[225px] w-[200px] 
-                md:mx-10 sm:mx-7.5 mx-5 md:text-[25px] sm:text-[20px] text-[15px] 
+                mx-auto md:text-[25px] sm:text-[20px] text-[15px] 
                 shadow-xl"
                 onClick={handleClick}
                 style={{
@@ -29,7 +29,7 @@ function WorkshopCard(props) {
                 {/* Front side */}
                 <div className={`backface-hidden ${!click ? "visible" : "hidden"}`}>
                     <img className="w-90 py-4 px-7" src={props.frontImgSrc} alt="Front" />
-                    <h1 className="text-2xl pt-1 pb-6 px-12 leading-normal">
+                    <h1 className="text-2xl pt-1 pb-6 px-3 leading-normal">
                         {props.frontText || "Default Theme"}
                     </h1>
                 </div>
