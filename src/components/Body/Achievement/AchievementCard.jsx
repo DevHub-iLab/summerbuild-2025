@@ -7,7 +7,8 @@ function AchievementCard(props){
                 border-r-[120px] border-r-transparent"
                 style={{ borderBottomColor: props.color || 'transparent'}}>
             </div>
-            <p className='relative bottom-15 font-bold text-center'>{props.text || 'PlaceHolder'}</p>
+            <h1 className='relative bottom-17 font-bold text-center'>{props.level || 'PlaceHolder'}</h1>
+            <p className='relative text-center bottom-14'>{props.description}</p>
         </div>
     )
 }
