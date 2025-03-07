@@ -2,7 +2,7 @@ import NewNav from './components/Navbar/NewNav.jsx'
 import Tagline from './components/Body/Tagline.jsx'
 import Countdown from './components/Body/Countdown/Countdown.jsx'
 import About from './components/Body/About/About.jsx'
-import Theme from './components/Body/Theme/Theme.jsx'
+import Challenge from './components/Body/Challenge/Challenge.jsx'
 import Achievement from './components/Body/Achievement/Achievement.jsx'
 import Prizes from './components/Body/Prizes/Prizes.jsx'
 import Schedule from './components/Body/Schedule/Schedule.jsx'
@@ -23,7 +23,7 @@ function App() {
       <section id="about">
         <About/>
       </section>
-      <Theme/>
+      <Challenge/>
       <Achievement/>
       <Prizes/>
       <section id="schedule">

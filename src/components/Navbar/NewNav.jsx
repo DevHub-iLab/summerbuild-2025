@@ -58,7 +58,7 @@ function NewNav() {
         ${showNavbar ? "translate-y-0" : "-translate-y-full" }`}>
             <nav className={`transition-all duration-100 
             ${navbar ? 'bg-[#f8f4d8] shadow-md' : 'bg-transparent'}`}>
-            <ul className="hidden md:flex z-50 justify-between items-center h-24 max-w-[1240px] font-bold mx-auto px-4 text-[#FA6B1C] md:text-4xl sm:text-3xl text-2xl">
+            <ul className="hidden md:flex z-50 md: justify-around items-center h-24 max-w-[1240px] font-bold mx-auto px-4 text-[#FA6B1C] md:text-2xl sm:text-xl text-lg">
               <li className="pt-4 cursor-pointer" onClick={() => scrollToSection('about')}>About</li>
               <li className="pt-4 cursor-pointer" onClick={() => scrollToSection('schedule')}>Schedule</li>
               <li className="pt-4 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Logo</li>
@@ -85,7 +85,7 @@ function NewNav() {
                 {/* Menu Items (Shown Only When navMobile is True) */}
                 <div className={`transition-all duration-500 ease-in-out overflow-hidden transform 
                 ${navMobile ? 'max-h-[500px] opacity-100 scale-y-100' : 'max-h-0 opacity-0 scale-y-0'}`}>
-                    <ul className="font-bold text-[#FA6B1C] md:text-4xl sm:text-3xl text-2xl text-center mt-5">
+                    <ul className="font-bold text-[#FA6B1C] md:text-2xl sm:text-xl text-lg text-center mt-5">
                         <li className="py-5 cursor-pointer" onClick={() => { scrollToSection('about'); setNavMobile(false); }}>About</li>
                         <li className="py-5 cursor-pointer" onClick={() => { scrollToSection('schedule'); setNavMobile(false); }}>Schedule</li>
                         <li className="py-5 cursor-pointer" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); setNavMobile(false); }}>Logo</li>

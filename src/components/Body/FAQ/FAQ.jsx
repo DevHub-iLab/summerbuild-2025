@@ -31,7 +31,7 @@ function FAQ(){
             ))}
           </div>
           <FAQTopic active={active} />
-          <FAQExt header="Have a question that is not addressed above?" content="Contact @hellopanda (Event Lead) or @meiji (Co-Lead) on telegram and have your queries answered!"/>
+          <FAQExt header="Have a question that is not addressed above?" content="Email devhubilab@e.ntu.edu.sg and have your queries answered!"/>
         </div>
       )
 }
