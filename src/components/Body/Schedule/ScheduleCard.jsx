@@ -1,6 +1,6 @@
 function ScheduleCard(props){
     return(
-        <div className='group flex w-full h-auto items-center p-5 mb-20'>
+        <div className='group flex w-full h-auto items-center p-5 md:mb-20 mb-10'>
             <div className='rounded-4xl md:w-[200px] w-[140px] h-15 flex-shrink-0 flex text-center justify-center items-center transition-all duration-300 ease-in-out transform group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-gray-400' style={{ backgroundColor: props.color || 'transparent'}}>
                 <h1 className='flex items-center sm:text-xl text-lg' style={{fontWeight: props.fontWeight}}>{props.header || 'PlaceHolder'}</h1>
             </div>
