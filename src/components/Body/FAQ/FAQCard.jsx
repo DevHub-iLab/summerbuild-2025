@@ -10,7 +10,6 @@ function FAQCard(props) {
 
     return (
         <div className="flex flex-col rounded-xl md:text-[25px] sm:text-[20px] text-[15px] bg-white m-3 px-5 py-3 transition-all duration-300 ease-in-out">
-
             <div className="flex items-center cursor-pointer" onClick={handleArrow}>
                 <div className="md:h-[25px] sm:h-[18px] h-[15px] pr-1 transition-transform duration-300">
                     {!arrow ? <IoIosArrowForward size="auto" /> : <IoIosArrowDown size="auto" />}

@@ -6,7 +6,7 @@ function Tagline(){
             <div className='max-w-[1000px] md:mt-[200px] mt-[75px] w-screen h-auto mx-auto text-center flex flex-col'>
                 <div className='flex justify-center'>
                     BUILD <ReactTyped className='font-bold pl-4'
-                    strings={[ 'ANYTHING', 'ANYWHERE', 'SOMEWHERE']} typeSpeed={120} backSpeed={90} loop/>
+                    strings={[ 'ANYTHING', 'ANYWHERE', 'ANYTIME']} typeSpeed={120} backSpeed={90} loop/>
                 </div>
             </div>
         </div>
