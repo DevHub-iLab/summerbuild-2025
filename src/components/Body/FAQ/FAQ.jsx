@@ -21,7 +21,7 @@ function FAQ(){
             {topics.map((topic) => (
               <h1
                 key={topic}
-                className={`font-semibold md:mb-7.5 sm:mb-5 mb-2.5 md:mx-15 sm:mx-10 mx-5 md:text-[30px] sm:text-[25px] text-[18px] cursor-pointer ${
+                className={`font-semibold md:mb-7.5 sm:mb-5 mb-2.5 md:mx-15 sm:mx-10 mx-3 md:text-[30px] sm:text-[25px] text-[18px] cursor-pointer ${
                   active === topic ? "text-[#1E1E1E]" : "text-[#81BFDA]"
                 }`}
                 onClick={() => setActive(topic)}
