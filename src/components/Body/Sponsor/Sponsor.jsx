@@ -7,7 +7,7 @@ function Sponsor(){
                 <span className="text-[#FA6B1C]">supported </span>
                 <span className="text-[#1E1E1E]">by</span>
             </h1>
-            <div className='mt-5 max-w-[1000px]'>
+            <div className='mt-5 max-w-[325px]'>
                 <SponsorCard color='#B1F0F7' text='CCDS Innovation Lab' imgSrc=''/>
             </div>
         </div>

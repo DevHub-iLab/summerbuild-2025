@@ -13,9 +13,9 @@ function Achievement(){
             </h1>
             {/* Desktop View */}
             <div className='hidden md:flex w-auto justify-center mt-5 mx-2'>
-                <AchievementCard color='#B1F0F7' text='Achievement 1'/>
-                <AchievementCard color='#B1F0F7' text='Achievement 2'/>
-                <AchievementCard color='#B1F0F7' text='Achievement 3'/>
+                <AchievementCard color='#B1F0F7' level='Diamond' description='Novel Creation'/>
+                <AchievementCard color='#FADA7A' level='Gold' description='API Consumption'/>
+                <AchievementCard color='#D9D9D9' level='Silver' description='CRUD'/>
             </div>
 
             {/* Mobile View - Auto-Swiping Carousel */}
@@ -28,16 +28,16 @@ function Achievement(){
                     spaceBetween={10}
                     slidesPerView={1}
                     centeredSlides={true}
-                    className="w-full max-w-xs flex items-center justify-center"
+                    className='w-full max-w-xs flex items-center justify-center'
                 >
                     <SwiperSlide>
-                        <AchievementCard color="#B1F0F7" text="Achievement 1" />
+                        <AchievementCard color='#B1F0F7' level='Diamond' description='Novel Creation'/>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <AchievementCard color="#B1F0F7" text="Achievement 2" />
+                        <AchievementCard color='#FADA7A' level='Gold' description='API Consumption'/>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <AchievementCard color="#B1F0F7" text="Achievement 3" />
+                        <AchievementCard color='#D9D9D9' level='Silver' description='CRUD'/>
                     </SwiperSlide>
                 </Swiper>
             </div>
