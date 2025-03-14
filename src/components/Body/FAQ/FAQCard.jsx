@@ -9,12 +9,12 @@ function FAQCard(props) {
     }
 
     return (
-        <div className="flex flex-col rounded-xl md:text-[25px] sm:text-[20px] text-[15px] bg-white m-3 p-3 transition-all duration-300 ease-in-out">
+        <div className="m-3 flex flex-col rounded-xl bg-white p-3 text-[15px] transition-all duration-300 ease-in-out sm:text-[20px] md:text-[25px]">
             <div
-                className="flex items-center cursor-pointer"
+                className="flex cursor-pointer items-center"
                 onClick={handleArrow}
             >
-                <div className="md:h-[25px] sm:h-[18px] h-[15px] pr-1 transition-transform duration-300">
+                <div className="h-[15px] pr-1 transition-transform duration-300 sm:h-[18px] md:h-[25px]">
                     {!arrow ? (
                         <IoIosArrowForward size="auto" />
                     ) : (
@@ -25,11 +25,11 @@ function FAQCard(props) {
             </div>
 
             <div
-                className={`overflow-hidden transition-max-height duration-300 ease-in-out ${
+                className={`transition-max-height overflow-hidden duration-300 ease-in-out ${
                     arrow ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"
                 }`}
             >
-                <p className="md:text-[18px] sm:text-[15px] text-[13px] md:ml-[30px] sm:ml-[25px] ml-[20px] pt-2">
+                <p className="ml-[20px] pt-2 text-[13px] sm:ml-[25px] sm:text-[15px] md:ml-[30px] md:text-[18px]">
                     {props.answer}
                 </p>
             </div>

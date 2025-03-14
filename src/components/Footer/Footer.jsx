@@ -10,17 +10,17 @@ function Footer() {
             </p>
             <div className="flex w-auto justify-center">
                 <img
-                    className="w-12 mb-3 p-3"
+                    className="mb-3 w-12 p-3"
                     src={LinkedInIcon}
                     alt="PlaceHolder"
                 ></img>
                 <img
-                    className="w-12 mb-3 p-3"
+                    className="mb-3 w-12 p-3"
                     src={WebIcon}
                     alt="PlaceHolder"
                 ></img>
                 <img
-                    className="w-12 mb-3 p-3"
+                    className="mb-3 w-12 p-3"
                     src={InstagramIcon}
                     alt="PlaceHolder"
                 ></img>

@@ -4,7 +4,7 @@ function FAQTopic(props) {
     return (
         <div>
             {props.active === "General" && (
-                <div className="flex flex-col justify-center m-auto rounded-xl bg-[#81BFDA] md:w-[750px] sm:w-[600px] w-[325px]">
+                <div className="m-auto flex w-[325px] flex-col justify-center rounded-xl bg-[#81BFDA] sm:w-[600px] md:w-[750px]">
                     <FAQCard
                         question="Who can participate in SummerBuild 2025?"
                         answer="SummerBuild 2025 is open to all CCDS students, no matter the study year or course! Join now and start building!"
@@ -15,7 +15,7 @@ function FAQTopic(props) {
             )}
 
             {props.active === "Registration" && (
-                <div className="flex flex-col justify-center m-auto rounded-xl bg-[#81BFDA] md:w-[750px] sm:w-[600px] w-[325px]">
+                <div className="m-auto flex w-[325px] flex-col justify-center rounded-xl bg-[#81BFDA] sm:w-[600px] md:w-[750px]">
                     <FAQCard
                         question="How do I register for the event?"
                         answer="Answer"
@@ -26,7 +26,7 @@ function FAQTopic(props) {
             )}
 
             {props.active === "Resources" && (
-                <div className="flex flex-col justify-center m-auto rounded-xl bg-[#81BFDA] md:w-[750px] sm:w-[600px] w-[325px]">
+                <div className="m-auto flex w-[325px] flex-col justify-center rounded-xl bg-[#81BFDA] sm:w-[600px] md:w-[750px]">
                     <FAQCard
                         question="Where can I find event resources?"
                         answer="Answer"

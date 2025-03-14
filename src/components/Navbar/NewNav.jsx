@@ -46,7 +46,7 @@ function NewNav() {
     return (
         <>
             <svg
-                class="absolute top-0 left-0 w-auto h-auto z-[-1]"
+                class="absolute top-0 left-0 z-[-1] h-auto w-auto"
                 viewBox="0 0 1440 320"
             >
                 <path
@@ -62,28 +62,30 @@ function NewNav() {
 
             {/* Desktop Navbar */}
             <div
-                className={`fixed top-0 w-full z-50 transition-transform duration-300 
-        ${showNavbar ? "translate-y-0" : "-translate-y-full"}`}
+                className={`fixed top-0 z-50 px-16 transition-all duration-300`}
             >
                 <nav
-                    className={`transition-all duration-100 
-            ${navbar ? "bg-[#f8f4d8] shadow-md" : "bg-transparent"}`}
+                    className={`transition-all duration-100 ${
+                        navbar
+                            ? "border-b border-[#FA6B1C]/10 bg-[#f8f4d8]/80 shadow-lg backdrop-blur-md"
+                            : "bg-transparent"
+                    }`}
                 >
-                    <ul className="hidden md:flex z-50 md: justify-around items-center h-24 max-w-[1240px] font-bold mx-auto px-4 text-[#FA6B1C] md:text-2xl sm:text-xl text-lg">
+                    <ul className="z-50 mx-auto hidden h-16 w-full max-w-[1000px] items-center justify-around px-4 text-xl font-bold text-[#FA6B1C] md:flex">
                         <li
-                            className="pt-4 cursor-pointer"
+                            className="cursor-pointer pt-4"
                             onClick={() => scrollToSection("about")}
                         >
                             About
                         </li>
                         <li
-                            className="pt-4 cursor-pointer"
+                            className="cursor-pointer pt-4"
                             onClick={() => scrollToSection("schedule")}
                         >
                             Schedule
                         </li>
                         <li
-                            className="pt-4 cursor-pointer"
+                            className="cursor-pointer pt-4"
                             onClick={() =>
                                 window.scrollTo({ top: 0, behavior: "smooth" })
                             }
@@ -91,13 +93,13 @@ function NewNav() {
                             Logo
                         </li>
                         <li
-                            className="pt-4 cursor-pointer"
+                            className="cursor-pointer pt-4"
                             onClick={() => scrollToSection("workshop")}
                         >
                             Workshops
                         </li>
                         <li
-                            className="pt-4 cursor-pointer"
+                            className="cursor-pointer pt-4"
                             onClick={() => scrollToSection("faq")}
                         >
                             FAQ
@@ -108,16 +110,14 @@ function NewNav() {
 
             {/* Mobile Navbar */}
             <div
-                className={`fixed top-0 w-full z-50 transition-transform duration-300 
-            ${showNavbar ? "translate-y-0" : "-translate-y-full"}`}
+                className={`fixed top-0 z-50 w-full transition-all duration-300`}
             >
                 <div
-                    className={`transition-all duration-100 ${
+                    className={`transition-all duration-300 ${
                         navMobile || navbar
-                            ? "bg-[#f8f4d8] shadow-md"
+                            ? "border-b border-[#FA6B1C]/10 bg-[#f8f4d8]/90 shadow-lg backdrop-blur-md"
                             : "bg-transparent"
-                    } 
-            p-5 flex flex-col justify-start items-center w-full md:hidden`}
+                    } flex w-full flex-col items-center justify-start p-4 md:hidden`}
                 >
                     {/* Mobile Menu Icon (Toggles Menu) */}
                     <div onClick={handleMobileNav} className="cursor-pointer">
@@ -130,16 +130,15 @@ function NewNav() {
 
                     {/* Menu Items (Shown Only When navMobile is True) */}
                     <div
-                        className={`transition-all duration-500 ease-in-out overflow-hidden transform 
-                ${
-                    navMobile
-                        ? "max-h-[500px] opacity-100 scale-y-100"
-                        : "max-h-0 opacity-0 scale-y-0"
-                }`}
+                        className={`transform overflow-hidden transition-all duration-500 ease-in-out ${
+                            navMobile
+                                ? "max-h-[500px] scale-y-100 opacity-100"
+                                : "max-h-0 scale-y-0 opacity-0"
+                        }`}
                     >
-                        <ul className="font-bold text-[#FA6B1C] md:text-2xl sm:text-xl text-lg text-center mt-5">
+                        <ul className="mt-5 text-center text-lg font-bold text-[#FA6B1C] sm:text-xl md:text-2xl">
                             <li
-                                className="py-5 cursor-pointer"
+                                className="cursor-pointer py-5"
                                 onClick={() => {
                                     scrollToSection("about")
                                     setNavMobile(false)
@@ -148,7 +147,7 @@ function NewNav() {
                                 About
                             </li>
                             <li
-                                className="py-5 cursor-pointer"
+                                className="cursor-pointer py-5"
                                 onClick={() => {
                                     scrollToSection("schedule")
                                     setNavMobile(false)
@@ -157,7 +156,7 @@ function NewNav() {
                                 Schedule
                             </li>
                             <li
-                                className="py-5 cursor-pointer"
+                                className="cursor-pointer py-5"
                                 onClick={() => {
                                     window.scrollTo({
                                         top: 0,
@@ -169,7 +168,7 @@ function NewNav() {
                                 Logo
                             </li>
                             <li
-                                className="py-5 cursor-pointer"
+                                className="cursor-pointer py-5"
                                 onClick={() => {
                                     scrollToSection("workshop")
                                     setNavMobile(false)
@@ -178,7 +177,7 @@ function NewNav() {
                                 Workshops
                             </li>
                             <li
-                                className="py-5 cursor-pointer"
+                                className="cursor-pointer py-5"
                                 onClick={() => {
                                     scrollToSection("faq")
                                     setNavMobile(false)

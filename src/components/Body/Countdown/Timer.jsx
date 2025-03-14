@@ -31,7 +31,7 @@ function Timer(props) {
     const timerComponents = Object.keys(timeLeft).map(interval => (
         <span
             key={interval}
-            className="sm:mx-3 mx-1.5 flex flex-col items-center sm:text-xl text-base font-semibold uppercase"
+            className="mx-1.5 flex flex-col items-center text-base font-semibold uppercase sm:mx-3 sm:text-xl"
         >
             <p>{interval}</p>
             <p>{timeLeft[interval]}</p>
@@ -40,7 +40,7 @@ function Timer(props) {
 
     return (
         <div
-            className="my-5 p-5 flex flex-col items-center rounded-md bg-[#FADA7A]"
+            className="my-5 flex flex-col items-center rounded-md bg-[#FADA7A] p-5"
             onMouseEnter={e => {
                 e.currentTarget.style.animation = "wiggle 1s ease-in-out"
             }}
@@ -48,10 +48,10 @@ function Timer(props) {
                 e.currentTarget.style.animation = "none"
             }}
         >
-            <h2 className="sm:text-3xl text-xl font-bold mb-4">
+            <h2 className="mb-4 text-xl font-bold sm:text-3xl">
                 {props.timer}
             </h2>
-            <div className="flex items-center sm:max-w-[500px] max-w-[300px]">
+            <div className="flex max-w-[300px] items-center sm:max-w-[500px]">
                 {timerComponents.length ? (
                     timerComponents
                 ) : (

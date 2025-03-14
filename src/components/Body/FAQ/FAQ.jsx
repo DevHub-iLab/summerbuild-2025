@@ -11,16 +11,16 @@ function FAQ() {
     }
 
     return (
-        <div id="faq" className="flex flex-col mt-20">
-            <h1 className="uppercase justify-center text-center font-bold md:mb-10 sm:mb-7.5 mb-5 md:text-4xl sm:text-3xl text-2xl">
+        <div id="faq" className="mt-20 flex flex-col">
+            <h1 className="mb-5 justify-center text-center text-2xl font-bold uppercase sm:mb-7.5 sm:text-3xl md:mb-10 md:text-4xl">
                 <span className="text-[#FA6B1C]">frequently </span>
                 <span className="text-[#1E1E1E]">asked questions </span>
             </h1>
-            <div className="flex w-auto justify-center mx-10">
+            <div className="mx-10 flex w-auto justify-center">
                 {topics.map(topic => (
                     <h1
                         key={topic}
-                        className={`font-semibold md:mb-7.5 sm:mb-5 mb-2.5 md:mx-15 sm:mx-10 mx-3 md:text-[30px] sm:text-[25px] text-[18px] cursor-pointer ${
+                        className={`mx-3 mb-2.5 cursor-pointer text-[18px] font-semibold sm:mx-10 sm:mb-5 sm:text-[25px] md:mx-15 md:mb-7.5 md:text-[30px] ${
                             active === topic
                                 ? "text-[#1E1E1E]"
                                 : "text-[#81BFDA]"

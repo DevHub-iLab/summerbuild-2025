@@ -1,12 +1,12 @@
 import ScheduleCard from "./ScheduleCard.jsx"
 function Schedule() {
     return (
-        <div id="schedule" className="flex flex-col mt-20 items-center">
-            <h1 className="text-[#1E1E1E] uppercase justify-center text-center font-bold md:text-4xl sm:text-3xl text-2xl">
+        <div id="schedule" className="mt-20 flex flex-col items-center">
+            <h1 className="justify-center text-center text-2xl font-bold text-[#1E1E1E] uppercase sm:text-3xl md:text-4xl">
                 Schedule
             </h1>
-            <div className="absolute z-[-1] bg-[#C6C6C6] left-1/2 transform md:-translate-x-[155px] sm:-translate-x-[140px] -translate-x-[128px] w-1 md:h-[1300px] h-[1000px] mt-22"></div>
-            <div className="flex flex-col items-center mt-5 w-auto">
+            <div className="absolute left-1/2 z-[-1] mt-22 h-[1000px] w-1 -translate-x-[128px] transform bg-[#C6C6C6] sm:-translate-x-[140px] md:h-[1300px] md:-translate-x-[155px]"></div>
+            <div className="mt-5 flex w-auto flex-col items-center">
                 <ScheduleCard
                     color="#81BFDA"
                     fontWeight="bold"

@@ -2,8 +2,8 @@ import SponsorCard from "./SponsorCard"
 
 function Sponsor() {
     return (
-        <div className="flex flex-col mt-20 items-center">
-            <h1 className="uppercase justify-center text-center font-bold md:mb-10 sm:mb-7.5 md:text-4xl sm:text-3xl text-2xl">
+        <div className="mt-20 flex flex-col items-center">
+            <h1 className="justify-center text-center text-2xl font-bold uppercase sm:mb-7.5 sm:text-3xl md:mb-10 md:text-4xl">
                 <span className="text-[#FA6B1C]">supported </span>
                 <span className="text-[#1E1E1E]">by</span>
             </h1>

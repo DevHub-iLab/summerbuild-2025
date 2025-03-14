@@ -9,14 +9,14 @@ import ExpressLogo from "../../../assets/expressIcon.svg"
 
 function Workshop() {
     return (
-        <div id="workshop" className="flex flex-col mt-20">
-            <h1 className="uppercase justify-center text-center font-bold md:text-4xl sm:text-3xl text-2xl">
+        <div id="workshop" className="mt-20 flex flex-col">
+            <h1 className="justify-center text-center text-2xl font-bold uppercase sm:text-3xl md:text-4xl">
                 <span className="text-[#1E1E1E]">workshops </span>
                 <span className="text-[#FA6B1C]">available</span>
             </h1>
 
             {/* Swiper for mobile */}
-            <div className="md:hidden mt-10">
+            <div className="mt-10 md:hidden">
                 <Swiper
                     modules={[Autoplay, Pagination]}
                     autoplay={{ delay: 3000, disableOnInteraction: false }}
@@ -25,7 +25,7 @@ function Workshop() {
                     spaceBetween={10}
                     slidesPerView={1}
                     centeredSlides={true}
-                    className="w-full max-w-xs flex items-center justify-center"
+                    className="flex w-full max-w-xs items-center justify-center"
                 >
                     <SwiperSlide>
                         <WorkshopCard
@@ -53,7 +53,7 @@ function Workshop() {
             </div>
 
             {/* Normal layout for larger screens */}
-            <div className="hidden md:flex justify-center mt-10">
+            <div className="mt-10 hidden justify-center md:flex">
                 <WorkshopCard
                     frontImgSrc={HTMLLogo}
                     color="#FADA7A"

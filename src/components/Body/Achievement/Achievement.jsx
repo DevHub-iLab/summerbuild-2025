@@ -6,13 +6,13 @@ import AchievementCard from "./AchievementCard.jsx"
 
 function Achievement() {
     return (
-        <div className="flex flex-col mt-20">
-            <h1 className="uppercase justify-center text-center font-bold md:text-4xl sm:text-3xl text-2xl">
+        <div className="mt-20 flex flex-col">
+            <h1 className="justify-center text-center text-2xl font-bold uppercase sm:text-3xl md:text-4xl">
                 <span className="text-[#1E1E1E]">levels </span>
                 <span className="text-[#FA6B1C]">of achievement</span>
             </h1>
             {/* Desktop View */}
-            <div className="hidden md:flex w-auto justify-center mt-5 mx-2">
+            <div className="mx-2 mt-5 hidden w-auto justify-center md:flex">
                 <AchievementCard
                     color="#B1F0F7"
                     level="Diamond"
@@ -31,7 +31,7 @@ function Achievement() {
             </div>
 
             {/* Mobile View - Auto-Swiping Carousel */}
-            <div className="md:hidden mt-5">
+            <div className="mt-5 md:hidden">
                 <Swiper
                     modules={[Autoplay, Pagination]}
                     autoplay={{ delay: 3000, disableOnInteraction: false }}
@@ -40,7 +40,7 @@ function Achievement() {
                     spaceBetween={10}
                     slidesPerView={1}
                     centeredSlides={true}
-                    className="w-full max-w-xs flex items-center justify-center"
+                    className="flex w-full max-w-xs items-center justify-center"
                 >
                     <SwiperSlide>
                         <AchievementCard
