@@ -7,9 +7,8 @@ function FAQExt(props) {
             <p className="md:text-[18px] sm:text-[15px] text-[13px] md:ml-[30px] sm:ml-[25px] ml-[20px] pt-2 pr-5">
                 {props.content}
             </p>
-
         </div>
-    );
+    )
 }
 
-export default FAQExt;
+export default FAQExt

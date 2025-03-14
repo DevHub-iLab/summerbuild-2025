@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { useState } from "react"
 
 function WorkshopCard(props) {
-    const [click, setClick] = useState(false);
+    const [click, setClick] = useState(false)
 
     const handleClick = () => {
-        setClick(!click);
-    };
+        setClick(!click)
+    }
 
     return (
         <div className="flex justify-center items-center perspective-[1000px] md:mx-10">
@@ -19,29 +19,47 @@ function WorkshopCard(props) {
                     backgroundColor: props.color || "transparent",
                     transformStyle: "preserve-3d",
                 }}
-                onMouseEnter={(e) => {
-                    e.currentTarget.style.animation = "wiggle 1s ease-in-out";
+                onMouseEnter={e => {
+                    e.currentTarget.style.animation = "wiggle 1s ease-in-out"
                 }}
-                onMouseLeave={(e) => {
-                    e.currentTarget.style.animation = "none";
+                onMouseLeave={e => {
+                    e.currentTarget.style.animation = "none"
                 }}
             >
                 {/* Front side */}
-                <div className={`backface-hidden ${!click ? "visible" : "hidden"}`}>
-                    <img className="w-90 py-4 px-7" src={props.frontImgSrc} alt="Front" />
+                <div
+                    className={`backface-hidden ${
+                        !click ? "visible" : "hidden"
+                    }`}
+                >
+                    <img
+                        className="w-90 py-4 px-7"
+                        src={props.frontImgSrc}
+                        alt="Front"
+                    />
                     <h1 className="text-2xl pt-1 pb-6 px-8 leading-normal">
                         {props.frontText || "Default Theme"}
                     </h1>
                 </div>
 
                 {/* Back side */}
-                <div className={`backface-hidden ${!click ? "hidden" : "visible"}`}>
-                    <img className="w-3/5 object-cover rounded-lg p-3 mx-auto mt-3 mb-2" src={props.backImgSrc} alt="Presenter" />
-                    <h1 className="text-lg pt-1 pb-6 px-6 leading-normal">{props.backText || "Insert description here"}</h1>
+                <div
+                    className={`backface-hidden ${
+                        !click ? "hidden" : "visible"
+                    }`}
+                >
+                    <img
+                        className="w-3/5 object-cover rounded-lg p-3 mx-auto mt-3 mb-2"
+                        src={props.backImgSrc}
+                        alt="Presenter"
+                    />
+                    <h1 className="text-lg pt-1 pb-6 px-6 leading-normal">
+                        {props.backText || "Insert description here"}
+                    </h1>
                 </div>
             </div>
         </div>
-    );
+    )
 }
 
-export default WorkshopCard;
+export default WorkshopCard
