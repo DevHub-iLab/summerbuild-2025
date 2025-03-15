@@ -1,11 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "tailwindcss";
 
+@theme {
+    --color-dh-orange: #eb7407;
+    --color-dh-red: #d03324;
+    --color-dh-grey-100: #19171c;
+    --color-dh-grey-200: #2d2a31;
+    --color-sb-blue-100: #b1f0f7;
+    --color-sb-blue-200: #81bfda;
+    --color-sb-yellow-100: #f5f0cd;
+    --color-sb-yellow-200: #fada7a;
+    --color-sb-orange: #fa6b1c;
+}
+
 * {
     font-family: "Poppins", serif;
 }
 body {
-    background-color: #faf9f6;
+    background-color: #f5f2dd;
     font-family: Arial, Helvetica, sans-serif;
 }
 
