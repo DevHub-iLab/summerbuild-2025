@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { IoIosMenu, IoMdClose } from "react-icons/io"
+import SummerBuild25 from "../../assets/summerbuild25logo.svg"
 
 function NewNav() {
     const [navbar, setNavbar] = useState(false) // Tracks background change
@@ -46,79 +47,77 @@ function NewNav() {
     return (
         <>
             <svg
-                class="absolute top-0 left-0 z-[-1] h-auto w-auto"
-                viewBox="0 0 1440 320"
-            >
+                class="absolute z-[-1] h-auto w-auto"
+                viewBox="10 100 1440 480">
                 <path
-                    fill="#f8f4d8"
-                    fill-opacity="1"
-                    d="M0,160L17.1,154.7C34.3,149,69,139,103,128C137.1,117,171,107,206,122.7C240,139,274,181,309,218.7C342.9,256,377,288,
-            411,288C445.7,288,480,256,514,229.3C548.6,203,583,181,617,181.3C651.4,181,686,203,720,213.3C754.3,224,789,224,823,208C857.1,192,891,160,926,160C960,160,994,
-            192,1029,186.7C1062.9,181,1097,139,1131,112C1165.7,85,1200,75,1234,85.3C1268.6,96,1303,128,1337,160C1371.4,192,1406,224,1423,240L1440,256L1440,0L1422.9,0C1405.7,
-            0,1371,0,1337,0C1302.9,0,1269,0,1234,0C1200,0,1166,0,1131,0C1097.1,0,1063,0,1029,0C994.3,0,960,0,926,0C891.4,0,857,0,823,0C788.6,0,754,0,720,0C685.7,0,651,0,617,
-            0C582.9,0,549,0,514,0C480,0,446,0,411,0C377.1,0,343,0,309,0C274.3,0,240,0,206,0C171.4,0,137,0,103,0C68.6,0,34,0,17,0L0,0Z"
-                ></path>
+                    d="M109.474 347.754C66.984 350.169 21.4949 328.709 9.13968e-06 308.962L4.67713e-05 0.000244141L2093 0.000375473L2093 359.887C1918.04 373.19 1932.98 320.479 1848.5 320.479C1795.51 318.608 1724.39 349.444 1649.61 359.887C1547.51 374.144 1459.75 317.19 1385.5 312.225C1276.03 304.903 1318.19 323.927 1231.21 327.668C1180.22 328.084 1153.72 325.589 1091.74 327.668C988.264 327.668 1021.95 366.01 828.5 371C714.629 371 637 357 494.5 384C368.5 363.807 388.686 308.962 336.92 308.962C249.44 308.962 151.964 345.338 109.474 347.754Z"
+                    fill="#B2E1F2"
+                />
+                <path
+                    d="M128.469 294.757C81.632 304.804 41.7894 290.878 5.17208e-06 277.537L3.8976e-05 0.00012207L2093 0.000253402C2093 0.000253402 2072.06 207.765 2093 231.757L2093 314.542C2036.1 336.573 1991.36 285.381 1916.5 276.573C1850.31 268.785 1828.84 273.021 1760.58 276.573C1686.48 280.427 1670.47 242.734 1596 240.398C1530.75 238.35 1516.81 285.927 1471.5 266.333C1432.77 249.586 1419.2 244.116 1364 240.398C1294.57 235.721 1300.75 278.032 1230.5 276.573C1186.09 275.65 1138.64 269.863 1095 266.333C1016.58 259.989 1034.64 304.314 956.272 297.87C902.838 293.476 892.906 270.347 839.3 266.333C752.38 259.824 729.012 309.169 640.847 311.356C503.346 314.766 480.606 202.79 360.414 230.719C309.41 242.571 330.559 267.287 272.435 269.86C232.621 271.622 216.649 247.855 178.457 252.846C136.488 258.331 167.559 286.373 128.469 294.757Z"
+                    fill="#8EDCF9"
+                />
+                <path
+                    d="M125 148.629C80.6639 135.977 44.8535 153.071 1.19201e-05 141.099L2.52792e-05 -0.000183105L2093 0.000107918L2093 267C1972.34 267.207 2020.84 153.629 1904 171.78C1816.67 185.347 1824.69 123.07 1734.5 123.5C1640.47 123.948 1589.18 180.957 1505.5 155.129C1417.14 127.857 1382.93 85.6217 1297 115.584C1241.67 134.876 1204.09 124.377 1146.5 141.099C1020.5 177.688 1003.26 134.232 888.5 141.099C795.115 146.687 782.794 222.683 689 224.531C579.829 226.682 554.999 145.364 446 141.099C346.582 137.209 296.422 218.403 206 193.206C167.113 182.37 163.721 159.678 125 148.629Z"
+                    fill="#66DAFB"
+                />
             </svg>
 
             {/* Desktop Navbar */}
-            <div
-                className={`fixed top-0 z-50 px-16 transition-all duration-300`}
-            >
-                <nav
-                    className={`transition-all duration-100 ${
-                        navbar
-                            ? "border-b border-[#FA6B1C]/10 bg-[#f8f4d8]/80 shadow-lg backdrop-blur-md"
-                            : "bg-transparent"
-                    }`}
-                >
-                    <ul className="z-50 mx-auto hidden h-16 w-full max-w-[1000px] items-center justify-around px-4 text-xl font-bold text-[#FA6B1C] md:flex">
-                        <li
-                            className="cursor-pointer pt-4"
-                            onClick={() => scrollToSection("about")}
-                        >
-                            About
-                        </li>
-                        <li
-                            className="cursor-pointer pt-4"
-                            onClick={() => scrollToSection("schedule")}
-                        >
-                            Schedule
-                        </li>
-                        <li
-                            className="cursor-pointer pt-4"
-                            onClick={() =>
-                                window.scrollTo({ top: 0, behavior: "smooth" })
-                            }
-                        >
-                            Logo
-                        </li>
-                        <li
-                            className="cursor-pointer pt-4"
-                            onClick={() => scrollToSection("workshop")}
-                        >
-                            Workshops
-                        </li>
-                        <li
-                            className="cursor-pointer pt-4"
-                            onClick={() => scrollToSection("faq")}
-                        >
-                            FAQ
-                        </li>
-                    </ul>
-                </nav>
+            <div className="flex max-w-full justify-center">
+                <div
+                    className={`fixed z-50 m-auto mt-8 w-full max-w-[80%] px-[8vw] transition-all duration-300`}>
+                    <nav
+                        className={`rounded-4xl bg-[#f8f4d8] drop-shadow-xl transition-all duration-100`}>
+                        <ul
+                            className={`z-50 mx-auto hidden h-[8vh] items-center justify-around px-4 text-[2vh] font-bold text-[#323854] md:flex ${showNavbar ? "" : ""}`}>
+                            <li
+                                className="cursor-pointer transition-all duration-100 hover:underline"
+                                onClick={() => scrollToSection("about")}>
+                                About
+                            </li>
+                            <li
+                                className="cursor-pointer transition-all duration-100 hover:underline"
+                                onClick={() => scrollToSection("schedule")}>
+                                Schedule
+                            </li>
+                            <li
+                                className="cursor-pointer transition-all duration-100 hover:underline"
+                                onClick={() =>
+                                    window.scrollTo({
+                                        top: 0,
+                                        behavior: "smooth",
+                                    })
+                                }>
+                                <img
+                                    src={SummerBuild25}
+                                    alt="SummerBuild Logo"
+                                    className="z-2 h-[10vh] rounded-[3rem] bg-[#f8f4d8] px-16 py-2 backdrop-blur-md transition-all duration-100 hover:scale-110"
+                                />
+                            </li>
+                            <li
+                                className="cursor-pointer transition-all duration-100 hover:underline"
+                                onClick={() => scrollToSection("workshop")}>
+                                Workshops
+                            </li>
+                            <li
+                                className="cursor-pointer transition-all duration-100 hover:underline"
+                                onClick={() => scrollToSection("faq")}>
+                                FAQ
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-
             {/* Mobile Navbar */}
             <div
-                className={`fixed top-0 z-50 w-full transition-all duration-300`}
-            >
+                className={`fixed top-0 z-50 w-full transition-all duration-300`}>
                 <div
                     className={`transition-all duration-300 ${
                         navMobile || navbar
-                            ? "border-b border-[#FA6B1C]/10 bg-[#f8f4d8]/90 shadow-lg backdrop-blur-md"
+                            ? "rounded-lg bg-[#f8f4d8]/80 shadow-lg backdrop-blur-md"
                             : "bg-transparent"
-                    } flex w-full flex-col items-center justify-start p-4 md:hidden`}
-                >
+                    } flex w-full flex-col items-center justify-start p-2 md:hidden`}>
                     {/* Mobile Menu Icon (Toggles Menu) */}
                     <div onClick={handleMobileNav} className="cursor-pointer">
                         {navMobile ? (
@@ -134,16 +133,14 @@ function NewNav() {
                             navMobile
                                 ? "max-h-[500px] scale-y-100 opacity-100"
                                 : "max-h-0 scale-y-0 opacity-0"
-                        }`}
-                    >
+                        }`}>
                         <ul className="mt-5 text-center text-lg font-bold text-[#FA6B1C] sm:text-xl md:text-2xl">
                             <li
                                 className="cursor-pointer py-5"
                                 onClick={() => {
                                     scrollToSection("about")
                                     setNavMobile(false)
-                                }}
-                            >
+                                }}>
                                 About
                             </li>
                             <li
@@ -151,8 +148,7 @@ function NewNav() {
                                 onClick={() => {
                                     scrollToSection("schedule")
                                     setNavMobile(false)
-                                }}
-                            >
+                                }}>
                                 Schedule
                             </li>
                             <li
@@ -163,8 +159,7 @@ function NewNav() {
                                         behavior: "smooth",
                                     })
                                     setNavMobile(false)
-                                }}
-                            >
+                                }}>
                                 Logo
                             </li>
                             <li
@@ -172,8 +167,7 @@ function NewNav() {
                                 onClick={() => {
                                     scrollToSection("workshop")
                                     setNavMobile(false)
-                                }}
-                            >
+                                }}>
                                 Workshops
                             </li>
                             <li
@@ -181,8 +175,7 @@ function NewNav() {
                                 onClick={() => {
                                     scrollToSection("faq")
                                     setNavMobile(false)
-                                }}
-                            >
+                                }}>
                                 FAQ
                             </li>
                         </ul>
