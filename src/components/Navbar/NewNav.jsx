@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { IoIosMenu, IoMdClose } from "react-icons/io"
-import SummerBuild25 from "../../assets/summerbuild25logo.svg"
+import SummerBuild25 from "../../assets/sb25.png"
+import SummerBuild25Mobile from "../../assets/sb25mobile.png"
 
 function NewNav() {
     const [navbar, setNavbar] = useState(false) // Tracks background change
@@ -56,7 +57,7 @@ function NewNav() {
         <>
             <svg
                 class="absolute z-[-1] h-auto w-auto"
-                viewBox="10 100 1440 480">
+                viewBox="10 150 1440 1440">
                 <path
                     d="M109.474 347.754C66.984 350.169 21.4949 328.709 9.13968e-06 308.962L4.67713e-05 0.000244141L2093 0.000375473L2093 359.887C1918.04 373.19 1932.98 320.479 1848.5 320.479C1795.51 318.608 1724.39 349.444 1649.61 359.887C1547.51 374.144 1459.75 317.19 1385.5 312.225C1276.03 304.903 1318.19 323.927 1231.21 327.668C1180.22 328.084 1153.72 325.589 1091.74 327.668C988.264 327.668 1021.95 366.01 828.5 371C714.629 371 637 357 494.5 384C368.5 363.807 388.686 308.962 336.92 308.962C249.44 308.962 151.964 345.338 109.474 347.754Z"
                     fill="#B2E1F2"
@@ -82,21 +83,11 @@ function NewNav() {
             {/* Desktop Navbar */}
             <div className="flex max-w-full justify-center">
                 <div
-                    className={`fixed z-50 m-auto mt-8 w-full max-w-[80%] px-[8vw] transition-all duration-300`}>
+                    className={`max-w[90rem] md:max-w[70rem] fixed z-50 m-auto mt-6 w-full px-[4rem] transition-all duration-300 lg:px-[8rem]`}>
                     <nav
-                        className={`rounded-4xl bg-[#f8f4d8] drop-shadow-xl transition-all duration-100`}>
+                        className={`drop-shadow-xl backdrop-blur-md transition-all duration-100`}>
                         <ul
-                            className={`z-50 mx-auto hidden h-[8vh] items-center justify-around px-4 text-[2vh] font-bold text-[#323854] md:flex ${showNavbar ? "" : ""}`}>
-                            <li
-                                className="cursor-pointer transition-all duration-100 hover:underline"
-                                onClick={() => scrollToSection("about")}>
-                                About
-                            </li>
-                            <li
-                                className="cursor-pointer transition-all duration-100 hover:underline"
-                                onClick={() => scrollToSection("schedule")}>
-                                Schedule
-                            </li>
+                            className={`text[1rem] z-50 mx-auto hidden h-[4rem] items-center justify-around rounded-4xl bg-[#f8f4d8]/80 py-2 pr-4 font-bold text-[#323854] md:flex lg:text-[1.5rem] ${showNavbar ? "" : ""}`}>
                             <li
                                 className="cursor-pointer transition-all duration-100 hover:underline"
                                 onClick={() =>
@@ -108,9 +99,20 @@ function NewNav() {
                                 <img
                                     src={SummerBuild25}
                                     alt="SummerBuild Logo"
-                                    className="z-2 h-[10vh] rounded-[3rem] bg-[#f8f4d8] px-16 py-2 backdrop-blur-md transition-all duration-100 hover:scale-110"
+                                    className="z-2 h-[4rem] w-[8rem] rounded-[3rem] transition-all duration-100 hover:scale-110"
                                 />
                             </li>
+                            <li
+                                className="cursor-pointer transition-all duration-100 hover:underline"
+                                onClick={() => scrollToSection("achievements")}>
+                                Achievements
+                            </li>
+                            <li
+                                className="cursor-pointer transition-all duration-100 hover:underline"
+                                onClick={() => scrollToSection("schedule")}>
+                                Schedule
+                            </li>
+
                             <li
                                 className="cursor-pointer transition-all duration-100 hover:underline"
                                 onClick={() => scrollToSection("workshop")}>
@@ -127,20 +129,16 @@ function NewNav() {
             </div>
             {/* Mobile Navbar */}
             <div
-                className={`fixed top-0 z-50 w-full transition-all duration-300`}>
+                className={`fixed top-0 z-50 flex w-full justify-center py-2 transition-all duration-300`}>
                 <div
-                    className={`transition-all duration-300 ${
-                        navMobile || navbar
-                            ? "rounded-lg bg-[#f8f4d8]/80 shadow-lg backdrop-blur-md"
-                            : "bg-transparent"
-                    } flex w-full flex-col items-center justify-start p-2 md:hidden`}>
+                    className={`flex w-[80%] flex-col items-center justify-start rounded-lg bg-[#f8f4d8]/80 p-2 shadow-lg backdrop-blur-md transition-all duration-300 md:hidden`}>
                     {/* Mobile Menu Icon (Toggles Menu) */}
                     <div onClick={handleMobileNav} className="cursor-pointer">
-                        {navMobile ? (
-                            <IoMdClose className="text-[#FA6B1C]" size={30} />
-                        ) : (
-                            <IoIosMenu className="text-[#FA6B1C]" size={30} />
-                        )}
+                        <img
+                            src={SummerBuild25Mobile}
+                            alt="SummerBuild Logo"
+                            className="z-2 h-[2rem] w-full"
+                        />
                     </div>
 
                     {/* Menu Items (Shown Only When navMobile is True) */}
@@ -150,17 +148,17 @@ function NewNav() {
                                 ? "max-h-[500px] scale-y-100 opacity-100"
                                 : "max-h-0 scale-y-0 opacity-0"
                         }`}>
-                        <ul className="mt-5 text-center text-lg font-bold text-[#FA6B1C] sm:text-xl md:text-2xl">
+                        <ul className="mt-2 text-center text-lg font-bold text-[#FA6B1C] sm:text-xl md:text-2xl">
                             <li
-                                className="cursor-pointer py-5"
+                                className="cursor-pointer py-2"
                                 onClick={() => {
-                                    scrollToSection("about")
+                                    scrollToSection("achievements")
                                     setNavMobile(false)
                                 }}>
-                                About
+                                Achievements
                             </li>
                             <li
-                                className="cursor-pointer py-5"
+                                className="cursor-pointer py-2"
                                 onClick={() => {
                                     scrollToSection("schedule")
                                     setNavMobile(false)
@@ -168,18 +166,7 @@ function NewNav() {
                                 Schedule
                             </li>
                             <li
-                                className="cursor-pointer py-5"
-                                onClick={() => {
-                                    window.scrollTo({
-                                        top: 0,
-                                        behavior: "smooth",
-                                    })
-                                    setNavMobile(false)
-                                }}>
-                                Logo
-                            </li>
-                            <li
-                                className="cursor-pointer py-5"
+                                className="cursor-pointer py-2"
                                 onClick={() => {
                                     scrollToSection("workshop")
                                     setNavMobile(false)
@@ -187,7 +174,7 @@ function NewNav() {
                                 Workshops
                             </li>
                             <li
-                                className="cursor-pointer py-5"
+                                className="cursor-pointer py-2"
                                 onClick={() => {
                                     scrollToSection("faq")
                                     setNavMobile(false)
