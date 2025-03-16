@@ -3,6 +3,7 @@ import { IoIosMenu, IoMdClose } from "react-icons/io"
 import SummerBuild25 from "../../assets/sb25.png"
 import SummerBuild25Mobile from "../../assets/sb25mobile.png"
 
+
 function NewNav() {
     const [navbar, setNavbar] = useState(false) // Tracks background change
     const [showNavbar, setShowNavbar] = useState(true) // Tracks visibility

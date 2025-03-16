@@ -1,4 +1,5 @@
 import ScheduleCard from "./ScheduleCard.jsx"
+
 function Schedule() {
     return (
         <div id="schedule" className="mt-20 flex flex-col items-center">
