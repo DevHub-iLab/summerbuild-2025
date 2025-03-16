@@ -11,7 +11,7 @@ function WorkshopCard(props) {
         <div className="mb-16 flex items-center justify-center perspective-[1000px] md:mx-10">
             {/* The actual card with wiggle animation */}
             <div
-                className="mx-auto w-[10rem] rounded-2xl text-center text-[15px] shadow-xl sm:w-[10rem] sm:text-[20px] md:w-[15rem] md:text-[25px]"
+                className="mx-auto w-[14rem] rounded-2xl text-center text-[15px] shadow-xl sm:w-[10rem] sm:text-[20px] md:w-[15rem] md:text-[25px]"
                 // onClick={handleClick}
                 style={{
                     backgroundColor: props.color || "transparent",
