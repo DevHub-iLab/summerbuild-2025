@@ -1,4 +1,5 @@
 import ChallengeCard from "./ChallengeCard.jsx"
+import { FlaskConical, Paintbrush, Wrench, Users } from "lucide-react"
 
 function Challenge() {
     return (
@@ -16,21 +17,25 @@ function Challenge() {
                     color="#B1F0F7"
                     text="Best UI/UX"
                     description="Create an intuitive user experience."
+                    icon={<Paintbrush size={48} color="#fa6b1c" />}
                 />
                 <ChallengeCard
                     color="#FADA7A"
                     text="Most Innovative"
                     description="Innovate something completely new."
+                    icon={<FlaskConical size={48} color="#fa6b1c" />}
                 />
                 <ChallengeCard
                     color="#f7b1c1"
                     text="Most Useful"
                     description="Build a practical solution."
+                    icon={<Wrench size={48} color="#fa6b1c" />}
                 />
                 <ChallengeCard
                     color="#f7d7e1"
                     text="Best Freshmen Team"
                     description="Your entire team are all Year 1 students."
+                    icon={<Users size={48} color="#fa6b1c" />}
                 />
             </div>
         </div>
