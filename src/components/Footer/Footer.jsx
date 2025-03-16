@@ -10,11 +10,11 @@ function Footer() {
                     by
                 </p>
                 <a
-                    className="hover:mouse-pointer mx-auto rounded-lg object-cover"
+                    className="mx-auto rounded-xl object-cover hover:!cursor-pointer"
                     href="https://devhub.ilabccds.com"
                     target="_blank">
                     <img
-                        className="mx-auto h-8 w-auto transition-all duration-300 ease-in-out hover:scale-105"
+                        className="mx-auto h-8 w-auto transition-all duration-300 ease-in-out hover:scale-102"
                         src={DevHubLogo}
                         alt="DevHub Logo"
                     />
@@ -22,7 +22,7 @@ function Footer() {
             </div>
             <div className="flex w-auto justify-center gap-4">
                 <a
-                    className="group relative cursor-pointer"
+                    className="group relative !cursor-pointer"
                     href="https://forms.office.com/r/JQm9nUgx8s"
                     target="_blank">
                     <Send className="h-10 w-10 p-1 text-gray-700 transition-colors hover:text-blue-500" />
@@ -32,7 +32,7 @@ function Footer() {
                 </a>
 
                 <a
-                    className="group relative cursor-pointer"
+                    className="group relative !cursor-pointer"
                     href="https://instagram.com/ntu.devhub"
                     target="_blank">
                     <Instagram className="h-10 w-10 p-1 text-gray-700 transition-colors hover:text-pink-600" />

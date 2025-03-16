@@ -2,7 +2,7 @@ function ScheduleCard(props) {
     return (
         <div className="group flex h-auto w-full items-center p-5">
             <div
-                className="flex h-15 w-[140px] flex-shrink-0 transform items-center justify-center rounded-4xl text-center transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-gray-400 md:w-[200px]"
+                className="group-hover:shadow-dh-grey-200/40 flex h-15 w-[140px] flex-shrink-0 transform items-center justify-center rounded-4xl text-center transition-all duration-300 ease-in-out group-hover:scale-102 group-hover:shadow-lg md:w-[200px]"
                 style={{ backgroundColor: props.color || "transparent" }}>
                 <h1
                     className="flex items-center text-lg sm:text-xl"

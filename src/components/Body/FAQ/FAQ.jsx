@@ -20,7 +20,7 @@ function FAQ() {
                 {topics.map(topic => (
                     <h1
                         key={topic}
-                        className={`mb-2.5 cursor-pointer text-[18px] font-semibold sm:mb-5 sm:text-[25px] md:mb-7.5 md:text-[30px] ${
+                        className={`mb-2.5 !cursor-pointer text-[18px] font-semibold sm:mb-5 sm:text-[25px] md:mb-7.5 md:text-[30px] ${
                             active === topic
                                 ? "text-[#1E1E1E]"
                                 : "text-[#81BFDA]"

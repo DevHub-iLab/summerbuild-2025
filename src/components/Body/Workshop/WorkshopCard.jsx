@@ -45,7 +45,7 @@ function WorkshopCard(props) {
                     }`}
                 >
                     <img
-                        className="mx-auto mt-3 mb-2 w-3/5 rounded-lg object-cover p-3"
+                        className="mx-auto mt-3 mb-2 w-3/5 rounded-xl object-cover p-3"
                         src={props.backImgSrc}
                         alt="Presenter"
                     />

@@ -3,7 +3,6 @@ import { IoIosMenu, IoMdClose } from "react-icons/io"
 import SummerBuild25 from "../../assets/sb25.png"
 import SummerBuild25Mobile from "../../assets/sb25mobile.png"
 
-
 function NewNav() {
     const [navbar, setNavbar] = useState(false) // Tracks background change
     const [showNavbar, setShowNavbar] = useState(true) // Tracks visibility
@@ -85,10 +84,9 @@ function NewNav() {
             <div className="flex max-w-full justify-center">
                 <div
                     className={`max-w[90rem] md:max-w[70rem] fixed z-50 m-auto mt-6 w-full px-[4rem] transition-all duration-300 lg:px-[8rem]`}>
-                    <nav
-                        className={`drop-shadow-xl backdrop-blur-md transition-all duration-100`}>
+                    <nav className={`transition-all duration-100`}>
                         <ul
-                            className={`text[1rem] z-50 mx-auto hidden h-[4rem] items-center justify-around rounded-4xl bg-[#f8f4d8]/80 py-2 pr-4 font-bold text-[#323854] md:flex lg:text-[1.5rem] ${showNavbar ? "" : ""}`}>
+                            className={`text[1rem] z-50 mx-auto hidden h-[4rem] items-center justify-around rounded-4xl bg-[#f8f4d8]/80 py-2 pr-4 font-bold text-[#323854] drop-shadow-xl backdrop-blur-md md:flex lg:text-[1.5rem] ${showNavbar ? "" : ""}`}>
                             <li
                                 className="cursor-pointer transition-all duration-100 hover:underline"
                                 onClick={() =>
@@ -132,7 +130,7 @@ function NewNav() {
             <div
                 className={`fixed top-0 z-50 flex w-full justify-center py-2 transition-all duration-300`}>
                 <div
-                    className={`flex w-[80%] flex-col items-center justify-start rounded-lg bg-[#f8f4d8]/80 p-2 shadow-lg backdrop-blur-md transition-all duration-300 md:hidden`}>
+                    className={`flex w-[80%] flex-col items-center justify-start rounded-xl bg-[#f8f4d8]/80 p-2 shadow-lg backdrop-blur-md transition-all duration-300 md:hidden`}>
                     {/* Mobile Menu Icon (Toggles Menu) */}
                     <div onClick={handleMobileNav} className="cursor-pointer">
                         <img
