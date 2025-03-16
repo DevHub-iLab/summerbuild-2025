@@ -8,11 +8,11 @@ function WorkshopCard(props) {
     }
 
     return (
-        <div className="flex items-center justify-center perspective-[1000px] md:mx-10">
+        <div className="mb-16 flex items-center justify-center perspective-[1000px] md:mx-10">
             {/* The actual card with wiggle animation */}
             <div
-                className="mx-auto w-[200px] rounded-2xl text-center text-[15px] shadow-xl sm:w-[225px] sm:text-[20px] md:w-[250px] md:text-[25px]"
-                onClick={handleClick}
+                className="mx-auto w-[10rem] rounded-2xl text-center text-[15px] shadow-xl sm:w-[10rem] sm:text-[20px] md:w-[15rem] md:text-[25px]"
+                // onClick={handleClick}
                 style={{
                     backgroundColor: props.color || "transparent",
                     transformStyle: "preserve-3d",
@@ -22,14 +22,12 @@ function WorkshopCard(props) {
                 }}
                 onMouseLeave={e => {
                     e.currentTarget.style.animation = "none"
-                }}
-            >
+                }}>
                 {/* Front side */}
                 <div
                     className={`backface-hidden ${
                         !click ? "visible" : "hidden"
-                    }`}
-                >
+                    }`}>
                     <img
                         className="w-90 px-7 py-4"
                         src={props.frontImgSrc}
@@ -40,7 +38,7 @@ function WorkshopCard(props) {
                     </h1>
                 </div>
 
-                {/* Back side */}
+                {/* Back side
                 <div
                     className={`backface-hidden ${
                         !click ? "hidden" : "visible"
@@ -54,7 +52,7 @@ function WorkshopCard(props) {
                     <h1 className="px-6 pt-1 pb-6 text-lg leading-normal">
                         {props.backText || "Insert description here"}
                     </h1>
-                </div>
+                </div> */}
             </div>
         </div>
     )

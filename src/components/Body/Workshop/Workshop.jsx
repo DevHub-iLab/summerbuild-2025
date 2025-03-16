@@ -6,6 +6,7 @@ import WorkshopCard from "./WorkshopCard.jsx"
 import HTMLLogo from "../../../assets/htmlIcon.svg"
 import ReactLogo from "../../../assets/reactIcon.svg"
 import ExpressLogo from "../../../assets/expressIcon.svg"
+import Eyes from "../../../assets/eyes.png"
 
 function Workshop() {
     return (
@@ -16,7 +17,7 @@ function Workshop() {
             </h1>
 
             {/* Swiper for mobile */}
-            <div className="mt-10 md:hidden">
+            <div className="mt-10 xl:hidden">
                 <Swiper
                     modules={[Autoplay, Pagination]}
                     autoplay={{ delay: 3000, disableOnInteraction: false }}
@@ -25,14 +26,12 @@ function Workshop() {
                     spaceBetween={10}
                     slidesPerView={1}
                     centeredSlides={true}
-                    className="flex w-full max-w-xs items-center justify-center"
-                >
+                    className="flex w-full max-w-xs items-center justify-center">
                     <SwiperSlide>
                         <WorkshopCard
                             frontImgSrc={HTMLLogo}
                             color="#FADA7A"
                             frontText="HTML/CSS Workshop"
-                            backText="This workshop is presented by XYZ. It will cover introduction to HTML."
                         />
                     </SwiperSlide>
                     <SwiperSlide>
@@ -48,17 +47,23 @@ function Workshop() {
                             color="#FADA7A"
                             frontText="Express.js Workshop"
                         />
+                    </SwiperSlide>{" "}
+                    <SwiperSlide>
+                        <WorkshopCard
+                            frontImgSrc={Eyes}
+                            color="#FADA7A"
+                            frontText="More to be announced!"
+                        />
                     </SwiperSlide>
                 </Swiper>
             </div>
 
             {/* Normal layout for larger screens */}
-            <div className="mt-10 hidden justify-center md:flex">
+            <div className="mt-10 hidden justify-center xl:flex">
                 <WorkshopCard
                     frontImgSrc={HTMLLogo}
                     color="#FADA7A"
                     frontText="HTML/CSS Workshop"
-                    backText="This workshop is presented by XYZ. It will cover introduction to HTML."
                 />
                 <WorkshopCard
                     frontImgSrc={ReactLogo}
@@ -69,6 +74,11 @@ function Workshop() {
                     frontImgSrc={ExpressLogo}
                     color="#FADA7A"
                     frontText="Express.js Workshop"
+                />
+                <WorkshopCard
+                    frontImgSrc={Eyes}
+                    color="#FADA7A"
+                    frontText="More to be announced!"
                 />
             </div>
         </div>
