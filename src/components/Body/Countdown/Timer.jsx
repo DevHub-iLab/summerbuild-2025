@@ -31,8 +31,7 @@ function Timer(props) {
     const timerComponents = Object.keys(timeLeft).map(interval => (
         <span
             key={interval}
-            className="mx-1.5 flex flex-col items-center text-base font-semibold uppercase sm:mx-3 sm:text-xl"
-        >
+            className="mx-1.5 flex flex-col items-center text-base font-semibold uppercase sm:mx-3 sm:text-xl">
             <p>{interval}</p>
             <p>{timeLeft[interval]}</p>
         </span>
@@ -46,8 +45,7 @@ function Timer(props) {
             }}
             onMouseLeave={e => {
                 e.currentTarget.style.animation = "none"
-            }}
-        >
+            }}>
             <h2 className="mb-4 text-xl font-bold sm:text-3xl">
                 {props.timer}
             </h2>
