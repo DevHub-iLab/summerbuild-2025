@@ -5,6 +5,7 @@ import "swiper/css/pagination";
 import AchievementCard from "./AchievementCard.jsx"
 
 function Achievement(){
+    return <></>
     return(
         <div className='flex flex-col mt-20'>
             <h1 className='uppercase justify-center text-center font-bold md:text-4xl sm:text-3xl text-2xl'> 

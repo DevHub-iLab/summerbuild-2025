@@ -1,5 +1,5 @@
 import SponsorCard from "./SponsorCard"
-
+import ILAB from '../../../assets/ilab.png'
 function Sponsor(){
     return(
         <div className='flex flex-col mt-20 items-center'>
@@ -8,7 +8,8 @@ function Sponsor(){
                 <span className="text-[#1E1E1E]">by</span>
             </h1>
             <div className='mt-5 max-w-[325px]'>
-                <SponsorCard color='#B1F0F7' text='CCDS Innovation Lab' imgSrc=''/>
+                <img src={ILAB} />
+                {/* <SponsorCard color='#B1F0F7' text='CCDS Innovation Lab' imgSrc=''/> */}
             </div>
         </div>
     )

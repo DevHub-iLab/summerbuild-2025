@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { IoIosMenu, IoMdClose } from "react-icons/io";
+import logo from "../../assets/icon.png";
 
 function NewNav() {
     const [navbar, setNavbar] = useState(false) // Tracks background change
@@ -61,7 +62,9 @@ function NewNav() {
             <ul className="hidden md:flex z-50 md: justify-around items-center h-24 max-w-[1240px] font-bold mx-auto px-4 text-[#FA6B1C] md:text-2xl sm:text-xl text-lg">
               <li className="pt-4 cursor-pointer" onClick={() => scrollToSection('about')}>About</li>
               <li className="pt-4 cursor-pointer" onClick={() => scrollToSection('schedule')}>Schedule</li>
-              <li className="pt-4 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Logo</li>
+              <li className="pt-4 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                  <img src={logo} alt="Logo" className="h-20 w-auto" />
+                  </li>
               <li className="pt-4 cursor-pointer" onClick={() => scrollToSection('workshop')}>Workshops</li>
               <li className="pt-4 cursor-pointer" onClick={() => scrollToSection('faq')}>FAQ</li>
             </ul>
@@ -88,7 +91,6 @@ function NewNav() {
                     <ul className="font-bold text-[#FA6B1C] md:text-2xl sm:text-xl text-lg text-center mt-5">
                         <li className="py-5 cursor-pointer" onClick={() => { scrollToSection('about'); setNavMobile(false); }}>About</li>
                         <li className="py-5 cursor-pointer" onClick={() => { scrollToSection('schedule'); setNavMobile(false); }}>Schedule</li>
-                        <li className="py-5 cursor-pointer" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); setNavMobile(false); }}>Logo</li>
                         <li className="py-5 cursor-pointer" onClick={() => { scrollToSection('workshop'); setNavMobile(false); }}>Workshops</li>
                         <li className="py-5 cursor-pointer" onClick={() => { scrollToSection('faq'); setNavMobile(false); }}>FAQ</li>
                     </ul>

@@ -8,8 +8,8 @@ function Schedule(){
             <div className='flex flex-col items-center mt-5 w-auto'>
                 <ScheduleCard color='#81BFDA' fontWeight='bold' header='WEEK 1'/>
                 <ScheduleCard color='#B1F0F7' fontWeight='400' header='26 May' content='Opening Ceremony'/>
-                <ScheduleCard color='#B1F0F7' fontWeight='400' header='27 May' content={`AM: HTML/CSS/JS Workshop\nPM: React Workshop`}/>
-                <ScheduleCard color='#B1F0F7' fontWeight='400' header='28 May' content={`AM: Express/Backend Workshop\nPM: Git Workshop`}/>
+                <ScheduleCard color='#B1F0F7' fontWeight='400' header='TBC' content={`HTML/CSS/JS Workshop\nReact Workshop`}/>
+                <ScheduleCard color='#B1F0F7' fontWeight='400' header='TBC' content={`Express/Backend Workshop\nGit Workshop`}/>
                 <ScheduleCard color='#81BFDA' fontWeight='bold' header='WEEK 2-4' content={`Building Period\nCheck-in Sessions`}/>
                 <ScheduleCard color='#81BFDA' fontWeight='bold' header='WEEK 5'/>
                 <ScheduleCard color='#B1F0F7' fontWeight='400' header='26 June' content='Final Building Period'/>
