@@ -44,7 +44,7 @@ function AboutCard() {
                         <span className="font-bold">20th May 2025!</span>
                     </p>
                     <a
-                        className="bg-dh-orange mt-2 flex w-full flex-col justify-between gap-2 rounded-xl px-4 py-1 text-white md:py-2"
+                        className="bg-dh-orange mt-2 flex w-full flex-col justify-between gap-2 rounded-xl px-4 py-1 font-bold text-white md:py-2"
                         href="https://forms.office.com/r/vG6SpV4JmG"
                         target="_blank">
                         <div className="flex flex-row items-center gap-4">
