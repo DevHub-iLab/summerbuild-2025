@@ -15,7 +15,11 @@ function Workshop() {
                 <span className="text-[#1E1E1E]">workshops </span>
                 <span className="text-[#FA6B1C]">available</span>
             </h1>
-
+            <h3 className="mt-3 text-center text-lg font-semibold text-[#1E1E1E]">
+                Learn industry-relevant skills from our workshops!
+                <br />
+                Stay tuned for updates on upcoming workshops & dates!
+            </h3>
             {/* Swiper for mobile */}
             <div className="mt-10 xl:hidden">
                 <Swiper
@@ -31,7 +35,7 @@ function Workshop() {
                         <WorkshopCard
                             frontImgSrc={HTMLLogo}
                             color="#FADA7A"
-                            frontText="HTML/CSS Workshop"
+                            frontText="HTML/CSS/JS Workshop"
                         />
                     </SwiperSlide>
                     <SwiperSlide>
@@ -63,7 +67,7 @@ function Workshop() {
                 <WorkshopCard
                     frontImgSrc={HTMLLogo}
                     color="#FADA7A"
-                    frontText="HTML/CSS Workshop"
+                    frontText="HTML/CSS/JS Workshop"
                 />
                 <WorkshopCard
                     frontImgSrc={ReactLogo}
