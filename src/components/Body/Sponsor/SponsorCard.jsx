@@ -1,13 +1,18 @@
 function SponsorCard(props) {
-    return(
-        <div className='rounded-md text-center py-1 
-        transition-all duration-300 ease-in-out transform hover:scale-105 
-        hover:shadow-lg hover:shadow-gray-400' 
-        style={{ backgroundColor: props.color || 'transparent'}}>
-            <h1 className='text-xl font-semibold px-10 py-7'>{props.text || 'Default Theme'}</h1>
-            <img className="h-[150px] w-[150px] object-cover rounded-lg mx-auto mb-7" src={props.imgSrc} alt="Logo" />
+    return (
+        <div
+            className="transform rounded-md py-1 text-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:shadow-gray-400"
+            style={{ backgroundColor: props.color || "transparent" }}>
+            <h1 className="px-10 py-7 text-xl font-semibold">
+                {props.text || "Default Theme"}
+            </h1>
+            <img
+                className="mx-auto mb-7 h-[150px] rounded-lg object-cover"
+                src={props.imgSrc}
+                alt="Logo"
+            />
         </div>
     )
-} 
+}
 
 export default SponsorCard
