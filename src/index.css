@@ -6,11 +6,15 @@
     --color-dh-red: #d03324;
     --color-dh-grey-100: #19171c;
     --color-dh-grey-200: #2d2a31;
+    --color-il-blue: #063f74;
     --color-sb-blue-100: #b1f0f7;
     --color-sb-blue-200: #81bfda;
+    --color-sb-blue-300: #4f8cbf;
     --color-sb-yellow-100: #f5f0cd;
     --color-sb-yellow-200: #fada7a;
     --color-sb-orange: #fa6b1c;
+    --color-sb-pink-100: #f7d7e1;
+    --color-sb-pink-200: #f7b1c1;
 }
 
 * {

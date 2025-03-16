@@ -17,25 +17,26 @@ function App() {
             <section id="nav">
                 <NewNav />
             </section>
-            <Tagline />
-            <Countdown />
-            <section id="about">
+            <div className="flex flex-col items-center justify-center">
+                <Tagline />
+                <Countdown />
                 <About />
-            </section>
-            <Challenge />
-            <Achievement />
-            <Prizes />
-            <section id="schedule">
-                <Schedule />
-            </section>
-            <section id="workshop">
-                <Workshop />
-            </section>
-            <section id="faq">
-                <FAQ />
-            </section>
-            <Sponsor />
-            <Footer />
+                <Challenge />
+                <section id="achievements">
+                    <Achievement />
+                </section>
+                <section id="schedule">
+                    <Schedule />
+                </section>
+                <section id="workshop">
+                    <Workshop />
+                </section>
+                <section id="faq">
+                    <FAQ />
+                </section>
+                <Sponsor />
+                <Footer />
+            </div>
         </div>
     )
 }
