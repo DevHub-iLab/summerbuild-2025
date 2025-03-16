@@ -1,13 +1,13 @@
 import AboutCard from "./AboutCard.jsx"
 
-function About(){
-    return(
-        <div id='about' className='flex flex-col mt-20'>
-            <h1 className='uppercase justify-items-center text-center font-bold md:text-4xl sm:text-3xl text-2xl'> 
-                <span className='text-[#1E1E1E]'>about </span> 
-                <span className='text-[#FA6B1C]'>summerbuild 2025</span>
-            </h1>
-            <AboutCard/>
+function About() {
+    return (
+        <div id="about" className="flex flex-col">
+            {/* <h1 className="justify-items-center text-center text-2xl font-bold uppercase sm:text-3xl md:text-4xl">
+                <span className="text-[#1E1E1E]">about </span>
+                <span className="text-[#FA6B1C]">summerbuild 2025</span>
+            </h1> */}
+            <AboutCard />
         </div>
     )
 }

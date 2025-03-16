@@ -1,14 +1,12 @@
-function AchievementCard(props){
-    return(
-        <div className='mb-5 '>
-            <div className="w-0 h-0 mx-10
-                border-l-[120px] border-l-transparent
-                border-b-[150px] border-b-yellow-100
-                border-r-[120px] border-r-transparent"
-                style={{ borderBottomColor: props.color || 'transparent'}}>
+function AchievementCard(props) {
+    return (
+        <div className="mb-5">
+            <div
+                className="text-dh-grey-200 mb-8 h-full w-full rounded-2xl py-4 pr-8 pl-4 text-left md:mb-0"
+                style={{ backgroundColor: props.color || "transparent" }}>
+                <h1 className="text-lg font-bold">{props.level}</h1>
+                <p>{props.description}</p>
             </div>
-            <h1 className='relative bottom-17 font-bold text-center'>{props.level || 'PlaceHolder'}</h1>
-            <p className='relative text-center bottom-14'>{props.description}</p>
         </div>
     )
 }
