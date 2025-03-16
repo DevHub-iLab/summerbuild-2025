@@ -2,10 +2,11 @@ import ScheduleCard from "./ScheduleCard.jsx"
 function Schedule() {
     return (
         <div id="schedule" className="mt-20 flex flex-col items-center">
-            <h1 className="justify-center text-center text-2xl font-bold text-[#1E1E1E] uppercase sm:text-3xl md:text-4xl">
-                Schedule
+            <h1 className="justify-center text-center text-2xl font-bold uppercase sm:text-3xl md:text-4xl">
+                <span className="text-[#1E1E1E]">Programme </span>
+                <span className="text-[#FA6B1C]">Schedule</span>
             </h1>
-            <div className="absolute left-1/2 z-[-1] mt-22 h-[1000px] w-1 -translate-x-[128px] transform bg-[#C6C6C6] sm:-translate-x-[140px] md:h-[1300px] md:-translate-x-[155px]"></div>
+            <div className="absolute left-1/2 z-[-1] mt-22 h-[600px] w-1 -translate-x-[128px] transform bg-[#C6C6C6] sm:-translate-x-[140px] md:h-[600px] md:-translate-x-[155px]"></div>
             <div className="mt-5 flex w-auto flex-col items-center">
                 <ScheduleCard
                     color="#81BFDA"
@@ -21,20 +22,14 @@ function Schedule() {
                 <ScheduleCard
                     color="#B1F0F7"
                     fontWeight="400"
-                    header="27 May"
-                    content={`AM: HTML/CSS/JS Workshop\nPM: React Workshop`}
-                />
-                <ScheduleCard
-                    color="#B1F0F7"
-                    fontWeight="400"
-                    header="28 May"
-                    content={`AM: Express/Backend Workshop\nPM: Git Workshop`}
+                    header="27-31 May"
+                    content={`Various Workshops`}
                 />
                 <ScheduleCard
                     color="#81BFDA"
                     fontWeight="bold"
                     header="WEEK 2-4"
-                    content={`Building Period\nCheck-in Sessions`}
+                    content={`Check-in Sessions with Mentors`}
                 />
                 <ScheduleCard
                     color="#81BFDA"
@@ -45,13 +40,13 @@ function Schedule() {
                     color="#B1F0F7"
                     fontWeight="400"
                     header="26 June"
-                    content="Final Building Period"
+                    content="Project Submission"
                 />
                 <ScheduleCard
                     color="#B1F0F7"
                     fontWeight="400"
                     header="27 June"
-                    content={`Judging\nClosing Ceremony`}
+                    content={`Judging & Closing Ceremony`}
                 />
             </div>
         </div>
