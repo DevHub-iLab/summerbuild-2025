@@ -11,7 +11,7 @@ function Sponsor() {
             <div className="mt-2 flex flex-row gap-8">
                 <a
                     className="hover:!mouse-pointer mx-auto mb-7 rounded-xl object-cover"
-                    href="https://wwww.ilabccds.com"
+                    href="https://www.ilabccds.com"
                     target="_blank">
                     <img
                         className="h-[150px] w-fit transition-all duration-300 ease-in-out hover:scale-102"
