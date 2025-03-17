@@ -136,7 +136,7 @@ function NewNav() {
                         <img
                             src={SummerBuild25Mobile}
                             alt="SummerBuild Logo"
-                            className="z-2 h-[2rem] w-fit"
+                            className="z-2 h-[2rem] w-[6rem]"
                         />
                     </div>
 
