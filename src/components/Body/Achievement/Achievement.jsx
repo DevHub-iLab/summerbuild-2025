@@ -20,7 +20,7 @@ function Achievement() {
                 <img
                     src={MedalPengi}
                     alt="Medals"
-                    className="mt-4 h-[20vh] w-fit md:mt-0"
+                    className="mt-4 h-[20vh] w-[20vh] md:mt-0"
                 />
                 {/* Desktop View */}
                 <div className="align-center mx-2 mt-5 hidden w-auto flex-col justify-center md:flex">
