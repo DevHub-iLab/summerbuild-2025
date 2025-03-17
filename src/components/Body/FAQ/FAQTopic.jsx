@@ -74,6 +74,14 @@ function FAQTopic(props) {
                             </>
                         }
                     />
+                    <FAQCard
+                        question="How many Check-In Sessions are there?"
+                        answer="There are 2 physical Check In sessions throughout the programme. One in the week of 1 June, the other in the week of 16 June. These Check In sessions offer a chance for you to get feedback on your product, network with other groups, learn from one another, and earn more swag!"
+                    />
+                    <FAQCard
+                        question="Can I only attend the workshops?"
+                        answer="The workshops are designed to support the building phase of the event, so we strongly encourage participants to commit to the full programme rather than just attending the workshops. You’ll get much more out of it by applying what you learnt immediately!"
+                    />
                 </div>
             )}
 
@@ -90,6 +98,10 @@ function FAQTopic(props) {
                     <FAQCard
                         question="Can people from other schools be in my team?"
                         answer="Yes, as long as you are all NTU students."
+                    />
+                    <FAQCard
+                        question="What if I don't have a group?"
+                        answer='If you would like to be randomly matched, indicate "-" in the team name during your registration. We will try our best to match you with other participants who have indiciated the same.'
                     />
                 </div>
             )}
