@@ -39,17 +39,17 @@ function AboutCard() {
                         project that you can earn certificates and prizes for
                         your hard work!
                     </p>
-                    <p>
-                        Registration is now open! until{" "}
-                        <span className="font-bold">20th May 2025!</span>
-                    </p>
                     <a
                         className="bg-dh-orange mt-2 flex w-full flex-col justify-between gap-2 rounded-xl px-4 py-1 font-bold text-white md:py-2"
                         href="https://forms.office.com/r/vG6SpV4JmG"
-                        target="_blank">
+                        target="_blank"
+                        aria-disabled="true"
+                        tabIndex="-1"
+                        style={{ pointerEvents: "none", opacity: 0.6 }}>
                         <div className="flex flex-row items-center gap-4">
                             <SquarePen size={32} />
-                            Click here to register on Microsoft Forms!
+                            Registration has closed due to overwhelming
+                            responses!
                         </div>
                     </a>
                 </div>
