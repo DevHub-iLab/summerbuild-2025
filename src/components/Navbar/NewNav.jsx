@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-import { IoIosMenu, IoMdClose } from "react-icons/io"
 import SummerBuild25 from "../../assets/sb25.png"
 import SummerBuild25Mobile from "../../assets/sb25mobile.png"
 
