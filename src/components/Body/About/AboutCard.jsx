@@ -39,17 +39,20 @@ function AboutCard() {
                         project that you can earn certificates and prizes for
                         your hard work!
                     </p>
+                    <p>
+                        <span className="text-dh-orange font-bold">
+                            Registration has closed
+                        </span>{" "}
+                        due to overwhelming responses! You can still join the
+                        waitlist in case any slots open up.
+                    </p>
                     <a
                         className="bg-dh-orange mt-2 flex w-full flex-col justify-between gap-2 rounded-xl px-4 py-1 font-bold text-white md:py-2"
-                        href="https://forms.office.com/r/vG6SpV4JmG"
-                        target="_blank"
-                        aria-disabled="true"
-                        tabIndex="-1"
-                        style={{ pointerEvents: "none", opacity: 0.6 }}>
+                        href="https://forms.office.com/r/6PjUscwVDR"
+                        target="_blank">
                         <div className="flex flex-row items-center gap-4">
                             <SquarePen size={32} />
-                            Registration has closed due to overwhelming
-                            responses!
+                            Join the waitlist! (form closing on 16 May 2025)
                         </div>
                     </a>
                 </div>
