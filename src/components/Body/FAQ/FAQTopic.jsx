@@ -34,23 +34,23 @@ function FAQTopic(props) {
                         answer={
                             <>
                                 Between the Opening and Closing Ceremony, we
-                                will have Check-In sessions for different groups
-                                to meet and network. This gives you an
-                                opportunity to learn from other groups and
-                                exchange ideas, experiences and best practices.
+                                will have Check-In sessions with our SummerBuild
+                                mentors for teams to meet and network with their
+                                mentors. This gives you an opportunity to learn
+                                from the mentors and exchange ideas, experiences
+                                and best practices.
                                 <br />
                                 <br />
                                 Whether you're looking for inspiration or
                                 feedback on your product, these sessions will
-                                provide a supportive environment to engage with
-                                fellow participants.
+                                provide a supportive environment to help you
+                                grow.
                                 <br />
                                 <br />
                                 Make the most of this opportunity to expand your
                                 network and improve your product!
                                 <br />
                                 <br />
-                                Oh, did we mention there will be more swag?!
                             </>
                         }
                     />
