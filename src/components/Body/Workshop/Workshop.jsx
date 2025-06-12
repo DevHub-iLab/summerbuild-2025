@@ -7,6 +7,8 @@ import HTMLLogo from "../../../assets/htmlIcon.svg"
 import ReactLogo from "../../../assets/reactIcon.svg"
 import ExpressLogo from "../../../assets/expressIcon.svg"
 import Eyes from "../../../assets/eyes.png"
+import AWS from "../../../assets/aws.svg"
+import Docker from "../../../assets/docker.svg"
 
 function Workshop() {
     return (
@@ -54,9 +56,16 @@ function Workshop() {
                     </SwiperSlide>{" "}
                     <SwiperSlide>
                         <WorkshopCard
-                            frontImgSrc={Eyes}
+                            frontImgSrc={AWS}
                             color="#FADA7A"
-                            frontText="More to be announced!"
+                            frontText="AWS Workshop"
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <WorkshopCard
+                            frontImgSrc={Docker}
+                            color="#FADA7A"
+                            frontText="Docker Workshop"
                         />
                     </SwiperSlide>
                 </Swiper>
@@ -80,9 +89,14 @@ function Workshop() {
                     frontText="Express.js Workshop"
                 />
                 <WorkshopCard
-                    frontImgSrc={Eyes}
+                    frontImgSrc={AWS}
                     color="#FADA7A"
-                    frontText="More to be announced!"
+                    frontText="AWS Workshop"
+                />
+                <WorkshopCard
+                    frontImgSrc={Docker}
+                    color="#FADA7A"
+                    frontText="Docker Workshop"
                 />
             </div>
         </div>
