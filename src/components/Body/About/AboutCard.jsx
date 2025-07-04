@@ -6,16 +6,16 @@ import { School } from "lucide-react"
 function AboutCard() {
     return (
         <div className="mt-8 flex flex-col items-center justify-center">
-            <div className="flex w-[90vw] flex-col items-center justify-center gap-2 text-left md:grid md:grid-cols-4 md:grid-rows-2 lg:w-[80vw] xl:grid-cols-6 xl:grid-rows-3 xl:gap-2 2xl:w-[70vw]">
+            <div className="flex w-[90vw] flex-col items-center justify-center gap-2 text-left md:grid md:grid-cols-4 md:grid-rows-2 lg:w-[80vw] xl:grid-cols-6 xl:grid-rows-2 xl:gap-2 2xl:w-[70vw]">
                 <div className="col-span-4 row-span-2 my-auto h-full w-full rounded-xl p-5 text-white xl:col-span-2 xl:row-span-3">
                     <img
-                        className="scale-100 sm:scale-70 md:scale-100"
+                        className="scale-100 sm:scale-50 md:scale-70"
                         src={SummerBuildGraphic}
                         alt="SummerBuild Graphic"
                     />
                 </div>
 
-                <div className="bg-sb-yellow-100 hover:shadow-dh-grey-200/40 text-dh-grey-200 flex h-fit w-full flex-col justify-between gap-4 rounded-xl p-4 transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-lg md:col-span-4 md:row-span-1 lg:col-span-4 lg:row-span-2">
+                <div className="bg-sb-yellow-100 hover:shadow-dh-grey-200/40 text-dh-grey-200 flex w-full flex-col justify-between gap-4 rounded-xl p-4 transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-lg md:col-span-4 md:row-span-1 lg:col-span-4 lg:row-span-2">
                     <p>
                         <span className="text-dh-orange font-bold">
                             SummerBuild{" "}
@@ -39,22 +39,6 @@ function AboutCard() {
                         project that you can earn certificates and prizes for
                         your hard work!
                     </p>
-                    <p>
-                        <span className="text-dh-orange font-bold">
-                            Registration has closed
-                        </span>{" "}
-                        due to overwhelming responses! You can still join the
-                        waitlist in case any slots open up.
-                    </p>
-                    <a
-                        className="bg-dh-orange mt-2 flex w-full flex-col justify-between gap-2 rounded-xl px-4 py-1 font-bold text-white md:py-2"
-                        href="https://forms.office.com/r/6PjUscwVDR"
-                        target="_blank">
-                        <div className="flex flex-row items-center gap-4">
-                            <SquarePen size={32} />
-                            Join the waitlist! (form closing on 16 May 2025)
-                        </div>
-                    </a>
                 </div>
 
                 <div className="bg-sb-pink-100 hover:shadow-dh-grey-200/40 text-dh-grey-200 row-span-1 flex h-full w-full flex-col justify-between rounded-xl p-2 transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-lg md:col-span-2 md:p-4 lg:col-span-1">
