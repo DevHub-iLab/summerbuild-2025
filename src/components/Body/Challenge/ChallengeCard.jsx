@@ -9,6 +9,15 @@ function ChallengeCard(props) {
             <div className="col-span-3 flex w-full flex-col items-start justify-around pr-4">
                 <h1 className="text-xl font-bold">{props.text}</h1>
                 <h2 className="text-lg">{props.description}</h2>
+                {props.winnerLink && (
+                    <a
+                        href={props.winnerLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm font-semibold text-[#FA6B1C] underline transition-colors duration-200 hover:text-[#e5591a]">
+                        {props.winnerText || "View Winner →"}
+                    </a>
+                )}
             </div>
         </div>
     )

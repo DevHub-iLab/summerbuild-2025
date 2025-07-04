@@ -18,24 +18,32 @@ function Challenge() {
                     text="Best UI/UX"
                     description="Create an intuitive user experience."
                     icon={<Paintbrush size={48} color="#fa6b1c" />}
+                    winnerLink="https://devpost.com/software/sigma-bytes"
+                    winnerText="View Sigma Byte's Project"
                 />
                 <ChallengeCard
                     color="#FADA7A"
                     text="Most Innovative"
                     description="Innovate something completely new."
                     icon={<FlaskConical size={48} color="#fa6b1c" />}
+                    winnerLink="https://devpost.com/software/finapet"
+                    winnerText="View WaddleWeCookToday's Project"
                 />
                 <ChallengeCard
                     color="#f7b1c1"
                     text="Most Useful"
                     description="Build a practical solution."
                     icon={<Wrench size={48} color="#fa6b1c" />}
+                    winnerLink="https://devpost.com/software/reunite-rna8vw"
+                    winnerText="View Naan Stop's Project"
                 />
                 <ChallengeCard
                     color="#f7d7e1"
                     text="Best Freshmen Team"
                     description="Your entire team are all Year 1 students."
                     icon={<Users size={48} color="#fa6b1c" />}
+                    winnerLink="https://devpost.com/software/placeit-c4t9z5"
+                    winnerText="View 14_CheckMate's Project"
                 />
             </div>
         </div>
