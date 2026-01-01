@@ -1,5 +1,6 @@
-# SummerBuild 2025 Website
-Information website for SummerBuild 2025, a summer programme for [NTU](https://www.ntu.edu.sg/) students to learn software development and build a project. 
+# SummerBuild 2026 Website
+
+Information website for SummerBuild 2026, a summer programme for [NTU](https://www.ntu.edu.sg/) students to learn software development and build a project.
 
 Built with ❤️ by the [DevHub@iLab](https://github.com/DevHub-iLab) team.
 
@@ -14,14 +15,14 @@ Built with ❤️ by the [DevHub@iLab](https://github.com/DevHub-iLab) team.
 
 # Deployment
 
- - The website is deployed using Cloudflare Pages, automatically deploying from the main branch using GitHub Actions.
+- The website is deployed using Cloudflare Pages, automatically deploying from the main branch using GitHub Actions.
 
 # Packages Used
 
- - [Poppins Font](https://fonts.google.com/specimen/Poppins)
- - [Tailwind CSS](https://tailwindcss.com/)
- - [Lucide Icons](https://github.com/lucide-icons/lucide)
- - [React Typed](https://github.com/ssbeefeater/react-typed)
- - [Swiper](https://swiperjs.com/)
- - [Vite](https://vitejs.dev/)
- - Pengi Assets designed by our publicity team!
+- [Poppins Font](https://fonts.google.com/specimen/Poppins)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Lucide Icons](https://github.com/lucide-icons/lucide)
+- [React Typed](https://github.com/ssbeefeater/react-typed)
+- [Swiper](https://swiperjs.com/)
+- [Vite](https://vitejs.dev/)
+- Pengi Assets designed by our publicity team!
