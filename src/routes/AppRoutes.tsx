@@ -5,6 +5,7 @@ import PreviousWinnersPage from "../pages/PreviousWinnersPage";
 import SchedulePage from "../pages/SchedulePage";
 import WorkshopPage from "../pages/WorkshopPage";
 import FAQPage from "../pages/FAQPage";
+import MilestonePage from "../pages/MilestonePage";
 
 const AppRoutes = () => {
   return (
@@ -13,6 +14,7 @@ const AppRoutes = () => {
       <Route path="/previouswinner" element={<PreviousWinnersPage />} />
       <Route path="/schedule" element={<SchedulePage />} />
       <Route path="/workshops" element={<WorkshopPage />} />
+      <Route path="/milestone" element={<MilestonePage />} />
       <Route path="/FAQ" element={<FAQPage />} />
     </Routes>
   );

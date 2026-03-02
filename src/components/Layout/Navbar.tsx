@@ -92,6 +92,13 @@ const Navbar = () => {
 
               <li
                 className="cursor-pointer transition-all duration-100 hover:underline"
+                onClick={() => navigate("/milestone")}
+              >
+                Milestone
+              </li>
+
+              <li
+                className="cursor-pointer transition-all duration-100 hover:underline"
                 onClick={() => navigate("/workshops")}
               >
                 Workshops

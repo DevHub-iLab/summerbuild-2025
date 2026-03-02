@@ -5,19 +5,6 @@ import { FlaskConical, Paintbrush, Wrench, Users } from "lucide-react";
 export default function PreviousWinnersPage() {
   return (
     <section>
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
-          <div className="w-full lg:w-1/2">
-            <div className="space-y-6">
-              <div className="inline-flex items-center gap-2">
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
-                  Previous Winners
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <div className="mt-20 flex flex-col items-center">
         <h1 className="mt-3 text-2xl text-center  font-semibold ">

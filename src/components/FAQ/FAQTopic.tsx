@@ -10,7 +10,7 @@ function FAQTopic(props: FAQTopicType) {
       {props.active === "General" && (
         <div className="m-auto flex w-[325px] flex-col justify-center rounded-xl bg-[#81BFDA] sm:w-[600px] md:w-[750px]">
           <FAQCard
-            question="Who can participate in SummerBuild 2025?"
+            question="Who can participate in SummerBuild 2026?"
             answer="SummerBuild is open to all NTU students from all faculties."
           />
           <FAQCard

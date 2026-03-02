@@ -51,6 +51,13 @@ export default function Sidebar() {
             >
               Schedule
             </button>
+
+            <button
+              className="cursor-pointer transition-all duration-100 hover:underline"
+              onClick={() => navigate("/milestone")}
+            >
+              Milestone
+            </button>
             <button
               className="cursor-pointer transition-all duration-100 hover:underline"
               onClick={() => navigate("/workshops")}
