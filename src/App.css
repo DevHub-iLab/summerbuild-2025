@@ -2,3 +2,32 @@
 
 @import "swiper/css";
 @import "swiper/css/pagination";
+
+
+.wave-svg {
+  view-box: 0 100 1440 600;
+}
+
+@media (min-width: 640px) {
+  .wave-svg {
+    view-box: 0 120 1440 600;
+  }
+}
+
+@media (min-width: 768px) {
+  .wave-svg {
+    view-box: 0 140 1440 600;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wave-svg {
+    view-box: 0 160 1440 600;
+  }
+}
+
+@media (min-width: 1280px) {
+  .wave-svg {
+    view-box: 0 180 1440 600;
+  }
+}

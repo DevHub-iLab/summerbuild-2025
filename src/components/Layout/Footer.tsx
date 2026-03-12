@@ -3,7 +3,7 @@ import DevHubLogo from "../../assets/devhublogo.svg";
 
 function Footer() {
   return (
-    <div className="mb-4 flex flex-col gap-4 items-center">
+    <div className="mt-auto mb-4 flex flex-col gap-4 items-center">
       <div className="mt-20 flex items-center justify-center gap-2">
         <p>
           Made with <span className="text-dh-red">❤ </span>

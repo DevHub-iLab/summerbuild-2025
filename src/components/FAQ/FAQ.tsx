@@ -1,23 +1,26 @@
 import { useState } from "react";
 import FAQTopic from "./FAQTopic";
 import FAQExt from "./FAQExt";
+import { FAQPageData } from "../../data/FAQPageData";
 
 function FAQ() {
   const [active, setActive] = useState("General");
-  const topics = ["General", "Registration", "Resources"];
+  const topics = FAQPageData.topics;
+  const { title, topicClassName, extendedSection } = FAQPageData;
 
   return (
     <div id="faq" className="mt-20 flex flex-col">
       <h1 className="mb-5 justify-center text-center text-2xl font-bold uppercase sm:mb-7.5 sm:text-3xl md:mb-10 md:text-4xl">
-        <span className="text-[#1E1E1E]">frequently asked </span>
-        <span className="text-[#FA6B1C]">questions </span>
+        <span className={title.prefixClassName}>{title.prefix}</span>
+        <span className={title.highlightClassName}>{title.highlight}</span>
       </h1>
+      
       <div className="flex w-full justify-around">
         {topics.map((topic) => (
           <h1
             key={topic}
-            className={`mb-2.5 !cursor-pointer text-[18px] font-semibold sm:mb-5 sm:text-[25px] md:mb-7.5 md:text-[30px] ${
-              active === topic ? "text-[#1E1E1E]" : "text-[#81BFDA]"
+            className={`mb-2.5 !cursor-pointer font-semibold sm:mb-5 md:mb-7.5 ${topicClassName} ${
+              active === topic ? title.prefixClassName : "text-[#81BFDA]"
             }`}
             onClick={() => setActive(topic)}
           >
@@ -25,26 +28,28 @@ function FAQ() {
           </h1>
         ))}
       </div>
+      
       <FAQTopic active={active} />
+      
       <FAQExt
-        header="Have a question that is not addressed above?"
+        header={extendedSection.header}
         content={
           <>
-            Feel free to reach out to us on our
+            {extendedSection.content.text}{" "}
             <a
-              href="https://www.instagram.com/ntu.devhub/"
+              href={extendedSection.content.link.url}
               target="_blank"
               rel="noreferrer"
-              className="bg-linear-65 from-[#c0a0d4] via-[#ce8585] to-[#fcb045] bg-clip-text font-bold text-transparent underline"
+              className={extendedSection.content.link.className}
             >
-              {" "}
-              Instagram
+              {extendedSection.content.link.text}
             </a>{" "}
-            page or email us at devhubilab[at]e.ntu.edu.sg.
+            {extendedSection.content.emailText}
           </>
         }
       />
     </div>
   );
 }
+
 export default FAQ;

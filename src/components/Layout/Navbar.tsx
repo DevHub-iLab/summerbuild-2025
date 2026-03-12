@@ -65,7 +65,7 @@ const Navbar = () => {
         >
           <nav className={`transition-all duration-100`}>
             <ul
-              className={`text[1rem] z-50 mx-auto hidden h-[4rem] items-center justify-around rounded-4xl bg-[#f8f4d8]/80 py-2 pr-4 font-bold text-[#323854] drop-shadow-xl backdrop-blur-md md:flex lg:text-[1.5rem] ${showNavbar ? "" : ""}`}
+              className={`text[1rem] z-50 mx-auto hidden h-[4rem] items-center justify-around rounded-4xl bg-[#f8f4d8]/80 py-2 pr-4 font-bold text-[#323854] drop-shadow-xl backdrop-blur-md md:flex lg:text-[1.2rem] ${showNavbar ? "" : ""}`}
             >
               <li
                 className="cursor-pointer transition-all duration-100 hover:underline"
@@ -115,7 +115,7 @@ const Navbar = () => {
       </div>
       {/* Mobile Navbar */}
       <div
-        className={`fixed top-0 z-50 flex w-full justify-center py-2 transition-all duration-300`}
+        className={`top-0 z-50 flex w-full justify-center py-2 transition-all duration-300`}
       >
         <div
           className={`flex w-[80%] flex-col items-center justify-start rounded-xl bg-[#f8f4d8]/80 p-2 shadow-lg backdrop-blur-md transition-all duration-300 md:hidden`}
@@ -155,6 +155,26 @@ const Navbar = () => {
                 }}
               >
                 Previous Winners
+              </li>
+              <li
+                className="cursor-pointer py-2"
+                onClick={() => {
+                  navigate("/schedule");
+                  setNavMobile(false);
+                }}
+              >
+                Schedule
+              </li>
+              
+              <li
+                className="cursor-pointer py-2"
+                onClick={() => {
+                  navigate("/milestone");
+                  setNavMobile(false);
+                }}
+              >
+              Milestone
+
               </li>
               <li
                 className="cursor-pointer py-2"

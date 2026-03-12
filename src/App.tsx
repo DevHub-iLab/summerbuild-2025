@@ -6,8 +6,6 @@ import WaveBar from "./components/Layout/WaveBar";
 import Footer from "./components/Layout/Footer";
 import Sidebar from "./components/Layout/Sidebar";
 
-import Tagline from "./components/Tagline";
-
 function App() {
   return (
     <>
@@ -16,12 +14,14 @@ function App() {
       <Navbar />
 
       <Sidebar />
-      <Tagline />
 
-      <section className="py-16 md:py-25 px-4 sm:px-6 lg:px-8">
+      <section className="sm:px-6 sm:mt-10 md:mt-10 lg:mt-20 xl:mt-45 ">
+
         <AppRoutes />
 
         <Footer />
+
+
       </section>
     </>
   );

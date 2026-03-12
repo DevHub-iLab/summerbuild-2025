@@ -6,7 +6,7 @@ import MedalPengi from "@assets/medalsb.png";
 
 function Achievement() {
   return (
-    <div className="mt-20 flex flex-col">
+    <div className="px-5 mt-20 flex flex-col">
       <h1 className="justify-center text-center text-2xl font-bold uppercase sm:text-3xl md:text-4xl">
         <span className="text-[#1E1E1E]">levels of </span>
         <span className="text-[#FA6B1C]">achievement</span>

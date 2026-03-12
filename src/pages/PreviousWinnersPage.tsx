@@ -4,12 +4,12 @@ import { FlaskConical, Paintbrush, Wrench, Users } from "lucide-react";
 
 export default function PreviousWinnersPage() {
   return (
-    <section>
-
       <div className="mt-20 flex flex-col items-center">
-        <h1 className="mt-3 text-2xl text-center  font-semibold ">
-          SummerBuild 25
-        </h1>
+
+      <h1 className="justify-center text-center text-2xl font-bold uppercase sm:text-3xl md:text-4xl">
+        <span className="text-[#1E1E1E]">Summerbuild </span>
+        <span className="text-[#FA6B1C]">25</span>
+      </h1>
 
         <div className="mt-3 grid max-w-[90vw] auto-rows-auto grid-cols-1 justify-items-center gap-2 sm:max-w-[80vw] lg:grid-cols-2 lg:gap-5 xl:max-w-[60vw]">
           <WinnerCard
@@ -46,6 +46,5 @@ export default function PreviousWinnersPage() {
           />
         </div>
       </div>
-    </section>
   );
 }

@@ -3,7 +3,7 @@ import { useState } from "react";
 
 type FAQCardType = {
   question: string;
-  answer: React.ReactElement | string;
+  answer: string | string[];
 };
 
 function FAQCard(props: FAQCardType) {
@@ -27,9 +27,17 @@ function FAQCard(props: FAQCardType) {
           arrow ? "opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <p className="ml-[20px] pt-2 text-[13px] sm:ml-[25px] sm:text-[15px] md:ml-[30px] md:text-[18px]">
-          {props.answer}
-        </p>
+        <div className="ml-[20px] pt-2 text-[13px] sm:ml-[25px] sm:text-[15px] md:ml-[30px] md:text-[18px]">
+    {Array.isArray(props.answer) ? (  // Handle if the answer is an array
+          props.answer.map((paragraph, index) => (
+            <p key={index} className={index > 0 ? "mt-4" : ""}>
+              {paragraph}
+            </p>
+          ))
+        ) : (
+          <p>{props.answer}</p>
+        )}
+        </div>
       </div>
     </div>
   );
