@@ -3,25 +3,61 @@ type ScheduleCardType = {
   fontWeight: string;
   header: string;
   content?: string;
+  type: "week" | "event";
+  icon?: string;
 };
 
-function ScheduleCard(props: ScheduleCardType) {
+function ScheduleCard({
+  color,
+  fontWeight,
+  header,
+  content,
+  type,
+  icon,
+}: ScheduleCardType) {
+  const isWeek = type === "week";
+
   return (
-    <div className="group flex h-auto w-full items-center p-5">
+    <div className="group relative flex w-full max-w-4xl items-center gap-4 md:gap-6">
+      {/* Timeline dot */}
+      <div className="absolute left-[128px] top-1/2 z-10 hidden h-4 w-4 -translate-y-1/2 rounded-full border-4 border-[#F6F3E7] bg-[#81BFDA] md:block" />
+
+      {/* Left pill */}
       <div
-        className="group-hover:shadow-dh-grey-200/40 flex h-15 w-[140px] flex-shrink-0 transform items-center justify-center rounded-4xl text-center transition-all duration-300 ease-in-out group-hover:scale-102 group-hover:shadow-lg md:w-[200px]"
-        style={{ backgroundColor: props.color || "transparent" }}
+        className={`relative z-20 flex min-h-[60px] w-[170px] flex-shrink-0 items-center justify-center rounded-full px-4 text-center shadow-md transition-all duration-300 group-hover:scale-[1.03] md:w-[220px] ${
+          isWeek ? "shadow-lg" : "shadow-sm"
+        }`}
+        style={{ backgroundColor: color || "transparent" }}
       >
-        <h1
-          className="flex items-center text-lg sm:text-xl"
-          style={{ fontWeight: props.fontWeight }}
+        <h2
+          className={`flex items-center gap-2 text-base md:text-xl ${
+            isWeek ? "uppercase tracking-wide" : ""
+          }`}
+          style={{ fontWeight }}
         >
-          {props.header || "PlaceHolder"}
-        </h1>
+          {icon ? <span>{icon}</span> : null}
+          <span>{header}</span>
+        </h2>
       </div>
-      <p className="ml-5 text-base font-medium whitespace-pre-line italic opacity-50 duration-400 group-hover:opacity-100 md:text-lg">
-        {props.content || ""}
-      </p>
+
+      {/* Right content card */}
+      <div
+  className={`min-h-[60px] flex-1 rounded-3xl px-5 py-4 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:shadow-lg ${
+    isWeek
+      ? "bg-[#F8F4E8] border border-[#E7DDC7] shadow-md"
+      : "bg-white border border-[#D7EEF8] shadow-sm"
+  }`}
+>
+  <p
+    className={`text-sm md:text-lg ${
+      isWeek
+        ? "font-semibold text-[#2F2A24]"
+        : "font-medium italic text-[#6B6B6B]"
+    }`}
+  >
+    {content || ""}
+  </p>
+</div>
     </div>
   );
 }
