@@ -61,11 +61,11 @@ const Navbar = () => {
       {/* Desktop Navbar */}
       <div className="flex max-w-full justify-center">
         <div
-          className={`max-w[90rem] md:max-w[70rem]  z-50 m-auto mt-6 w-full px-[4rem] transition-all duration-300 lg:px-[8rem]`}
+          className={`max-w[90rem] md:max-w[70rem]  z-50 m-auto mt-6 w-full px-16 transition-all duration-300 lg:px-32`}
         >
           <nav className={`transition-all duration-100`}>
             <ul
-              className={`text[1rem] z-50 mx-auto hidden h-[4rem] items-center justify-around rounded-4xl bg-[#f8f4d8]/80 py-2 pr-4 font-bold text-[#323854] drop-shadow-xl backdrop-blur-md md:flex lg:text-[1.2rem] ${showNavbar ? "" : ""}`}
+              className={`text[1rem] z-50 mx-auto hidden h-16 items-center justify-around rounded-4xl bg-[#f8f4d8]/80 py-2 pr-4 font-bold text-[#323854] drop-shadow-xl backdrop-blur-md md:flex lg:text-[1.2rem] ${showNavbar ? "" : ""}`}
             >
               <li
                 className="cursor-pointer transition-all duration-100 hover:underline"
@@ -74,7 +74,7 @@ const Navbar = () => {
                 <img
                   src={SummerBuild25}
                   alt="SummerBuild Logo"
-                  className="z-2 h-[4rem] w-[8rem] rounded-[3rem] transition-all duration-100 hover:scale-110"
+                  className="z-2 h-16 w-32 rounded-[3rem] transition-all duration-100 hover:scale-110"
                 />
               </li>
               <li
@@ -90,12 +90,12 @@ const Navbar = () => {
                 Schedule
               </li>
 
-              <li
+              {/* <li
                 className="cursor-pointer transition-all duration-100 hover:underline"
                 onClick={() => navigate("/milestone")}
               >
                 Milestone
-              </li>
+              </li> */}
 
               <li
                 className="cursor-pointer transition-all duration-100 hover:underline"
@@ -125,7 +125,7 @@ const Navbar = () => {
             <img
               src={SummerBuild25Mobile}
               alt="SummerBuild Logo"
-              className="z-2 h-[2rem] w-[6rem]"
+              className="z-2 h-8 w-24"
             />
           </div>
 
@@ -133,7 +133,7 @@ const Navbar = () => {
           <div
             className={`transform overflow-hidden transition-all duration-500 ease-in-out ${
               navMobile
-                ? "max-h-[500px] scale-y-100 opacity-100"
+                ? "max-h-125 scale-y-100 opacity-100"
                 : "max-h-0 scale-y-0 opacity-0"
             }`}
           >
@@ -166,7 +166,7 @@ const Navbar = () => {
                 Schedule
               </li>
               
-              <li
+              {/* <li
                 className="cursor-pointer py-2"
                 onClick={() => {
                   navigate("/milestone");
@@ -175,7 +175,7 @@ const Navbar = () => {
               >
               Milestone
 
-              </li>
+              </li> */}
               <li
                 className="cursor-pointer py-2"
                 onClick={() => {

@@ -29,7 +29,7 @@ export default function Sidebar() {
               <img
                 src={SummerBuild25}
                 alt="SummerBuild Logo"
-                className="z-2 h-[4rem]  rounded-[3rem] max-w-fit transition-all duration-100 hover:scale-110"
+                className="z-2 h-16  rounded-[3rem] max-w-fit transition-all duration-100 hover:scale-110"
               />
             </div>
 
@@ -52,12 +52,12 @@ export default function Sidebar() {
               Schedule
             </button>
 
-            <button
+            {/* <button
               className="cursor-pointer transition-all duration-100 hover:underline"
               onClick={() => navigate("/milestone")}
             >
               Milestone
-            </button>
+            </button> */}
             <button
               className="cursor-pointer transition-all duration-100 hover:underline"
               onClick={() => navigate("/workshops")}
