@@ -11,7 +11,7 @@ export const HomePageElements = {
       highlight: "Build"
     },
     description: {
-      prefix: "A 5-week program by",
+      prefix: "A 4-week program by",
       link: {
         text: "DevHub",
         url: "https://devhub.ilabccds.com",
@@ -29,7 +29,7 @@ export const HomePageElements = {
   stats: [
     {
       id: "weeks",
-      text: "5 Weeks"
+      text: "4 Weeks"
     },
     {
       id: "beginner",

@@ -20,7 +20,7 @@ function AboutCard() {
             When?{" "}
           </p>
           <p className="">
-            <span className="text-lg">26 May - 27 June</span>
+            <span className="text-lg">25 May - 19 June</span>
           </p>
         </div>
         <div className="bg-sb-pink-100 hover:shadow-dh-grey-200/40 text-dh-grey-200 row-span-1 flex h-full w-full flex-col justify-between rounded-xl p-2 transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-lg md:col-span-2 md:p-4 lg:col-span-1">
@@ -40,7 +40,7 @@ function AboutCard() {
             Team Size?{" "}
           </p>
           <p className="">
-            <span className="text-lg">2 - 5 students per team</span>
+            <span className="text-lg">3 - 5 students per team</span>
           </p>
         </div>
       </div>
