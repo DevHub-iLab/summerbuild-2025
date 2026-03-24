@@ -14,7 +14,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
             <div className="w-full lg:w-1/2 md:flex justify-center lg:justify-start">
-              <div className="relative max-w-md">
+              <div className="relative mx-auto w-48 sm:w-64 md:w-80 lg:w-full lg:max-w-md">
                 <img
                   className="w-full h-auto drop-shadow-xl transition-transform duration-300 hover:scale-105"
                   src={summerbuild.pengi.src}

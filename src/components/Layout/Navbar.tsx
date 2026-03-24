@@ -59,60 +59,57 @@ const Navbar = () => {
   return (
     <>
       {/* Desktop Navbar */}
-      <div className="flex max-w-full justify-center">
-        <div
-          className={`max-w[90rem] md:max-w[70rem]  z-50 m-auto mt-6 w-full px-16 transition-all duration-300 lg:px-32`}
-        >
-          <nav className={`transition-all duration-100`}>
-            <ul
-              className={`text[1rem] z-50 mx-auto hidden h-16 items-center justify-around rounded-4xl bg-[#f8f4d8]/80 py-2 pr-4 font-bold text-[#323854] drop-shadow-xl backdrop-blur-md md:flex lg:text-[1.2rem] ${showNavbar ? "" : ""}`}
-            >
-              <li
-                className="cursor-pointer transition-all duration-100 hover:underline"
-                onClick={() => navigate("/")}
-              >
-                <img
-                  src={SummerBuild25}
-                  alt="SummerBuild Logo"
-                  className="z-2 h-16 w-32 rounded-[3rem] transition-all duration-100 hover:scale-110"
-                />
-              </li>
-              <li
-                className="cursor-pointer transition-all duration-100 hover:underline"
-                onClick={() => navigate("/previouswinner")}
-              >
-                Previous Winners
-              </li>
-              <li
-                className="cursor-pointer transition-all duration-100 hover:underline"
-                onClick={() => navigate("/schedule")}
-              >
-                Schedule
-              </li>
+<div className="flex max-w-full justify-center">
+  <div
+    className={`max-w-360 z-50 m-auto mt-6 w-full px-16 transition-all duration-300 lg:px-32`}
+  >
+    <nav className="transition-all duration-100">
+      <ul className="z-50 mx-auto hidden h-16 items-center justify-center rounded-4xl bg-[#f8f4d8]/80 px-6 py-2 font-bold text-[#323854] drop-shadow-xl backdrop-blur-md md:flex lg:text-2xl">
+  <li 
+    className="flex w-50 justify-center cursor-pointer transition-all duration-100 hover:underline"
+    onClick={() => navigate("/")}
+  >
+    <img
+      src={SummerBuild25}
+      alt="SummerBuild Logo"
+      className="h-16 w-32 rounded-[3rem] transition-all duration-100 hover:scale-110"
+    />
+  </li>
 
-              {/* <li
-                className="cursor-pointer transition-all duration-100 hover:underline"
-                onClick={() => navigate("/milestone")}
-              >
-                Milestone
-              </li> */}
-
-              <li
-                className="cursor-pointer transition-all duration-100 hover:underline"
-                onClick={() => navigate("/workshops")}
-              >
-                Workshops
-              </li>
-              <li
-                className="cursor-pointer transition-all duration-100 hover:underline"
-                onClick={() => navigate("/FAQ")}
-              >
-                FAQ
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
+  <li 
+    className="flex w-55 justify-center text-center cursor-pointer transition-all duration-100 hover:underline" 
+    onClick={() => navigate("/previouswinner")}
+  >
+    Previous Winners
+  </li>
+  <li 
+    className="flex w-55 justify-center text-center cursor-pointer transition-all duration-100 hover:underline"
+    onClick={() => navigate("/schedule")}
+  >
+    Schedule
+  </li>
+  <li 
+    className="flex w-55 justify-center text-center cursor-pointer transition-all duration-100 hover:underline"
+    onClick={() => navigate("/workshops")}
+  >
+    Workshops
+  </li>
+  {/* <li 
+    className="flex w-55 justify-center text-center cursor-pointer transition-all duration-100 hover:underline"
+    onClick={() => navigate("/milestone")}
+  >
+    Milestones
+  </li> */}
+  <li 
+    className="flex w-55 justify-center text-center cursor-pointer transition-all duration-100 hover:underline"
+    onClick={() => navigate("/FAQ")}
+  >
+    FAQ
+  </li>
+</ul>
+    </nav>
+  </div>
+</div>
       {/* Mobile Navbar */}
       <div
         className={`top-0 z-50 flex w-full justify-center py-2 transition-all duration-300`}

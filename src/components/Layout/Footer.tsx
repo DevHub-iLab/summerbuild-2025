@@ -22,7 +22,7 @@ function Footer() {
         </a>
       </div>
       <div className="flex w-auto justify-center gap-4">
-        <a
+        {/* <a
           className="group relative !cursor-pointer"
           href="https://forms.office.com/r/JQm9nUgx8s"
           target="_blank"
@@ -31,7 +31,7 @@ function Footer() {
           <span className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 transform rounded bg-gray-800 px-2 py-1 text-xs whitespace-nowrap text-white opacity-0 transition-opacity group-hover:opacity-100">
             Join our Telegram
           </span>
-        </a>
+        </a> */}
 
         <a
           className="group relative !cursor-pointer"

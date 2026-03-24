@@ -13,7 +13,7 @@ function App() {
 
       <Navbar />
 
-      <Sidebar />
+      {/* <Sidebar /> */}
 
       <section className="sm:px-6 sm:mt-10 md:mt-10 lg:mt-20 xl:mt-45 ">
 
