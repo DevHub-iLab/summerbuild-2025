@@ -20,18 +20,18 @@ function ScheduleCard({
   return (
     <div className="group relative flex w-full max-w-4xl items-center gap-4 md:gap-6">
       {/* Timeline dot */}
-      <div className="absolute left-[128px] top-1/2 z-10 hidden h-4 w-4 -translate-y-1/2 rounded-full border-4 border-[#F6F3E7] bg-[#81BFDA] md:block" />
+      <div className="absolute left-32 top-1/2 z-10 hidden h-4 w-4 -translate-y-1/2 rounded-full border-4 border-[#F6F3E7] bg-[#81BFDA] md:block" />
 
       {/* Left pill */}
       <div
-        className={`relative z-20 flex min-h-[60px] w-[170px] flex-shrink-0 items-center justify-center rounded-full px-4 text-center shadow-md transition-all duration-300 group-hover:scale-[1.03] md:w-[220px] ${
+        className={`relative z-20 flex min-h-15 w-42.5 shrink-0 items-center justify-center rounded-full px-4 text-center shadow-md transition-all duration-300 group-hover:scale-[1.03] md:w-55 ${
           isWeek ? "shadow-lg" : "shadow-sm"
         }`}
         style={{ backgroundColor: color || "transparent" }}
       >
         <h2
           className={`flex items-center gap-2 text-base md:text-xl ${
-            isWeek ? "uppercase tracking-wide" : ""
+            isWeek ? "tracking-wide" : ""
           }`}
           style={{ fontWeight }}
         >
@@ -42,7 +42,7 @@ function ScheduleCard({
 
       {/* Right content card */}
       <div
-  className={`min-h-[60px] flex-1 rounded-3xl px-5 py-4 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:shadow-lg ${
+  className={`min-h-15 flex-1 rounded-3xl px-5 py-4 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:shadow-lg ${
     isWeek
       ? "bg-[#F8F4E8] border border-[#E7DDC7] shadow-md"
       : "bg-white border border-[#D7EEF8] shadow-sm"

@@ -31,3 +31,49 @@
     view-box: 0 180 1440 600;
   }
 }
+
+.faq-topic-swiper {
+  padding-bottom: 28px;
+}
+
+.faq-topic-swiper .swiper-pagination {
+  bottom: 0 !important;
+}
+
+.faq-topic-swiper .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #cbd5db;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.faq-topic-swiper .swiper-pagination-bullet-active {
+  width: 22px;
+  border-radius: 9999px;
+  background: #6ecbf5;
+}
+
+.workshop-swiper {
+  padding-bottom: 20px;
+}
+
+.workshop-swiper .swiper-pagination {
+  bottom: 2px !important;
+}
+
+.workshop-swiper .swiper-pagination-bullets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.workshop-swiper .swiper-pagination-bullet {
+  width: 7px;
+  height: 7px;
+  opacity: 0.5;
+}
+
+.workshop-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+}

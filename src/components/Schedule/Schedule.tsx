@@ -9,7 +9,7 @@ function Schedule() {
     >
       {/* Header */}
       <div className="mx-auto max-w-3xl text-center">
-        <h1 className="text-2xl font-bold uppercase sm:text-3xl md:text-5xl">
+        <h1 className="font-bold uppercase text-2xl sm:text-3xl md:text-5xl">
           <span className="text-[#1E1E1E]">{scheduleData.scheduleHeader} </span>
           <span className="text-[#FA6B1C]">
             {scheduleData.scheduleHeaderOrange}

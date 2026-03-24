@@ -148,7 +148,7 @@ const Navbar = () => {
                 : "max-h-0 scale-y-0 opacity-0"
             }`}
           >
-            <ul className="mt-2 text-center text-lg font-bold text-[#FA6B1C] sm:text-xl md:text-2xl">
+            <ul className="mt-2 text-center text-lg font-bold text-[#323854] sm:text-xl md:text-2xl">
               <li
                 className="cursor-pointer py-2"
                 onClick={() => {
@@ -166,17 +166,7 @@ const Navbar = () => {
                 }}
               >
                 Previous Winners
-              </li>
-              <li
-                className="cursor-pointer py-2"
-                onClick={() => {
-                  navigate("/schedule");
-                  setNavMobile(false);
-                }}
-              >
-                Schedule
-              </li>
-              
+              </li>              
               {/* <li
                 className="cursor-pointer py-2"
                 onClick={() => {

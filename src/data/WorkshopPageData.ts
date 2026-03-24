@@ -13,25 +13,25 @@ export type WorkshopItem = {
 export const workshopPageData: WorkshopItem[] = [
   {
     id: 1,
-    title: "HTML/CSS/JS Workshop",
+    title: "HTML/CSS/JS",
     imageSrc: HTMLLogo,
     color: "#FADA7A",
   },
   {
     id: 2,
-    title: "React Workshop",
+    title: "React",
     imageSrc: ReactLogo,
     color: "#FADA7A",
   },
   {
     id: 3,
-    title: "AI Dev Workshop",
+    title: "AI Dev",
     imageSrc: TinkerTankerLogo,
     color: "#FADA7A",
   },
   {
     id: 4,
-    title: "Git Control Workshop",
+    title: "Git Control",
     imageSrc: GitLogo,
     color: "#FADA7A",
   },

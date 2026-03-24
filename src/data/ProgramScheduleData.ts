@@ -20,8 +20,8 @@ export const scheduleData: {
 
   allSchedules: [
     {
-      dateTitle: "WEEK 1",
-      description: "Kick off the programme and get ready to build.",
+      dateTitle: "Week 1",
+      description: "Programme kick off!",
       color: "#6ECBF5",
       fontWeight: "bold",
       type: "week",
@@ -44,7 +44,7 @@ export const scheduleData: {
       icon: "🛠️",
     },
     {
-      dateTitle: "WEEK 2–3",
+      dateTitle: "Week 2–3",
       description: "Check-in Sessions with Mentors",
       color: "#6ECBF5",
       fontWeight: "bold",
@@ -52,8 +52,8 @@ export const scheduleData: {
       icon: "👥",
     },
     {
-      dateTitle: "WEEK 4",
-      description: "Final stretch before submission and judging.",
+      dateTitle: "Week 4",
+      description: "Final stretch before submission and judging",
       color: "#6ECBF5",
       fontWeight: "bold",
       type: "week",
@@ -65,7 +65,7 @@ export const scheduleData: {
       color: "#9EE7F5",
       fontWeight: "400",
       type: "event",
-      icon: "📤",
+      icon: "🗃️",
     },
     {
       dateTitle: "19 June",

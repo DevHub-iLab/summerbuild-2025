@@ -6,12 +6,12 @@ export default function PreviousWinnersPage() {
   return (
       <div className="mt-20 flex flex-col items-center">
 
-      <h1 className="justify-center text-center text-2xl font-bold uppercase sm:text-3xl md:text-4xl">
+      <h1 className="justify-center text-center font-bold uppercase text-2xl sm:text-3xl md:text-5xl">
         <span className="text-[#1E1E1E]">Summerbuild </span>
         <span className="text-[#FA6B1C]">25</span>
       </h1>
 
-        <div className="mt-3 grid max-w-[90vw] auto-rows-auto grid-cols-1 justify-items-center gap-2 sm:max-w-[80vw] lg:grid-cols-2 lg:gap-5 xl:max-w-[60vw]">
+        <div className="mt-3 sm:mt-5 md:mt-10 grid max-w-[90vw] auto-rows-auto grid-cols-1 justify-items-center gap-2 sm:max-w-[80vw] lg:grid-cols-2 lg:gap-5 xl:max-w-[60vw]">
           <WinnerCard
             color="#B1F0F7"
             text="Best UI/UX"
