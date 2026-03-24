@@ -1,4 +1,4 @@
-import { ChevronRight, ChevronDown } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { useState } from "react";
 
 type FAQCardType = {
@@ -6,37 +6,51 @@ type FAQCardType = {
   answer: string | string[];
 };
 
-function FAQCard(props: FAQCardType) {
-  const [arrow, setArrow] = useState(false);
-
-  const handleArrow = () => {
-    setArrow(!arrow);
-  };
+function FAQCard({ question, answer }: FAQCardType) {
+  const [open, setOpen] = useState(false);
 
   return (
-    <div className="m-3 flex cursor-pointer flex-col rounded-xl bg-white p-3 text-[15px] transition-all duration-300 ease-in-out sm:text-[18px] md:text-[20px]">
-      <div className="flex items-center" onClick={handleArrow}>
-        <div>
-          {!arrow ? <ChevronRight size="1.5rem" /> : <ChevronDown size="1.5rem" />}
-        </div>
-        <p className="cursor-pointer! font-semibold">{props.question}</p>
-      </div>
+    <div
+      className={`overflow-hidden rounded-2xl border transition-all duration-300 ease-in-out ${
+        open
+          ? "border-[#9ED9F3] bg-[#F7FCFF] shadow-md"
+          : "border-transparent bg-white shadow-sm hover:shadow-md"
+      }`}
+    >
+      <button
+        type="button"
+        onClick={() => setOpen(!open)}
+        className="flex w-full items-center gap-3 px-5 py-4 text-left transition-all duration-300 sm:px-6 sm:py-5"
+      >
+        <ChevronRight
+          size={22}
+          className={`shrink-0 text-[#3A3A3A] transition-transform duration-300 ${
+            open ? "rotate-90" : ""
+          }`}
+        />
+
+        <p className="text-[15px] font-semibold text-[#1E1E1E] sm:text-[18px] md:text-[20px]">
+          {question}
+        </p>
+      </button>
 
       <div
-        className={`transition-max-height cursor-pointer overflow-hidden duration-300 ease-in-out ${
-          arrow ? "opacity-100" : "max-h-0 opacity-0"
+        className={`grid transition-all duration-300 ease-in-out ${
+          open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
         }`}
       >
-        <div className="ml-5 pt-2 text-[12px] sm:ml-6.25 sm:text-[15px] md:ml-7.5 md:text-[18px]">
-    {Array.isArray(props.answer) ? (  // Handle if the answer is an array
-          props.answer.map((paragraph, index) => (
-            <p key={index} className={index > 0 ? "mt-4" : ""}>
-              {paragraph}
-            </p>
-          ))
-        ) : (
-          <p>{props.answer}</p>
-        )}
+        <div className="overflow-hidden">
+          <div className="px-5 pb-5 text-[13px] leading-relaxed text-[#3F4752] sm:px-6 sm:text-[15px] md:text-[17px]">
+            {Array.isArray(answer) ? (
+              answer.map((paragraph, index) => (
+                <p key={index} className={index > 0 ? "mt-4" : ""}>
+                  {paragraph}
+                </p>
+              ))
+            ) : (
+              <p>{answer}</p>
+            )}
+          </div>
         </div>
       </div>
     </div>
