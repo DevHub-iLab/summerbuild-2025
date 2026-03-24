@@ -19,7 +19,7 @@ function FAQ() {
         {topics.map((topic) => (
           <h1
             key={topic}
-            className={`mb-2.5 !cursor-pointer font-semibold sm:mb-5 md:mb-7.5 ${topicClassName} ${
+            className={`mb-2.5 cursor-pointer! font-semibold sm:mb-5 md:mb-7.5 ${topicClassName} ${
               active === topic ? title.prefixClassName : "text-[#81BFDA]"
             }`}
             onClick={() => setActive(topic)}

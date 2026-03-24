@@ -11,7 +11,7 @@ function FAQTopic(props: FAQTopicType) {
   return (
     <div>
       {props.active === "General" && (
-        <div className="m-auto flex w-[325px] flex-col justify-center rounded-xl bg-[#81BFDA] sm:w-[600px] md:w-[750px]">
+        <div className="m-auto flex w-81.25 flex-col justify-center rounded-xl bg-[#81BFDA] sm:w-150 md:w-187.5">
           {FAQTopicElements.general.map((item) => (
             <FAQCard
               key={item.id}
@@ -23,7 +23,7 @@ function FAQTopic(props: FAQTopicType) {
       )}
 
       {props.active === "Registration" && (
-        <div className="m-auto flex w-[325px] flex-col justify-center rounded-xl bg-[#81BFDA] sm:w-[600px] md:w-[750px]">
+        <div className="m-auto flex w-81.25 flex-col justify-center rounded-xl bg-[#81BFDA] sm:w-150 md:w-187.5">
           {FAQTopicElements.registration.map((item) => (
             <FAQCard
               key={item.id}
@@ -35,7 +35,7 @@ function FAQTopic(props: FAQTopicType) {
       )}
 
       {props.active === "Resources" && (
-        <div className="m-auto flex w-[325px] flex-col justify-center rounded-xl bg-[#81BFDA] sm:w-[600px] md:w-[750px]">
+        <div className="m-auto flex w-81.25 flex-col justify-center rounded-xl bg-[#81BFDA] sm:w-150 md:w-187.5">
           {FAQTopicElements.resources.map((item) => (
             <FAQCard
               key={item.id}

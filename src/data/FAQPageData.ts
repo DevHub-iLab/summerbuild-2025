@@ -42,7 +42,7 @@ export const FAQTopicElements = {
       answer:[
         "Our workshops are designed to be interactive and hands-on. From our experience, in-person sessions create a more focused learning environment where participants can actively participate, ask questions, and network with peers.",
 
-        " Unlike virtual sessions, which can be prone to distractions and passive participation, in-person workshops encourage real-time discussions and a more immersive learning experience."]
+        "Unlike virtual sessions, which can be prone to distractions and passive participation, in-person workshops encourage real-time discussions and a more immersive learning experience."]
       }
     ,
     {
@@ -50,7 +50,7 @@ export const FAQTopicElements = {
       question: "What are Check-In sessions?",
       answer:["Between the Opening and Closing Ceremony, we will have Check-In sessions with our SummerBuild mentors for teams to meet and network with their mentors.",
 
-          " This gives you an opportunity to learn from the mentors and exchange ideas, experiences and best practices.Whether you're looking for inspiration or feedback on your product, these sessions will provide a supportive environment to help you grow.Make the most of this opportunity to expand your network and improve your product!"]
+          "This gives you an opportunity to learn from the mentors and exchange ideas, experiences and best practices. Whether you're looking for inspiration or feedback on your product, these sessions will provide a supportive environment to help you grow. Make the most of this opportunity to expand your network and improve your product!"]
     },
     {
       id: "general-4",
@@ -60,12 +60,12 @@ export const FAQTopicElements = {
     {
       id: "general-5",
       question: "Do I need to attend for the opening and closing ceremonies?",
-      answer:"Yes, most of your team should attend the ceremonies, as we will be giving out swag during both opening and closing ceremonies.Furthermore, there will be a science-fair style judging during the closing ceremony for us to assign the levels of achievement to the groups, as well as award the special prizes."
+      answer:"Yes, most of your team should attend the ceremonies, as we will be giving out swag during both opening and closing ceremonies. Furthermore, there will be a science-fair style judging during the closing ceremony for us to assign the levels of achievement to the groups, as well as award the special prizes."
     },
     {
       id: "general-6",
       question: "How many Check-In Sessions are there?",
-      answer: "There are 2 physical Check In sessions throughout the programme. One in the week of 1 June, the other in the week of 16 June. These Check In sessions offer a chance for you to get feedback on your product, network with other groups, learn from one another, and earn more swag!"
+      answer: "We recommend all groups to have at least 2 virtual/physical Check-In sessions with your assigned mentor throughout the programme. One in the 1st week of June, the other in the 2nd week of June. These Check-In sessions offers a chance for you to get feedback on your product!"
     },
     {
       id: "general-7",
@@ -83,7 +83,7 @@ export const FAQTopicElements = {
     {
       id: "registration-2",
       question: "How many people can I have in my group?",
-      answer: "Every group requires a minimum of 2 people and a maximum of 5."
+      answer: "Every group requires a minimum of 3 people and a maximum of 5."
     },
     {
       id: "registration-3",

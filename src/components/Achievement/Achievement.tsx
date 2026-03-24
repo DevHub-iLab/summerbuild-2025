@@ -11,7 +11,7 @@ function Achievement() {
         <span className="text-[#1E1E1E]">levels of </span>
         <span className="text-[#FA6B1C]">achievement</span>
       </h1>
-      <h3 className="mt-3 text-center text-lg font-semibold text-[#1E1E1E]">
+      <h3 className="mt-3 text-center text-lg text-[#1E1E1E]">
         Earn Certificates for how advanced your project is by the end of the
         programme!
       </h3>
