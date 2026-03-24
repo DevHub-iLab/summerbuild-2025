@@ -1,55 +1,65 @@
 import { useNavigate } from "react-router-dom";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef  } from "react";
 import SummerBuild25 from "../../assets/sb25.png";
 import SummerBuild25Mobile from "../../assets/sb25mobile.png";
+
+const HIDE_THRESHOLD = 120; // must scroll this far from top before navbar can hide
+const SHOW_THRESHOLD = 60; // must scroll up this much before navbar reappears
+const SCROLL_DELTA = 8; // ignore tiny accidental scrolls
 
 const Navbar = () => {
   const navigate = useNavigate();
 
-  //const [navbar, setNavbar] = useState(false) // Tracks background change
   const [showNavbar, setShowNavbar] = useState(true); // Tracks visibility
-  const [prevScrollPos, setPrevScrollPos] = useState(0); // Stores previous Y position
   const [navMobile, setNavMobile] = useState(false);
 
-  //scroll smooth flow
-  //const scrollToSection = (id : string) => {
-  //    const element = document.getElementById(id)
-  //    if (element) {
-  //        const offsetY = 80
-  //        const elementPosition = element.getBoundingClientRect().top
-  //        const offsetPosition =
-  //            elementPosition + window.pageYOffset - offsetY
+  const lastScrollY = useRef(0);
+  const scrollUpDistance = useRef(0);
 
-  //        window.scrollTo({
-  //            top: offsetPosition,
-  //            behavior: "smooth",
-  //        })
-  //    }
-
-  //    setNavMobile(false)
-  //}
-
-  //sticky navBar
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
+      const currentScrollY = window.scrollY;
+      const diff = currentScrollY - lastScrollY.current;
 
-      // Show navbar when scrolling up, hide when scrolling down
-      if (currentScrollPos > prevScrollPos) {
-        setShowNavbar(false);
-      } else {
+      // always show near top
+      if (currentScrollY <= HIDE_THRESHOLD) {
         setShowNavbar(true);
+        scrollUpDistance.current = 0;
+        lastScrollY.current = currentScrollY;
+        return;
       }
 
-      // Change background when scrolled past 20px
-      //setNavbar(currentScrollPos >= 20)
-      setPrevScrollPos(currentScrollPos);
+      // ignore very tiny scroll movements
+      if (Math.abs(diff) < SCROLL_DELTA) {
+        return;
+      }
+
+      // scrolling down
+      if (diff > 0) {
+        scrollUpDistance.current = 0;
+
+        if (currentScrollY > HIDE_THRESHOLD) {
+          setShowNavbar(false);
+        }
+      }
+
+      // scrolling up
+      if (diff < 0) {
+        scrollUpDistance.current += Math.abs(diff);
+
+        if (scrollUpDistance.current >= SHOW_THRESHOLD) {
+          setShowNavbar(true);
+        }
+      }
+
+      lastScrollY.current = currentScrollY;
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos]);
+  }, []);
 
   //handle mobileNavbar
   const handleMobileNav = () => {
@@ -59,10 +69,14 @@ const Navbar = () => {
   return (
     <>
       {/* Desktop Navbar */}
-<div className="flex max-w-full justify-center">
-  <div
-    className={`max-w-360 z-50 m-auto mt-6 w-full px-16 transition-all duration-300 lg:px-32`}
-  >
+<div
+        className={`fixed top-0 left-0 right-0 z-50 flex justify-center transition-all duration-500 ease-in-out ${
+          showNavbar
+            ? "translate-y-0 opacity-100 pointer-events-auto"
+            : "-translate-y-24 opacity-0 pointer-events-none"
+        }`}
+      >
+        <div className="z-50 mt-6 w-full max-w-360 px-16 transition-all duration-300 lg:px-32">
     <nav className="transition-all duration-100">
       <ul className="z-50 mx-auto hidden h-16 items-center justify-center rounded-4xl bg-[#f8f4d8]/80 px-6 py-2 font-bold text-[#323854] drop-shadow-xl backdrop-blur-md md:flex lg:text-2xl">
   <li 
