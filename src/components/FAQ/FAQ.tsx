@@ -35,9 +35,7 @@ function FAQ() {
       id="faq"
       className="relative mt-20 flex flex-col items-center px-6"
     >
-      {/* subtle background glow */}
-      <div className="absolute top-10 left-1/2 -z-10 h-65 w-65 -translate-x-1/2 rounded-full bg-[#9EE7F5]/25 blur-3xl" />
-
+      
       <div className="mx-auto max-w-4xl text-center">
         <h1 className="font-bold uppercase text-2xl sm:text-3xl md:text-5xl">
           <span className={title.prefixClassName}>{title.prefix}</span>

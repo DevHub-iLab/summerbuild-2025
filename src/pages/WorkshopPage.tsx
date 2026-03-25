@@ -12,7 +12,7 @@ export default function WorkshopPage() {
         <span className="text-[#FA6B1C]">26</span>
       </h1>
 
-      <h3 className="mt-3 text-center text-lg text-[#1E1E1E]">
+      <h3 className="text-center mt-4 text-sm font-medium text-black/70 sm:text-base md:text-lg">
         Learn industry-relevant skills from our workshops!
         <br />
         Stay tuned for updates on upcoming workshops and dates.
@@ -21,7 +21,7 @@ export default function WorkshopPage() {
       <div className="mx-auto mt-10 max-w-7xl">
         {/* Mobile / tablet swiper */}
         <div className="xl:hidden">
-          <div className="mx-auto w-full max-w-[260px] pb-12">
+          <div className="mx-auto w-full max-w-65 pb-12">
             <Swiper
               modules={[Autoplay, Pagination]}
               autoplay={{ delay: 3000, disableOnInteraction: false }}

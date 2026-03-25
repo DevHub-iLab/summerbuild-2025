@@ -28,7 +28,7 @@ function Schedule() {
       {/* MOBILE VIEW */}
       <div className="mt-10 flex w-full max-w-md flex-col gap-4 md:hidden">
         {scheduleData.weeks.map((week, i) => {
-          const isOpen = openIndex === i;
+          const isOpen = openIndex === null;
 
           return (
             <div

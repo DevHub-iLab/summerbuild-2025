@@ -40,11 +40,11 @@ function TimeBlock({
   label: string;
 }) {
   return (
-    <div className="min-w-[72px] rounded-2xl border border-white/60 bg-white/70 px-3 py-3 text-center shadow-sm backdrop-blur-sm sm:min-w-[84px] sm:px-4 sm:py-4">
-      <div className="text-2xl font-extrabold leading-none text-[#1E1E1E] sm:text-3xl">
+    <div className="min-w-16 rounded-2xl border border-white/60 bg-white/70 px-2 py-2 text-center shadow-sm backdrop-blur-sm sm:min-w-21 sm:px-4 sm:py-4">
+      <div className="text-[27px] font-extrabold leading-none text-[#1E1E1E] sm:text-3xl">
         {String(value).padStart(2, "0")}
       </div>
-      <div className="mt-1 text-xs font-semibold uppercase tracking-wide text-[#6B7280] sm:text-sm">
+      <div className="mt-1 text-[10px] font-semibold uppercase tracking-wide text-[#6B7280] sm:text-sm">
         {label}
       </div>
     </div>
@@ -70,20 +70,20 @@ export default function Countdown() {
   return (
     <section className="px-4 pt-6 sm:px-6">
       <div className="mx-auto max-w-150">
-        <div className="rounded-[2rem] border border-[#E8D8BE] bg-gradient-to-br from-[#FFF8EE] via-[#F7F3EC] to-[#EEF7FB] p-5 shadow-md sm:p-6">
+        <div className="rounded-4xl border border-[#E8D8BE] bg-linear-to-br from-[#FFF8EE] via-[#F7F3EC] to-[#EEF7FB] p-5 shadow-md sm:p-6">
           <div className="flex items-start gap-4">
             {/* Icon on top-left */}
-            <div className="mt-1 flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#6ECBF5] shadow-sm">
+            <div className="mt-1 flex h-13 w-13 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-2xl bg-[#6ECBF5] shadow-sm">
               <Clock3 className="h-7 w-7 text-[#1E1E1E]" />
             </div>
 
             {/* Right content */}
             <div className="min-w-0 flex-1">
-              <h2 className="max-w-[420px] text-3xl font-extrabold leading-tight text-[#1E1E1E]">
+              <h2 className="max-w-105 text-2xl sm:text-3xl font-extrabold leading-tight text-[#1E1E1E]">
                 {title}
               </h2>
 
-              <p className="mt-4 max-w-[440px] text-lg leading-relaxed text-[#5F6B7A]">
+              <p className="mt-4 max-w-110 text-l leading-relaxed text-[#5F6B7A]">
                 {description}
               </p>
             </div>
@@ -112,7 +112,7 @@ export default function Countdown() {
                 href={buttonLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-13 w-full max-w-[300px] items-center justify-center gap-2 rounded-2xl bg-[#FF6A1A] px-5 text-base font-bold text-white shadow-md transition-all duration-300 hover:brightness-95"
+                className="flex h-13 w-full max-w-75 items-center justify-center gap-2 rounded-2xl bg-[#FF6A1A] px-5 text-base font-bold text-white shadow-md transition-all duration-300 hover:brightness-95"
               >
                 {buttonText}
                 <ArrowRight className="h-4 w-4" />

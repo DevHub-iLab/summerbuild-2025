@@ -37,7 +37,7 @@ export default function PreviousWinnersPage() {
             winnerText="View Naan Stop's Project"
           />
           <WinnerCard
-            color="#f7d7e1"
+            color="#CDEAC0"
             text="Best Freshmen Team"
             description="Your entire team are all Year 1 students."
             icon={<Users size={48} color="#fa6b1c" />}

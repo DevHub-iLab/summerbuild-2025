@@ -12,7 +12,7 @@ export default function HomePage() {
       <Tagline />
       <Countdown/>
 
-      <section className="my-10 pb-10">
+      <section className="my-10 py-5">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-10">
             <div className="w-full lg:w-1/2 md:flex justify-center lg:justify-start">
@@ -71,7 +71,7 @@ export default function HomePage() {
                   </p>
                 </div>
 
-                <div className="flex justify-center flex-wrap gap-3 pt-4">
+                <div className="flex justify-center flex-wrap gap-3 pt-2">
                   <span
                     className="text-dh-grey-200 hover:shadow-dh-grey-200/40 mb-8 rounded-xl py-4 px-4 text-left transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-lg md:mb-0 text-lg font-bold"
                     style={{ backgroundColor: "#e0f2fe" }}
