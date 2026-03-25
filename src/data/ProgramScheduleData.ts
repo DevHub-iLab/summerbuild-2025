@@ -1,79 +1,66 @@
-export type ScheduleItem = {
+export type ScheduleEvent = {
   dateTitle: string;
-  description?: string;
-  color: string;
-  fontWeight: "400" | "500" | "600" | "700" | "bold";
-  type: "week" | "event";
+  description: string;
   icon?: string;
 };
 
-export const scheduleData: {
-  scheduleHeader: string;
-  scheduleHeaderOrange: string;
-  scheduleSubtitle: string;
-  allSchedules: ScheduleItem[];
-} = {
+export type ScheduleWeek = {
+  weekTitle: string;
+  description?: string;
+  color: string;
+  icon?: string;
+  events: ScheduleEvent[];
+};
+
+export const scheduleData = {
   scheduleHeader: "PROGRAMME",
   scheduleHeaderOrange: "SCHEDULE",
   scheduleSubtitle:
     "A 4-week summer journey of workshops, mentorship, and milestone moments.",
 
-  allSchedules: [
+  weeks: [
     {
-      dateTitle: "Week 1",
+      weekTitle: "Week 1",
       description: "Programme kick off!",
       color: "#6ECBF5",
-      fontWeight: "bold",
-      type: "week",
       icon: "☀️",
+      events: [
+        {
+          dateTitle: "25 May",
+          description: "Opening Ceremony",
+          icon: "🎉",
+        },
+        {
+          dateTitle: "25–26 May",
+          description: "Various Workshops",
+          icon: "🛠️",
+        },
+      ],
     },
     {
-      dateTitle: "25 May",
-      description: "Opening Ceremony",
-      color: "#9EE7F5",
-      fontWeight: "400",
-      type: "event",
-      icon: "🎉",
-    },
-    {
-      dateTitle: "25–26 May",
-      description: "Various Workshops",
-      color: "#9EE7F5",
-      fontWeight: "400",
-      type: "event",
-      icon: "🛠️",
-    },
-    {
-      dateTitle: "Week 2–3",
+      weekTitle: "Week 2–3",
       description: "Check-in Sessions with Mentors",
       color: "#6ECBF5",
-      fontWeight: "bold",
-      type: "week",
       icon: "👥",
+      events: [],
     },
     {
-      dateTitle: "Week 4",
+      weekTitle: "Week 4",
       description: "Final stretch before submission and judging",
       color: "#6ECBF5",
-      fontWeight: "bold",
-      type: "week",
       icon: "🚀",
-    },
-    {
-      dateTitle: "16 June",
-      description: "Project Submission",
-      color: "#9EE7F5",
-      fontWeight: "400",
-      type: "event",
-      icon: "🗃️",
-    },
-    {
-      dateTitle: "19 June",
-      description: "Judging & Closing Ceremony",
-      color: "#9EE7F5",
-      fontWeight: "400",
-      type: "event",
-      icon: "🏁",
+      events: [
+        {
+          dateTitle: "16 June",
+          description: "Project Submission",
+          icon: "🗃️",
+        },
+        {
+          dateTitle: "19 June",
+          description: "Judging & Closing Ceremony",
+          icon: "🏁",
+        },
+      ],
     },
   ],
 };

@@ -30,7 +30,7 @@ export default function WorkshopCard({
     <div className="flex items-center justify-center py-2">
       <div
         className={`group relative ${
-          mobile ? "h-[280px] w-[210px]" : "h-[340px] w-56 sm:w-48 md:w-60"
+          mobile ? "h-[280px] w-[230px]" : "h-[340px] w-56 sm:w-48 md:w-60"
         } [perspective:1200px]`}
         onMouseEnter={() => !mobile && setIsFlipped(true)}
         onMouseLeave={() => !mobile && setIsFlipped(false)}
