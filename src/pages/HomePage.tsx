@@ -2,6 +2,7 @@ import { HomePageElements } from "../data/HomePageData";
 import AboutCard from "../components/FAQ/AboutCard";
 import Achievement from "../components/Achievement/Achievement";
 import Tagline from "../components/Tagline";
+import Countdown from "../components/CountDown";
 
 export default function HomePage() {
   const { summerbuild, messageBox, stats } = HomePageElements;
@@ -9,10 +10,11 @@ export default function HomePage() {
   return (
     <>
       <Tagline />
+      <Countdown/>
 
       <section className="my-10 pb-10">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-10">
             <div className="w-full lg:w-1/2 md:flex justify-center lg:justify-start">
               <div className="relative mx-auto w-48 sm:w-64 md:w-80 lg:w-full lg:max-w-md">
                 <img

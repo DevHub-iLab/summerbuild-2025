@@ -30,7 +30,7 @@ function Achievement() {
   return (
     <section className="mt-20 px-5">
       <h1 className="text-center text-2xl font-bold uppercase sm:text-3xl md:text-4xl">
-        <span className="text-[#1E1E1E]">Hackathon </span>
+        <span className="text-[#1E1E1E]">SummerBuild'26 </span>
         <span className="text-[#FA6B1C]">Achievements</span>
       </h1>
 

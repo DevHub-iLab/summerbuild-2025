@@ -35,5 +35,29 @@ export const HomePageElements = {
       id: "beginner",
       text: "Beginner friendly"
     }
-  ]
+  ],
+  aboutInfoCards: [
+    {
+      title: "Where?",
+      value: "The Arc & LT3/6 @ NTU",
+      icon: "mapPin",
+    },
+    {
+      title: "When?",
+      value: "25 May - 19 June",
+      icon: "calendar",
+    },
+    {
+      title: "Who can join?",
+      value: "NTU students from any Year or Faculty",
+      icon: "school",
+    },
+    {
+      title: "Team Size?",
+      value: "3 - 5 students per team",
+      icon: "users",
+    },
+  ],
+
+  
 };
