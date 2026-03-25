@@ -4,7 +4,7 @@ import ILabLogo from "../../assets/ilablogo.svg";
 
 function Footer() {
   return (
-    <footer className="mt-5 sm:mt-20 mb-6 flex flex-col items-center gap-6 px-4">
+    <footer className="mt-12 sm:mt-20 mb-6 flex flex-col items-center gap-6 px-4">
       {/* Brand strip */}
       <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-start sm:gap-10">
         {/* Made by */}

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef  } from "react";
 import SummerBuild26 from "../../assets/sb/sb26.svg";
 import SummerBuild26Mobile from "../../assets/sb/sb26mobile.svg";
+import { ChevronDown } from "lucide-react";
 
 const HIDE_THRESHOLD = 120; // must scroll this far from top before navbar can hide
 const SHOW_THRESHOLD = 60; // must scroll up this much before navbar reappears
@@ -132,11 +133,22 @@ const Navbar = () => {
           className={`flex w-[80%] flex-col items-center justify-start rounded-xl bg-[#f8f4d8]/80 p-2 shadow-lg backdrop-blur-md transition-all duration-300 md:hidden`}
         >
           {/* Mobile Menu Icon (Toggles Menu) */}
-          <div onClick={handleMobileNav} className="cursor-pointer">
+          <div
+            onClick={handleMobileNav}
+            className="relative flex w-full cursor-pointer items-center justify-center py-1"
+          >
+            {/* Centered Logo */}
             <img
               src={SummerBuild26Mobile}
               alt="SummerBuild Logo"
-              className="z-2 h-8 w-24"
+              className="z-10 h-8 w-24"
+            />
+
+            {/* Right-aligned dropdown icon */}
+            <ChevronDown
+              className={`absolute right-2 h-5 w-5 text-[#323854]/75 transition-transform duration-300 ${
+                navMobile ? "rotate-180" : ""
+              }`}
             />
           </div>
 

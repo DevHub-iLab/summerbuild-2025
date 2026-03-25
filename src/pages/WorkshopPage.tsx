@@ -21,7 +21,7 @@ export default function WorkshopPage() {
       <div className="mx-auto mt-10 max-w-7xl">
         {/* Mobile / tablet swiper */}
         <div className="md:hidden">
-          <div className="mx-auto w-full max-w-65 pb-12">
+          <div className="mx-auto w-full max-w-65 pb-0">
             <Swiper
               modules={[Autoplay, Pagination]}
               autoplay={{ delay: 3000, disableOnInteraction: false }}

@@ -8,7 +8,7 @@ type FAQType = {
 function FAQExt({ header, content, imageSrc, imageAlt }: FAQType) {
   return (
     <div className="mx-auto mt-14 w-full max-w-4xl rounded-4xl bg-[#5B96C8] px-6 py-4 text-white shadow-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-2xl sm:px-8 md:px-10">
-      <div className="flex flex-col items-center gap-6 md:flex-row md:items-center md:justify-between md:gap-8">
+      <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between md:gap-8">
         {/* Text */}
         <div className="text-center md:max-w-2xl md:text-left">
           <h2 className="text-xl font-semibold text-black md:text-2xl">
