@@ -16,7 +16,7 @@ function Schedule() {
           </span>
         </h1>
 
-        <p className="mt-4 text-sm font-medium text-[#6F6F6F] sm:text-base md:text-lg">
+        <p className="mt-4 text-sm font-medium text-black/70 sm:text-base md:text-lg">
           {scheduleData.scheduleSubtitle}
         </p>
       </div>

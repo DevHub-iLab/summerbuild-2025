@@ -38,6 +38,9 @@ export default function WorkshopPage() {
                     imageSrc={workshop.imageSrc}
                     title={workshop.title}
                     color={workshop.color}
+                    date={workshop.date}
+                    time={workshop.time}
+                    location={workshop.location}
                     mobile
                   />
                 </SwiperSlide>
@@ -54,6 +57,9 @@ export default function WorkshopPage() {
               imageSrc={workshop.imageSrc}
               title={workshop.title}
               color={workshop.color}
+              date={workshop.date}
+              time={workshop.time}
+              location={workshop.location}
             />
           ))}
         </div>

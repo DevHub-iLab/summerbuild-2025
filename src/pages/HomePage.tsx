@@ -27,10 +27,10 @@ export default function HomePage() {
             <div className="w-full px-5 lg:w-1/2">
               <div className="space-y-6">
                 <div className="inline-flex items-center gap-2">
-                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase sm:text-3xl md:text-4xl tracking-tight">
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase sm:text-3xl tracking-tight">
                     {summerbuild.title.prefix}
                   </h2>
-                  <span className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase sm:text-3xl md:text-4xl tracking-tight text-dh-orange">
+                  <span className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase sm:text-3xl tracking-tight text-dh-orange">
                     {summerbuild.title.highlight}
                   </span>
                 </div>
@@ -51,7 +51,7 @@ export default function HomePage() {
                   {summerbuild.description.suffix}
                 </p>
 
-                <div className="bg-[#e4f0e8] row-span-1 h-full w-full rounded-2xl rounded-tl-none p-5 md:p-6 relative transition-all duration-300 ease-in-out md:col-span-2 lg:col-span-1 shadow-md">
+                <div className="bg-[#e4f0e8] row-span-1 h-full w-full rounded-2xl p-5 md:p-6 relative transition-all duration-300 ease-in-out md:col-span-2 lg:col-span-1 shadow-md">
                   <div className="-left-1 top-4 w-3 h-3 bg-[#e4f0e8] transform rotate-45"></div>
                   <p className="text-base md:text-lg lg:text-xl">
                     <span className="text-dh-orange font-bold">
