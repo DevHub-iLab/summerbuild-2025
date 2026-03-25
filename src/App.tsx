@@ -4,7 +4,7 @@ import Navbar from "./components/Layout/Navbar";
 import WaveBar from "./components/Layout/WaveBar";
 
 import Footer from "./components/Layout/Footer";
-import Sidebar from "./components/Layout/Sidebar";
+// import Sidebar from "./components/Layout/Sidebar";
 
 function App() {
   return (

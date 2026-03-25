@@ -1,4 +1,4 @@
-import { Instagram, Send } from "lucide-react";
+import { Instagram } from "lucide-react";
 import DevHubLogo from "../../assets/devhublogo.svg";
 
 function Footer() {
