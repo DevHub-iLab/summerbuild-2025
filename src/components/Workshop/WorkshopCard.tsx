@@ -86,7 +86,7 @@ export default function WorkshopCard({
 
           {/* Back */}
           <div
-            className={`absolute inset-0 rounded-2xl border border-white/30 bg-gradient-to-br from-[#FADA7A] via-[#F7C85D] to-[#f0a653] p-5 text-left shadow-xl [backface-visibility:hidden] [transform:rotateY(180deg)]`}
+            className={`absolute inset-0 rounded-2xl border border-white/30 bg-gradient-to-br from-[#FADA7A] via-[#F7C85D] to-[#FADA7A] p-5 text-left shadow-xl [backface-visibility:hidden] [transform:rotateY(180deg)]`}
           >
             <div className="flex h-full flex-col">
               <div className="mb-4 flex items-center gap-3">
