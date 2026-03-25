@@ -20,7 +20,7 @@ export default function WorkshopPage() {
 
       <div className="mx-auto mt-10 max-w-7xl">
         {/* Mobile / tablet swiper */}
-        <div className="xl:hidden">
+        <div className="md:hidden">
           <div className="mx-auto w-full max-w-65 pb-12">
             <Swiper
               modules={[Autoplay, Pagination]}
@@ -50,7 +50,7 @@ export default function WorkshopPage() {
         </div>
 
         {/* Desktop layout */}
-        <div className="hidden xl:flex xl:flex-wrap xl:items-start xl:justify-center xl:gap-8">
+        <div className="hidden md:flex md:flex-wrap md:items-start md:justify-center md:gap-8">
           {workshopPageData.map((workshop) => (
             <WorkshopCard
               key={workshop.id}

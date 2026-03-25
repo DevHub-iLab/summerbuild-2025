@@ -2,6 +2,7 @@ import { useState } from "react";
 import ScheduleCard from "./ScheduleCard";
 import { ChevronDown } from "lucide-react";
 import { scheduleData } from "../../data/ProgramScheduleData";
+import scheduleImg from "../../assets/sb/teaching.svg";
 
 function Schedule() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -153,14 +154,28 @@ function Schedule() {
       </div>
 
       {/* Bottom CTA */}
-      <div className="mt-14 w-full max-w-3xl rounded-4xl bg-[#6FA9D1] px-6 py-8 text-center text-white shadow-lg">
-        <h2 className="text-xl font-semibold text-black md:text-2xl">
-          Ready to build through summer?
-        </h2>
-        <p className="mt-3 text-sm md:text-lg">
-          Mark these dates down and stay tuned for updates on workshops,
-          sessions, and submission details.
-        </p>
+      <div className="mt-14 w-full max-w-200 rounded-4xl bg-[#6FA9D1] px-6 py-6 shadow-lg">
+        <div className="flex flex-col items-center gap-6 md:flex-row md:items-center md:justify-between md:gap-8">
+          {/* Text */}
+          <div className="text-center md:max-w-xl md:text-left">
+            <h2 className="text-xl font-semibold text-black md:text-2xl">
+              Ready to build through summer?
+            </h2>
+            <p className="mt-3 text-sm text-white md:text-lg">
+              Mark these dates down and stay tuned for updates on workshops,
+              sessions, and submission details.
+            </p>
+          </div>
+
+          {/* SVG / image */}
+          <div className="shrink-0">
+            <img
+              src={scheduleImg}
+              alt="Penguins planning the schedule"
+              className="h-auto w-36 md:w-44 lg:w-52"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

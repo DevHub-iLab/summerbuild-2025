@@ -18,7 +18,7 @@ export const FAQPageData = {
         url: "https://www.instagram.com/ntu.devhub/",
         className: "bg-linear-65 from-[#c0a0d4] via-[#ce8585] to-[#fcb045] bg-clip-text font-bold text-transparent underline"
       },
-      emailText: "page or email us at devhubilab@e.ntu.edu.sg."
+      emailText: "page or email us at"
     }
   }
 };

@@ -6,6 +6,7 @@ import { Pagination } from "swiper/modules";
 import FAQTopic from "./FAQTopic";
 import FAQExt from "./FAQExt";
 import { FAQPageData } from "../../data/FAQPageData";
+import questionImg from "../../assets/sb/question.svg";
 
 function FAQ() {
   const [active, setActive] = useState("General");
@@ -115,6 +116,8 @@ function FAQ() {
 
       <FAQExt
         header={extendedSection.header}
+        imageSrc={questionImg}
+        imageAlt="Penguin answering frequently asked questions"
         content={
           <>
             {extendedSection.content.text}{" "}

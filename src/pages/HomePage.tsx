@@ -38,7 +38,7 @@ export default function HomePage() {
                 </div>
 
                 <p className="text-lg md:text-xl leading-relaxed">
-                  {summerbuild.description.prefix}{" "}
+                  A <span className="font-semibold">4-week</span> program by{" "}
                   <a
                     href={summerbuild.description.link.url}
                     className="inline-flex items-center gap-1 text-dh-orange font-bold hover:text-dh-orange/80 transition-colors underline decoration-2 decoration-il-blue/50 underline-offset-4"
@@ -74,7 +74,7 @@ export default function HomePage() {
                 <div className="flex justify-center flex-wrap gap-3 pt-2">
                   <span
                     className="text-dh-grey-200 hover:shadow-dh-grey-200/40 mb-8 rounded-xl py-4 px-4 text-left transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-lg md:mb-0 text-lg font-bold"
-                    style={{ backgroundColor: "#e0f2fe" }}
+                    style={{ backgroundColor: "#a1f3ff" }}
                   >
                     {stats[0].text}
                   </span>

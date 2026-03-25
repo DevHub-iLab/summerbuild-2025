@@ -41,7 +41,7 @@ function TimeBlock({
 }) {
   return (
     <div className="min-w-16 rounded-2xl border border-white/60 bg-white/70 px-2 py-2 text-center shadow-sm backdrop-blur-sm sm:min-w-21 sm:px-4 sm:py-4">
-      <div className="text-[27px] font-extrabold leading-none text-[#1E1E1E] sm:text-3xl">
+      <div className="text-[24px] font-extrabold leading-none text-[#1E1E1E] sm:text-3xl">
         {String(value).padStart(2, "0")}
       </div>
       <div className="mt-1 text-[10px] font-semibold uppercase tracking-wide text-[#6B7280] sm:text-sm">
@@ -95,7 +95,7 @@ export default function Countdown() {
             </div>
             </div>
 
-          <div className="mt-4 flex flex-wrap justify-center gap-3">
+          <div className="mt-4 flex flex-wrap justify-center gap-1 sm:gap-3">
             <TimeBlock value={timeLeft.days} label="Days" />
             <TimeBlock value={timeLeft.hours} label="Hours" />
             <TimeBlock value={timeLeft.minutes} label="Minutes" />

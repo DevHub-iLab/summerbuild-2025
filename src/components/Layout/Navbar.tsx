@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 
 import { useState, useEffect, useRef  } from "react";
-import SummerBuild25 from "../../assets/sb25.png";
-import SummerBuild25Mobile from "../../assets/sb25mobile.png";
+import SummerBuild26 from "../../assets/sb/sb26.svg";
+import SummerBuild26Mobile from "../../assets/sb/sb26mobile.svg";
 
 const HIDE_THRESHOLD = 120; // must scroll this far from top before navbar can hide
 const SHOW_THRESHOLD = 60; // must scroll up this much before navbar reappears
@@ -84,7 +84,7 @@ const Navbar = () => {
     onClick={() => navigate("/")}
   >
     <img
-      src={SummerBuild25}
+      src={SummerBuild26}
       alt="SummerBuild Logo"
       className="h-16 w-32 rounded-[3rem] transition-all duration-100 hover:scale-110"
     />
@@ -134,7 +134,7 @@ const Navbar = () => {
           {/* Mobile Menu Icon (Toggles Menu) */}
           <div onClick={handleMobileNav} className="cursor-pointer">
             <img
-              src={SummerBuild25Mobile}
+              src={SummerBuild26Mobile}
               alt="SummerBuild Logo"
               className="z-2 h-8 w-24"
             />

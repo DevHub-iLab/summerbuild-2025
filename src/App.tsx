@@ -15,7 +15,7 @@ function App() {
 
       {/* <Sidebar /> */}
 
-      <section className="sm:px-6 mt-10 lg:mt-20 xl:mt-35">
+      <section className="sm:px-6 mt-10 lg:mt-35 xl:mt-45">
 
         <AppRoutes />
 
