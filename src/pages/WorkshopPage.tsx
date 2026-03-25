@@ -9,7 +9,7 @@ export default function WorkshopPage() {
     <section className="mt-20">
       <h1 className="justify-center text-center font-bold uppercase text-2xl sm:text-3xl md:text-5xl">
         <span className="text-[#1E1E1E]">Workshops </span>
-        <span className="text-[#FA6B1C]">26</span>
+        <span className="text-[#FA6B1C]">'26</span>
       </h1>
 
       <h3 className="text-center mt-4 text-sm font-medium text-black/70 sm:text-base md:text-lg">
