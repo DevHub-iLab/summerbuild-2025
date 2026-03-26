@@ -154,7 +154,7 @@ function Schedule() {
       </div>
 
       {/* Bottom CTA */}
-      <div className="mt-14 w-full max-w-200 rounded-4xl bg-[#6FA9D1] px-6 py-6 shadow-lg">
+      <div className="mt-14 w-full max-w-190 rounded-4xl bg-[#6FA9D1] px-6 py-6 shadow-lg">
         <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between md:gap-8">
           {/* Text */}
           <div className="text-center md:max-w-xl md:text-left">

@@ -13,7 +13,7 @@ function FAQCard({ question, answer }: FAQCardType) {
     <div
       className={`overflow-hidden rounded-2xl border transition-all duration-300 ease-in-out ${
         open
-          ? "border-[#9ED9F3] bg-[#F7FCFF] shadow-md"
+          ? "border-[#9ED9F3] bg-[#fdfeff] shadow-md"
           : "border-transparent bg-white shadow-sm hover:shadow-md"
       }`}
     >

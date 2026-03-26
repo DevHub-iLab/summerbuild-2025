@@ -1,6 +1,6 @@
 import HTMLLogo from "../assets/htmlIcon.svg";
 import ReactLogo from "../assets/reactIcon.svg";
-import GitLogo from "../assets/gitIcon.png";
+import GitLogo from "../assets/workshops/gitIcon.png";
 import ExpressLogo from "../assets/expressIcon.svg"
 import TinkerTankerLogo from "../assets/tinkertankerIcon.svg";
 
