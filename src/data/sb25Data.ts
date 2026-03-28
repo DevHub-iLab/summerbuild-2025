@@ -1,5 +1,5 @@
 import freshmanTeam from "../assets/sb/2025/bestFreshman/bestFreshman.jpg";
-import uiuxTeam from "../assets/sb/2025/bestUIUX/bestUIUX.jpg";
+import uiuxTeam from "../assets/sb/2025/bestUIUX/bestUIUX2.jpg";
 import innovativeTeam from "../assets/sb/2025/mostInnovative/mostInnovative.jpg";
 import usefulTeam from "../assets/sb/2025/mostUseful/mostUseful.jpg";
 export type IconType = "paintbrush" | "flask" | "wrench" | "users";
