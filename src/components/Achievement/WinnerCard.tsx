@@ -33,13 +33,11 @@ const iconMap = {
 export default function WinnerCard({
   color,
   award,
-  awardDescription,
   teamName,
   projectName,
   summary,
   members,
   images,
-  tags,
   winnerLink,
   iconType,
 }: WinnerProps) {
