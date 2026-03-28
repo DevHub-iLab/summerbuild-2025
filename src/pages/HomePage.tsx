@@ -3,6 +3,7 @@ import AboutCard from "../components/FAQ/AboutCard";
 import Achievement from "../components/Achievement/Achievement";
 import Tagline from "../components/Tagline";
 import Countdown from "../components/CountDown";
+import RekaChallengeSection from "../components/RekaChallenge";
 
 export default function HomePage() {
   const { summerbuild, messageBox, stats } = HomePageElements;
@@ -91,8 +92,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
+      
       <AboutCard />
+      <RekaChallengeSection />
       <Achievement />
     </>
   );

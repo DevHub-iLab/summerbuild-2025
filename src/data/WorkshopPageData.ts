@@ -3,6 +3,7 @@ import ReactLogo from "../assets/reactIcon.svg";
 import GitLogo from "../assets/workshops/gitIcon.png";
 import ExpressLogo from "../assets/expressIcon.svg"
 import TinkerTankerLogo from "../assets/tinkertankerIcon.svg";
+import RekaAILogo from "../assets/workshops/rekaAI.svg";
 
 export type WorkshopItem = {
   id: number;
@@ -59,6 +60,15 @@ export const workshopPageData: WorkshopItem[] = [
     date: "26 May 2026",
     time: "1 PM - 4 PM",
     location: "NS LT6",
+  },
+  {
+    id: 6,
+    title: "Reka AI",
+    imageSrc: RekaAILogo,
+    color: "#FADA7A",
+    date: "TBC",
+    time: "TBC",
+    location: "TBC",
   },
   
 ];
