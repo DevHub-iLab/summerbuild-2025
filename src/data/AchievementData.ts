@@ -23,13 +23,13 @@ export const achievementData = {
     },
   ],
   specialAwards: [
-    {
-      id: "best-technical",
-      title: "Best Technical",
-      description: "Recognises the strongest technical execution.",
-      color: "#FFD6A5",
-      icon: "code",
-    },
+    // {
+    //   id: "best-technical",
+    //   title: "Best Technical",
+    //   description: "Recognises the strongest technical execution.",
+    //   color: "#FFD6A5",
+    //   icon: "code",
+    // },
     {
       id: "best-ai-integration",
       title: "Best AI Integration",

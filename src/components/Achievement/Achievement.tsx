@@ -97,8 +97,8 @@ function Achievement() {
               Special Awards
             </h2>
 
-            <div className="mx-auto grid max-w-5xl grid-cols-3 gap-6">
-              {achievementData.specialAwards.slice(0, 3).map((award) => (
+            <div className="mx-auto grid max-w-3xl grid-cols-2 gap-6">
+              {achievementData.specialAwards.slice(0, 2).map((award) => (
                 <AchievementCard
                   key={award.id}
                   color={award.color}
@@ -110,8 +110,8 @@ function Achievement() {
               ))}
             </div>
 
-            <div className="mx-auto mt-6 grid max-w-2xl grid-cols-2 gap-6">
-              {achievementData.specialAwards.slice(3).map((award) => (
+            <div className="mx-auto mt-6 grid max-w-3xl grid-cols-2 gap-6">
+              {achievementData.specialAwards.slice(2).map((award) => (
                 <AchievementCard
                   key={award.id}
                   color={award.color}
