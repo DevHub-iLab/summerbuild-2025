@@ -1,7 +1,7 @@
 import { Instagram } from "lucide-react";
 import DevHubLogo from "../../assets/devhublogo.svg";
 import ILabLogo from "../../assets/ilablogo.svg";
-import RekaAILogo from "../../assets/workshops/rekaAI.svg";
+// import RekaAILogo from "../../assets/workshops/rekaAI.svg";
 
 function Footer() {
   return (
@@ -53,7 +53,7 @@ function Footer() {
               />
             </a>
 
-            <a
+            {/* <a
               href="https://reka.ai/"
               target="_blank"
               rel="noreferrer"
@@ -64,7 +64,7 @@ function Footer() {
                 alt="Reka AI Logo"
                 className="h-6 sm:h-7 md:h-10 w-auto"
               />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
