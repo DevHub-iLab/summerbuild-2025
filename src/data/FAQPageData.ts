@@ -93,7 +93,7 @@ export const FAQTopicElements = {
     {
       id: "registration-4",
       question: "What if I don't have a group?",
-      answer: "If you would like to be randomly matched, indicate \"-\" in the team name during your registration. We will try our best to match you with other participants who have indiciated the same."
+      answer: "Indicate \"-\" in the team name during your registration and we will set up a excel sheet with other participants who have indiciated the same for you to find a group."
     }
   ],
 
