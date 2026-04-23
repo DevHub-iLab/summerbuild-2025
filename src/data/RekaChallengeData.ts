@@ -11,17 +11,20 @@ export type RekaChallengeSectionData = {
   subtitle: string;
   note: string;
   cards: ChallengeCard[];
+  cta?: {
+    label: string;
+    link: string;
+  };
 };
 
 export const rekaChallengeData: RekaChallengeSectionData = {
   eyebrow: "Special Track",
-  title: "Reka AI Smart Cities Challenge",
+  title: "Reka Vision Challenge",
   // subtitle:
   //   "An optional challenge track for teams who want to explore AI-powered solutions in urban contexts using Reka AI APIs.",
   // note: "Participation is optional, but teams joining this track can use these problem areas as starting points while still defining their own scope and approach.",
-  subtitle:
-  "In collaboration with Reka AI, special prizes will be awarded to teams that leverage Reka AI APIs and technologies to build impactful, real-world solutions.",
-  note: "Full challenge details, including problem statements and judging criteria, are currently being finalised and will be released soon.",
+  subtitle: "In collaboration with Reka, special prizes are up for grabs for teams who leverage Reka's Vision APIs and technologies in creative and impactful ways.",
+  note: "You can explore areas like Smart Cities, Transportation, or Security, and experiment with Reka Vision capabilities to build next-generation applications or dashboards. Teams may showcase end-to-end flows, from ingesting video data to generating actionable insights. Full challenge details will be announced soon.",
   cards: [
     // {
     //   id: 1,
@@ -53,4 +56,8 @@ export const rekaChallengeData: RekaChallengeSectionData = {
     //   ],
     // },
   ],
+  cta: {
+    label: "Find out more",
+    link: "https://reka.ai/products/vision", 
+  },
 };

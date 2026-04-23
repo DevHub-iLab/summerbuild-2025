@@ -3,7 +3,7 @@ import { Sparkles, Lightbulb, ChevronDown } from "lucide-react";
 import { rekaChallengeData } from "../data/RekaChallengeData";
 
 function RekaChallengeSection() {
-  const { eyebrow, subtitle, note, cards } = rekaChallengeData;
+  const { eyebrow, subtitle, note, cards, cta } = rekaChallengeData;
   const [openCardId, setOpenCardId] = useState<number | null>(null);
 
   const toggleCard = (id: number) => {
@@ -23,7 +23,7 @@ function RekaChallengeSection() {
               </div>
 
               <h2 className="text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl">
-                <span className="text-dh-orange">Reka AI</span> Smart Cities Challenge
+                <span className="text-dh-orange">Reka Vision</span> Challenge
               </h2>
 
               <p className="mt-4 text-sm leading-7 text-black/75 sm:text-base md:text-lg">
@@ -33,9 +33,23 @@ function RekaChallengeSection() {
               <p className="mt-3 text-sm leading-6 text-black/60 sm:text-base">
                 {note}
               </p>
+
+              {cta && (
+                <div className="mt-5 flex justify-center">
+                  <a
+                    href={cta.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center rounded-full bg-dh-orange px-5 py-2 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:scale-[1.03] hover:shadow-md"
+                  >
+                    {cta.label}
+                  </a>
+                </div>
+              )}
             </div>
 
             {/* Mobile accordion */}
+            {cards.length > 0 && (
             <div className="mt-8 space-y-3 md:hidden">
               {cards.map((card) => {
                 const isOpen = openCardId === card.id;
@@ -103,8 +117,10 @@ function RekaChallengeSection() {
                 );
               })}
             </div>
+            )}
 
             {/* Desktop cards */}
+            {cards.length > 0 && (
             <div className="mt-8 hidden grid-cols-1 gap-4 md:mt-10 md:grid md:grid-cols-2 md:gap-6">
               {cards.map((card) => (
                 <div
@@ -146,6 +162,7 @@ function RekaChallengeSection() {
                 </div>
               ))}
             </div>
+            )}
           </div>
         </div>
       </div>
