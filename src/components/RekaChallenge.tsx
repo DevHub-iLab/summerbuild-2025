@@ -3,8 +3,7 @@ import { Sparkles, Lightbulb, ChevronDown } from "lucide-react"
 import { rekaChallengeData } from "../data/RekaChallengeData"
 
 function RekaChallengeSection() {
-    const { eyebrow, title, subtitle, highlights, cards, cta } =
-        rekaChallengeData
+    const { eyebrow, subtitle, highlights, cards, cta } = rekaChallengeData
     const [openCardId, setOpenCardId] = useState<number | null>(null)
 
     const toggleCard = (id: number) => {
