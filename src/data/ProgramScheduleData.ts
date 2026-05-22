@@ -1,66 +1,66 @@
 export type ScheduleEvent = {
-  dateTitle: string;
-  description: string;
-  icon?: string;
-};
+    dateTitle: string
+    description: string
+    icon?: string
+}
 
 export type ScheduleWeek = {
-  weekTitle: string;
-  description?: string;
-  color: string;
-  icon?: string;
-  events: ScheduleEvent[];
-};
+    weekTitle: string
+    description?: string
+    color: string
+    icon?: string
+    events: ScheduleEvent[]
+}
 
 export const scheduleData = {
-  scheduleHeader: "PROGRAMME",
-  scheduleHeaderOrange: "SCHEDULE",
-  scheduleSubtitle:
-    "A 4-week summer journey of workshops, mentorship, and milestone moments.",
+    scheduleHeader: "PROGRAMME",
+    scheduleHeaderOrange: "SCHEDULE",
+    scheduleSubtitle:
+        "A 4-week summer journey of workshops, mentorship, and milestone moments.",
 
-  weeks: [
-    {
-      weekTitle: "Week 1",
-      description: "Programme kick off!",
-      color: "#6ECBF5",
-      icon: "☀️",
-      events: [
+    weeks: [
         {
-          dateTitle: "25 May",
-          description: "Opening Ceremony",
-          icon: "🎉",
+            weekTitle: "Week 1",
+            description: "Programme kick off!",
+            color: "#6ECBF5",
+            icon: "☀️",
+            events: [
+                {
+                    dateTitle: "25 May",
+                    description: "Opening Ceremony @ NS LT3 11am",
+                    icon: "🎉",
+                },
+                {
+                    dateTitle: "25–26 May",
+                    description: "Various Workshops",
+                    icon: "🛠️",
+                },
+            ],
         },
         {
-          dateTitle: "25–26 May",
-          description: "Various Workshops",
-          icon: "🛠️",
-        },
-      ],
-    },
-    {
-      weekTitle: "Week 2–3",
-      description: "Check-in Sessions with Mentors",
-      color: "#6ECBF5",
-      icon: "👥",
-      events: [],
-    },
-    {
-      weekTitle: "Week 4",
-      description: "Final stretch before submission and judging",
-      color: "#6ECBF5",
-      icon: "🚀",
-      events: [
-        {
-          dateTitle: "16 June",
-          description: "Project Submission",
-          icon: "🗃️",
+            weekTitle: "Week 2–3",
+            description: "Check-in Sessions with Mentors",
+            color: "#6ECBF5",
+            icon: "👥",
+            events: [],
         },
         {
-          dateTitle: "19 June",
-          description: "Judging & Closing Ceremony",
-          icon: "🏁",
+            weekTitle: "Week 4",
+            description: "Final stretch before submission and judging",
+            color: "#6ECBF5",
+            icon: "🚀",
+            events: [
+                {
+                    dateTitle: "18 June",
+                    description: "Project Submission at 12pm",
+                    icon: "🗃️",
+                },
+                {
+                    dateTitle: "19 June",
+                    description: "Judging & Closing Ceremony",
+                    icon: "🏁",
+                },
+            ],
         },
-      ],
-    },
-  ],
-};
+    ],
+}
