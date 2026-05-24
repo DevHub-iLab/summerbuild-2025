@@ -23,13 +23,14 @@ export const achievementData = {
         },
     ],
     specialAwards: [
-        // {
-        //   id: "best-technical",
-        //   title: "Best Technical",
-        //   description: "Recognises the strongest technical execution.",
-        //   color: "#FFD6A5",
-        //   icon: "code",
-        // },
+        {
+            id: "best-uiux",
+            title: "Best UI/UX Design",
+            description:
+                "Recognises the most user-friendly and visually appealing interface.",
+            color: "#FFB3B3",
+            icon: "palette",
+        },
         {
             id: "best-ai-integration",
             title: "Best AI Integration",

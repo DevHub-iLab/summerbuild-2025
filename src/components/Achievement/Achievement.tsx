@@ -101,34 +101,22 @@ function Achievement() {
                             Special Awards
                         </h2>
 
-                        <div className="mx-auto grid max-w-3xl grid-cols-2 gap-6">
-                            {achievementData.specialAwards
-                                .slice(0, 2)
-                                .map(award => (
-                                    <AchievementCard
+                        <div className="mx-auto grid max-w-3xl grid-cols-4 gap-6">
+                            {achievementData.specialAwards.map(
+                                (award, index) => (
+                                    <div
                                         key={award.id}
-                                        color={award.color}
-                                        title={award.title}
-                                        description={award.description}
-                                        icon={award.icon}
-                                        variant="special"
-                                    />
-                                ))}
-                        </div>
-
-                        <div className="mx-auto mt-6 grid max-w-3xl grid-cols-2 gap-6">
-                            {achievementData.specialAwards
-                                .slice(2)
-                                .map(award => (
-                                    <AchievementCard
-                                        key={award.id}
-                                        color={award.color}
-                                        title={award.title}
-                                        description={award.description}
-                                        icon={award.icon}
-                                        variant="special"
-                                    />
-                                ))}
+                                        className={`col-span-2 ${index === 4 ? "col-start-2" : ""}`}>
+                                        <AchievementCard
+                                            color={award.color}
+                                            title={award.title}
+                                            description={award.description}
+                                            icon={award.icon}
+                                            variant="special"
+                                        />
+                                    </div>
+                                ),
+                            )}
                         </div>
                     </div>
                     {/* Reka Awards */}
