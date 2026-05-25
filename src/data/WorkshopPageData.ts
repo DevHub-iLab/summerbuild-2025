@@ -23,7 +23,7 @@ export const workshopPageData: WorkshopItem[] = [
         color: "#FADA7A",
         date: "21 May 2026",
         time: "1PM",
-        location: "LHN LT",
+        location: "Arc LHN LT",
     },
     {
         id: 1,
@@ -50,7 +50,7 @@ export const workshopPageData: WorkshopItem[] = [
         color: "#FADA7A",
         date: "26 May 2026",
         time: "10 AM – 12 PM",
-        location: "NS LT6",
+        location: "Arc LHN LT",
     },
     {
         id: 4,
@@ -59,7 +59,7 @@ export const workshopPageData: WorkshopItem[] = [
         color: "#FADA7A",
         date: "26 May 2026",
         time: "10 AM – 12 PM",
-        location: "NS LT6",
+        location: "Arc LHN LT",
     },
     {
         id: 5,
@@ -68,6 +68,6 @@ export const workshopPageData: WorkshopItem[] = [
         color: "#FADA7A",
         date: "26 May 2026",
         time: "1 PM - 4 PM",
-        location: "NS LT6",
+        location: "Arc LHN LT",
     },
 ]
