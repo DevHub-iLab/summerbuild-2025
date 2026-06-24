@@ -1,7 +1,7 @@
 // src/pages/WinnersPage.tsx
 
 import WinnerCard from "../components/Achievement/WinnerCard"
-import type { WinnerItem } from "../data/Winners/sb25Data"
+import type { WinnerItem } from "../data/Winners/winnerData"
 
 type WinnersPageProps = {
     year: string
@@ -35,13 +35,11 @@ export default function WinnersPage({
                         key={`${winner.award}-${winner.teamName}`}
                         color={winner.color}
                         award={winner.award}
-                        awardDescription={winner.awardDescription}
                         teamName={winner.teamName}
                         projectName={winner.projectName}
                         summary={winner.summary}
                         members={winner.members}
                         images={winner.images}
-                        tags={winner.tags}
                         winnerLink={winner.winnerLink}
                         iconType={winner.iconType}
                     />
