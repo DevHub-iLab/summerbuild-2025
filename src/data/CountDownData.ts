@@ -1,5 +1,5 @@
 export const countdownData = {
-    badge: "Registration closed!",
+    badge: "Event Over!",
     title: "Registration Countdown",
     description:
         "Don’t miss your chance to join SummerBuild '26. Secure your spot before registration closes!",

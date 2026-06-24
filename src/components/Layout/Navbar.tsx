@@ -1,185 +1,215 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"
 
-import { useState, useEffect, useRef  } from "react";
-import SummerBuild26 from "../../assets/sb/sb26.svg";
-import SummerBuild26Mobile from "../../assets/sb/sb26mobile.svg";
-import { ChevronDown } from "lucide-react";
+import { useState, useEffect, useRef } from "react"
+import SummerBuild26 from "../../assets/sb/sb26.svg"
+import SummerBuild26Mobile from "../../assets/sb/sb26mobile.svg"
+import { ChevronDown } from "lucide-react"
 
-const HIDE_THRESHOLD = 120; // must scroll this far from top before navbar can hide
-const SHOW_THRESHOLD = 60; // must scroll up this much before navbar reappears
-const SCROLL_DELTA = 8; // ignore tiny accidental scrolls
+const HIDE_THRESHOLD = 120 // must scroll this far from top before navbar can hide
+const SHOW_THRESHOLD = 60 // must scroll up this much before navbar reappears
+const SCROLL_DELTA = 8 // ignore tiny accidental scrolls
 
 const Navbar = () => {
-  const navigate = useNavigate();
+    const navigate = useNavigate()
 
-  const [showNavbar, setShowNavbar] = useState(true); // Tracks visibility
-  const [navMobile, setNavMobile] = useState(false);
+    const [showNavbar, setShowNavbar] = useState(true) // Tracks visibility
+    const [navMobile, setNavMobile] = useState(false)
 
-  const lastScrollY = useRef(0);
-  const scrollUpDistance = useRef(0);
+    const lastScrollY = useRef(0)
+    const scrollUpDistance = useRef(0)
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      const diff = currentScrollY - lastScrollY.current;
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY
+            const diff = currentScrollY - lastScrollY.current
 
-      // always show near top
-      if (currentScrollY <= HIDE_THRESHOLD) {
-        setShowNavbar(true);
-        scrollUpDistance.current = 0;
-        lastScrollY.current = currentScrollY;
-        return;
-      }
+            // always show near top
+            if (currentScrollY <= HIDE_THRESHOLD) {
+                setShowNavbar(true)
+                scrollUpDistance.current = 0
+                lastScrollY.current = currentScrollY
+                return
+            }
 
-      // ignore very tiny scroll movements
-      if (Math.abs(diff) < SCROLL_DELTA) {
-        return;
-      }
+            // ignore very tiny scroll movements
+            if (Math.abs(diff) < SCROLL_DELTA) {
+                return
+            }
 
-      // scrolling down
-      if (diff > 0) {
-        scrollUpDistance.current = 0;
+            // scrolling down
+            if (diff > 0) {
+                scrollUpDistance.current = 0
 
-        if (currentScrollY > HIDE_THRESHOLD) {
-          setShowNavbar(false);
+                if (currentScrollY > HIDE_THRESHOLD) {
+                    setShowNavbar(false)
+                }
+            }
+
+            // scrolling up
+            if (diff < 0) {
+                scrollUpDistance.current += Math.abs(diff)
+
+                if (scrollUpDistance.current >= SHOW_THRESHOLD) {
+                    setShowNavbar(true)
+                }
+            }
+
+            lastScrollY.current = currentScrollY
         }
-      }
 
-      // scrolling up
-      if (diff < 0) {
-        scrollUpDistance.current += Math.abs(diff);
+        window.addEventListener("scroll", handleScroll, { passive: true })
 
-        if (scrollUpDistance.current >= SHOW_THRESHOLD) {
-          setShowNavbar(true);
-        }
-      }
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, [])
 
-      lastScrollY.current = currentScrollY;
-    };
+    //handle mobileNavbar
+    const handleMobileNav = () => {
+        setNavMobile(!navMobile)
+    }
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    return (
+        <>
+            {/* Desktop Navbar */}
+            <div
+                className={`fixed top-0 right-0 left-0 z-50 flex justify-center transition-all duration-500 ease-in-out ${
+                    showNavbar
+                        ? "pointer-events-auto translate-y-0 opacity-100"
+                        : "pointer-events-none -translate-y-24 opacity-0"
+                }`}>
+                <div className="z-50 mt-6 w-full max-w-360 px-16 transition-all duration-300 lg:px-32">
+                    <nav className="transition-all duration-100">
+                        <ul className="z-50 mx-auto hidden h-16 items-center justify-center rounded-4xl bg-[#f8f4d8]/80 px-6 py-2 font-bold text-[#323854] drop-shadow-xl backdrop-blur-md md:flex lg:text-2xl">
+                            <li
+                                className="flex w-50 cursor-pointer justify-center transition-all duration-100 hover:underline"
+                                onClick={() => navigate("/")}>
+                                <img
+                                    src={SummerBuild26}
+                                    alt="SummerBuild Logo"
+                                    className="h-16 w-32 rounded-[3rem] transition-all duration-100 hover:scale-110"
+                                />
+                            </li>
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+                            <li className="group relative flex w-55 justify-center text-center">
+                                <button
+                                    type="button"
+                                    className="flex cursor-pointer items-center gap-1 transition-all duration-100 hover:underline">
+                                    Winners
+                                    <ChevronDown className="h-5 w-5 transition-transform duration-300 group-hover:rotate-180" />
+                                </button>
 
-  //handle mobileNavbar
-  const handleMobileNav = () => {
-    setNavMobile(!navMobile);
-  };
+                                <div className="invisible absolute top-full mt-3 w-44 rounded-2xl bg-[#f8f4d8]/95 py-3 text-base font-bold text-[#323854] opacity-0 shadow-xl backdrop-blur-md transition-all duration-200 group-hover:visible group-hover:opacity-100">
+                                    <button
+                                        type="button"
+                                        className="block w-full px-4 py-2 text-center hover:underline"
+                                        onClick={() =>
+                                            navigate("/winners/2026")
+                                        }>
+                                        2026 Winners
+                                    </button>
 
-  return (
-    <>
-      {/* Desktop Navbar */}
-<div
-        className={`fixed top-0 left-0 right-0 z-50 flex justify-center transition-all duration-500 ease-in-out ${
-          showNavbar
-            ? "translate-y-0 opacity-100 pointer-events-auto"
-            : "-translate-y-24 opacity-0 pointer-events-none"
-        }`}
-      >
-        <div className="z-50 mt-6 w-full max-w-360 px-16 transition-all duration-300 lg:px-32">
-    <nav className="transition-all duration-100">
-      <ul className="z-50 mx-auto hidden h-16 items-center justify-center rounded-4xl bg-[#f8f4d8]/80 px-6 py-2 font-bold text-[#323854] drop-shadow-xl backdrop-blur-md md:flex lg:text-2xl">
-  <li 
-    className="flex w-50 justify-center cursor-pointer transition-all duration-100 hover:underline"
-    onClick={() => navigate("/")}
-  >
-    <img
-      src={SummerBuild26}
-      alt="SummerBuild Logo"
-      className="h-16 w-32 rounded-[3rem] transition-all duration-100 hover:scale-110"
-    />
-  </li>
-
-  <li 
-    className="flex w-55 justify-center text-center cursor-pointer transition-all duration-100 hover:underline" 
-    onClick={() => navigate("/previouswinner")}
-  >
-    Previous Winners
-  </li>
-  <li 
-    className="flex w-55 justify-center text-center cursor-pointer transition-all duration-100 hover:underline"
-    onClick={() => navigate("/schedule")}
-  >
-    Schedule
-  </li>
-  <li 
-    className="flex w-55 justify-center text-center cursor-pointer transition-all duration-100 hover:underline"
-    onClick={() => navigate("/workshops")}
-  >
-    Workshops
-  </li>
-  {/* <li 
+                                    <button
+                                        type="button"
+                                        className="block w-full px-4 py-2 text-center hover:underline"
+                                        onClick={() =>
+                                            navigate("/winners/2025")
+                                        }>
+                                        2025 Winners
+                                    </button>
+                                </div>
+                            </li>
+                            <li
+                                className="flex w-55 cursor-pointer justify-center text-center transition-all duration-100 hover:underline"
+                                onClick={() => navigate("/schedule")}>
+                                Schedule
+                            </li>
+                            <li
+                                className="flex w-55 cursor-pointer justify-center text-center transition-all duration-100 hover:underline"
+                                onClick={() => navigate("/workshops")}>
+                                Workshops
+                            </li>
+                            {/* <li 
     className="flex w-55 justify-center text-center cursor-pointer transition-all duration-100 hover:underline"
     onClick={() => navigate("/milestone")}
   >
     Milestones
   </li> */}
-  <li 
-    className="flex w-55 justify-center text-center cursor-pointer transition-all duration-100 hover:underline"
-    onClick={() => navigate("/FAQ")}
-  >
-    FAQ
-  </li>
-</ul>
-    </nav>
-  </div>
-</div>
-      {/* Mobile Navbar */}
-      <div
-        className={`top-0 z-50 flex w-full justify-center py-2 transition-all duration-300`}
-      >
-        <div
-          className={`flex w-[80%] flex-col items-center justify-start rounded-xl bg-[#f8f4d8]/80 p-2 shadow-lg backdrop-blur-md transition-all duration-300 md:hidden`}
-        >
-          {/* Mobile Menu Icon (Toggles Menu) */}
-          <div
-            onClick={handleMobileNav}
-            className="relative flex w-full cursor-pointer items-center justify-center py-1"
-          >
-            {/* Centered Logo */}
-            <img
-              src={SummerBuild26Mobile}
-              alt="SummerBuild Logo"
-              className="z-10 h-8 w-24"
-            />
+                            <li
+                                className="flex w-55 cursor-pointer justify-center text-center transition-all duration-100 hover:underline"
+                                onClick={() => navigate("/FAQ")}>
+                                FAQ
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            {/* Mobile Navbar */}
+            <div
+                className={`top-0 z-50 flex w-full justify-center py-2 transition-all duration-300`}>
+                <div
+                    className={`flex w-[80%] flex-col items-center justify-start rounded-xl bg-[#f8f4d8]/80 p-2 shadow-lg backdrop-blur-md transition-all duration-300 md:hidden`}>
+                    {/* Mobile Menu Icon (Toggles Menu) */}
+                    <div
+                        onClick={handleMobileNav}
+                        className="relative flex w-full cursor-pointer items-center justify-center py-1">
+                        {/* Centered Logo */}
+                        <img
+                            src={SummerBuild26Mobile}
+                            alt="SummerBuild Logo"
+                            className="z-10 h-8 w-24"
+                        />
 
-            {/* Right-aligned dropdown icon */}
-            <ChevronDown
-              className={`absolute right-2 h-5 w-5 text-[#323854]/75 transition-transform duration-300 ${
-                navMobile ? "rotate-180" : ""
-              }`}
-            />
-          </div>
+                        {/* Right-aligned dropdown icon */}
+                        <ChevronDown
+                            className={`absolute right-2 h-5 w-5 text-[#323854]/75 transition-transform duration-300 ${
+                                navMobile ? "rotate-180" : ""
+                            }`}
+                        />
+                    </div>
 
-          {/* Menu Items (Shown Only When navMobile is True) */}
-          <div
-            className={`transform overflow-hidden transition-all duration-500 ease-in-out ${
-              navMobile
-                ? "max-h-125 scale-y-100 opacity-100"
-                : "max-h-0 scale-y-0 opacity-0"
-            }`}
-          >
-            <ul className="mt-2 text-center text-lg font-bold text-[#323854] sm:text-xl md:text-2xl">
-              <li
-                className="cursor-pointer py-2"
-                onClick={() => {
-                  navigate("/");
-                  setNavMobile(false);
-                }}
-              >
-                Home
-              </li>
-              <li
-                className="cursor-pointer py-2"
-                onClick={() => {
-                  navigate("/previouswinner");
-                  setNavMobile(false);
-                }}
-              >
-                Previous Winners
-              </li>              
-              {/* <li
+                    {/* Menu Items (Shown Only When navMobile is True) */}
+                    <div
+                        className={`transform overflow-hidden transition-all duration-500 ease-in-out ${
+                            navMobile
+                                ? "max-h-125 scale-y-100 opacity-100"
+                                : "max-h-0 scale-y-0 opacity-0"
+                        }`}>
+                        <ul className="mt-2 text-center text-lg font-bold text-[#323854] sm:text-xl md:text-2xl">
+                            <li
+                                className="cursor-pointer py-2"
+                                onClick={() => {
+                                    navigate("/")
+                                    setNavMobile(false)
+                                }}>
+                                Home
+                            </li>
+                            <li className="py-2">
+                                <div className="font-bold">
+                                    Previous Winners
+                                </div>
+
+                                <div className="mt-1 flex flex-col gap-1 text-base font-semibold text-[#323854]/80">
+                                    <button
+                                        type="button"
+                                        className="py-1 hover:underline"
+                                        onClick={() => {
+                                            navigate("/winners/2026")
+                                            setNavMobile(false)
+                                        }}>
+                                        2026 Winners
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        className="py-1 hover:underline"
+                                        onClick={() => {
+                                            navigate("/winners/2025")
+                                            setNavMobile(false)
+                                        }}>
+                                        2025 Winners
+                                    </button>
+                                </div>
+                            </li>
+                            {/* <li
                 className="cursor-pointer py-2"
                 onClick={() => {
                   navigate("/milestone");
@@ -189,39 +219,36 @@ const Navbar = () => {
               Milestone
 
               </li> */}
-              <li
-                className="cursor-pointer py-2"
-                onClick={() => {
-                  navigate("/schedule");
-                  setNavMobile(false);
-                }}
-              >
-                Schedule
-              </li>
-              <li
-                className="cursor-pointer py-2"
-                onClick={() => {
-                  navigate("/workshops");
-                  setNavMobile(false);
-                }}
-              >
-                Workshops
-              </li>
-              <li
-                className="cursor-pointer py-2"
-                onClick={() => {
-                  navigate("/FAQ");
-                  setNavMobile(false);
-                }}
-              >
-                FAQ
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
+                            <li
+                                className="cursor-pointer py-2"
+                                onClick={() => {
+                                    navigate("/schedule")
+                                    setNavMobile(false)
+                                }}>
+                                Schedule
+                            </li>
+                            <li
+                                className="cursor-pointer py-2"
+                                onClick={() => {
+                                    navigate("/workshops")
+                                    setNavMobile(false)
+                                }}>
+                                Workshops
+                            </li>
+                            <li
+                                className="cursor-pointer py-2"
+                                onClick={() => {
+                                    navigate("/FAQ")
+                                    setNavMobile(false)
+                                }}>
+                                FAQ
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}
 
-export default Navbar;
+export default Navbar
